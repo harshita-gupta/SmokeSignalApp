@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6214" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6207"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SEGOEUISL.TTF">
+            <string>SegoeUI-Semilight</string>
+            <string>SegoeUI-Semilight</string>
+            <string>SegoeUI-Semilight</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -11,31 +17,82 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2014 The Smoke Signal. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountains 640 x 960.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-ZD-uyg">
+                    <rect key="frame" x="0.0" y="-480" width="480" height="960"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BBe-Yu-vAF">
+                    <rect key="frame" x="98" y="20" width="284" height="356"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="284" id="Z04-IA-29S"/>
+                        <constraint firstAttribute="height" constant="356" id="cKX-hV-3bi"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="official student publication of" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-Iw-r15">
+                    <rect key="frame" x="153" y="210" width="175" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="XEz-W4-lO5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmokeSignalMobileApp" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mission san jose high school" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQb-sd-0nC">
+                    <rect key="frame" x="155" y="230" width="171" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="rCZ-A6-zws"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fremont, ca" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vI-dz-tGg">
+                    <rect key="frame" x="206" y="250" width="69" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="8Gz-an-7RK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="14"/>
+                    <color key="textColor" red="0.16470588235294117" green="0.42745098039215684" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.69019607843137254" green="0.84313725490196079" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="5vI-dz-tGg" firstAttribute="top" secondItem="DQb-sd-0nC" secondAttribute="bottom" id="6w1-Sg-1CO"/>
+                <constraint firstAttribute="centerX" secondItem="DQb-sd-0nC" secondAttribute="centerX" id="BhO-sf-1le"/>
+                <constraint firstItem="DQb-sd-0nC" firstAttribute="centerX" secondItem="eXz-Iw-r15" secondAttribute="centerX" id="FFd-cs-INc"/>
+                <constraint firstAttribute="centerX" secondItem="BBe-Yu-vAF" secondAttribute="centerX" id="HOu-RS-xGC"/>
+                <constraint firstAttribute="centerX" secondItem="DQb-sd-0nC" secondAttribute="centerX" id="Mkx-xx-kRr"/>
+                <constraint firstItem="DQb-sd-0nC" firstAttribute="centerX" secondItem="5vI-dz-tGg" secondAttribute="centerX" id="NVK-B5-gxM"/>
+                <constraint firstAttribute="centerX" secondItem="eXz-Iw-r15" secondAttribute="centerX" id="Ocu-dh-8vV"/>
+                <constraint firstItem="lcq-ZD-uyg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qsj-lD-fzp"/>
+                <constraint firstItem="BBe-Yu-vAF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="VId-ht-PPA"/>
+                <constraint firstAttribute="centerX" secondItem="eXz-Iw-r15" secondAttribute="centerX" id="Ys1-6H-UzZ"/>
+                <constraint firstItem="5vI-dz-tGg" firstAttribute="top" secondItem="DQb-sd-0nC" secondAttribute="bottom" constant="-67" id="a77-yi-R1P"/>
+                <constraint firstItem="BBe-Yu-vAF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="98" id="b33-0v-S4P"/>
+                <constraint firstAttribute="bottom" secondItem="lcq-ZD-uyg" secondAttribute="bottom" id="bDC-Ot-nIW"/>
+                <constraint firstAttribute="trailing" secondItem="BBe-Yu-vAF" secondAttribute="trailing" constant="98" id="buT-Qm-4TZ"/>
+                <constraint firstAttribute="trailing" secondItem="lcq-ZD-uyg" secondAttribute="trailing" id="d5q-Io-whQ"/>
+                <constraint firstAttribute="centerY" secondItem="DQb-sd-0nC" secondAttribute="centerY" id="fHg-P1-lKf"/>
+                <constraint firstItem="DQb-sd-0nC" firstAttribute="top" secondItem="eXz-Iw-r15" secondAttribute="bottom" id="ii8-LX-ce5"/>
+                <constraint firstAttribute="centerX" secondItem="5vI-dz-tGg" secondAttribute="centerX" id="kek-xZ-lzT"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="b33-0v-S4P"/>
+                    <exclude reference="buT-Qm-4TZ"/>
+                    <exclude reference="Ys1-6H-UzZ"/>
+                    <exclude reference="BhO-sf-1le"/>
+                    <exclude reference="FFd-cs-INc"/>
+                    <exclude reference="a77-yi-R1P"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="Logo.png" width="1200" height="400"/>
+        <image name="Mountains 640 x 960.png" width="640" height="960"/>
+    </resources>
 </document>

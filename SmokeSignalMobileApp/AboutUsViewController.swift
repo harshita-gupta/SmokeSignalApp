@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class AboutUsViewController: UIViewController {
+    
+    var currentCategory = Category(slug_name: "about-us")
+    
+}

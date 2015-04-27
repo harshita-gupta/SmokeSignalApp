@@ -7,79 +7,227 @@
 //
 
 import UIKit
-
-class MasterViewController: UITableViewController {
-
-    var objects = NSMutableArray()
-
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
+import Foundation
+class MasterViewController: UITableViewController, UIScrollViewDelegate{
+    
+    @IBOutlet var activityBar: UIProgressView!
+    
+    @IBOutlet var postTable: UITableView!
+    
+    @IBOutlet var mainNavBar: UINavigationItem!
+    
+    @IBOutlet var refresher: UIRefreshControl!
+    
+    var currentCategory : Category = Category()
+    
+    var currentPage = 0
+    var currentlyLoading = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        Singleton.sharedInstance.masterViewControllerReference = self;
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        currentCategory = Category(slug_name: "")
+        addNavBarBanner()
+        activityBar.progressTintColor = currentCategory.highlightColor
+        refresher.backgroundColor = currentCategory.highlightColor
+        currentPage = 1;
+    
+        //getting the json data from thesmokesignal.org
+        parsing.getWebDataFromCategory("", page_number: currentPage)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    func refreshWithNewCatSort(slug_name: String) {
+        currentCategory = Category(slug_name: slug_name)
+        addNavBarBanner()
+        activityBar.progressTintColor = currentCategory.highlightColor
+        refresher.backgroundColor = currentCategory.highlightColor
+        currentPage = 1
+        parsing.getWebDataFromCategory(currentCategory.slug!, page_number: currentPage, completion: nil)
     }
-
-    func insertNewObject(sender: AnyObject) {
-        objects.insertObject(NSDate.date(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+ 
+    func addNavBarBanner() {
+        print(currentCategory.topBanner!.description)
+        var topLogo : UIImage = currentCategory.topBanner!
+        var topLogoView : UIImageView = UIImageView(image: topLogo)
+        
+        var logoSizeLength :CGFloat = topLogo.size.width//(navigationController!.navigationBar.frame.size.width - 30) * 0.7
+        var logoSizeHeight : CGFloat = topLogo.size.height//logoSizeLength * (83/462)
+        
+        var logoSize = CGSizeMake(logoSizeLength, logoSizeHeight)
+        
+        print(logoSize)
+        print(topLogo)
+        
+        var resizedImage = topLogo//parsing.RBResizeImage(topLogo, targetSize: logoSize)
+        
+        var yPos = floor(self.navigationController!.navigationBar.frame.size.height - resizedImage.size.height) / 2
+        
+        var xPos = floor(self.navigationController!.navigationBar.frame.size.width - resizedImage.size.width) / 2
+        
+        topLogoView.frame = CGRectMake(xPos, yPos, resizedImage.size.width, resizedImage.size.height)
+        
+        print(topLogoView.frame)
+        
+        var width = 0.9 * self.view.frame.size.width
+        
+        var topLogoContainerView : UIView = UIView(frame: CGRectMake(0, 0, width, self.navigationController!.navigationBar.frame.size.height))
+        topLogoContainerView.addSubview(topLogoView)
+        mainNavBar.titleView = topLogoContainerView
     }
-
-    // MARK: - Segues
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let object = objects[indexPath.row] as NSDate
-            (segue.destinationViewController as DetailViewController).detailItem = object
-            }
+    
+    
+    //handles loading of extra table cells
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        var currentOffset : CGFloat = scrollView.contentOffset.y
+        var maximumOffset : CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        //checks if user has scrolled to bottom
+        if (  (maximumOffset - currentOffset <= 10.0)  &&  (currentlyLoading == false)   ) { //the boolean currentlyLoading was created so that we can make sure the getWebData method isn't called over and over again while the user is at the bottom. It is called once, then stops.
+            currentlyLoading = true
+            currentPage = currentPage + 1
+            parsing.getWebDataFromCategory(currentCategory.slug!, page_number: currentPage, completion: { () -> () in self.currentlyLoading = false})// implemented a completion handler that shows that the loading has completed. Then the getWebData method can be called again.
         }
+        
+        
     }
-
-    // MARK: - Table View
-
+    
+    //number of sections
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
+    //number of rows
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return Singleton.sharedInstance.posts.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-
-        let object = objects[indexPath.row] as NSDate
-        cell.textLabel?.text = object.description
-        return cell
-    }
-
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeObjectAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    //cell heights
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if (indexPath.row == 0) {
+            return 250
+        }
+        
+        else {
+            return 120
         }
     }
+    
+    //populates table with cells
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
+        var cell : UITableViewCell
+        
+        if (indexPath.row == 0) {
+            cell = tableView.dequeueReusableCellWithIdentifier("mostRecentPreview", forIndexPath: indexPath) as! UITableViewCell
+        }
+        
+        else {
+            cell = tableView.dequeueReusableCellWithIdentifier("article", forIndexPath: indexPath) as! UITableViewCell
+        }
+        
+        fillCells(cell, indexPath: indexPath)
+        cell.setNeedsDisplay()
+        return cell
+    }
+    
+    // configures stuff for cells
+    func fillCells(cell: UITableViewCell, indexPath: NSIndexPath) {
+        var currentPostDictionary : NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
+        
+        var currentArticle : Article = Article(article: currentPostDictionary)
+        
+        var categoryLabel = cell.viewWithTag(8) as! UILabel
+        var headline = cell.viewWithTag(1) as! UILabel
+        var dateLabel = cell.viewWithTag(4) as! UILabel
+        var writerLabel = cell.viewWithTag(5) as! UILabel
+        var textPreview = cell.viewWithTag(2) as! UILabel
+        var imageView = cell.viewWithTag(3) as! UIImageView
+
+        
+        if (currentArticle.categoriesString != nil) {
+            categoryLabel.text = currentArticle.categoriesString!
+        }
+        
+        if (currentArticle.headline != nil) {
+            headline.text = currentArticle.headline!
+        }
+        
+        if (currentArticle.postedDateText != nil) {
+            dateLabel.text = currentArticle.postedDateText!
+        }
+        
+        if (currentArticle.writerString != nil) {
+            writerLabel.text = currentArticle.writerString!
+        }
+        
+        if (currentArticle.previewText != nil) {
+            textPreview.text = currentArticle.previewText!
+        }
+        
+        if (currentArticle.imageExists!) {
+            imageView.sd_setImageWithURL(currentArticle.fullImageURL!)
+            //imageView.image = currentArticle.fullImage!
+        }
+        else {
+            
+            var leadingSpaceToImg : CGFloat = 3.0
+            var imWidth = imageView.frame.size.width
+            imageView.hidden = true
+            
+            headline.setTranslatesAutoresizingMaskIntoConstraints(true)
+            writerLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+            textPreview.setTranslatesAutoresizingMaskIntoConstraints(true)
+            categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+
+            var headFrame = headline.frame
+            headFrame.size.width = headline.frame.size.width + imWidth //+ leadingSpaceToImg
+            headline.frame = headFrame
+            
+            var writerFrame = writerLabel.frame
+            writerFrame.size.width = writerLabel.frame.size.width + imWidth //+ leadingSpaceToImg
+            writerLabel.frame = writerFrame
+            
+            var textFrame = textPreview.frame
+            textFrame.size.width = textPreview.frame.size.width + imWidth //+ leadingSpaceToImg
+            textPreview.frame = textFrame
+            
+            var catFrame = categoryLabel.frame
+            catFrame.size.width = categoryLabel.frame.size.width + imWidth //+ leadingSpaceToImg
+            categoryLabel.frame = catFrame
+            
+            headline.setTranslatesAutoresizingMaskIntoConstraints(true)
+            writerLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+            textPreview.setTranslatesAutoresizingMaskIntoConstraints(true)
+            categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+
+
+        }
+        
+        imageView.clipsToBounds = true 
+
+    }
+    
+    @IBAction func refreshPulled(sender: AnyObject) {
+        currentPage = 1;
+        parsing.getWebDataFromCategory(currentCategory.slug!, page_number: currentPage, completion: nil)
+        refresher.endRefreshing()
+    }
+    
+    //DONE
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if ((segue.identifier == "showDetail") || (segue.identifier == "showDetailFirst")) {
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                Singleton.sharedInstance.currIndex = indexPath.row
+                let selectedPost: NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
+                (segue.destinationViewController as! DetailViewController).detailItem = Article(article: selectedPost)
+            }
+        }
+    }
 
 }
 
