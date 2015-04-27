@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SmokeSignalMobileApp.xcodeproj">
+      location = "self:The Smoke Signal.xcodeproj">
    </FileRef>
 </Workspace>
