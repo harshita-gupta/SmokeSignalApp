@@ -189,7 +189,7 @@ struct parsing {
 //            writer.replaceOccurrencesOfString("web editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
 //            writer.replaceOccurrencesOfString("editor in chief", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
 //            writer.replaceOccurrencesOfString("editor-in-chief", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            
+//
             //we proceed to remove everything after the name.
             //after name, there is always a <
             //we create an optional just in case, but highly unlikely that article will only be writer name LOL. unless it's an image. so good robustness gj harshita
@@ -203,6 +203,25 @@ struct parsing {
                 writer = clearCharactersFromString(writer, rangeToBeCleared: rangeAfter)
             }
         
+//            writer.replaceOccurrencesOfString("Staff Writer", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("Staff Writers", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("News Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("Opinion Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("Feature Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("Centerspread Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("Arts and Entertainment Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("Arts & Entertainment Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("A&E Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("A & E Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("Sports editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("graphics editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("photo editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("photos editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("web editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("editor in chief", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+//            writer.replaceOccurrencesOfString("editor-in-chief", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
+
+            
             return writer
         }
     }
@@ -234,6 +253,11 @@ struct parsing {
             
         }
 
+        if (clearedText.hasPrefix(": ")) {
+            clearedText.replaceCharactersInRange(NSMakeRange(0, 2), withString: "")
+            
+        }
+
         var finalString: NSMutableString = (clearedText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())).mutableCopy() as! NSMutableString
          
         return finalString
@@ -244,7 +268,7 @@ struct parsing {
         
         if extractWriter(NSMutableString(string: textToBeCleared)) != nil { //there is a writer name
             var writerName = extractWriter(NSMutableString(string: textToBeCleared))!
-            var locWriterName : NSRange? = textToBeCleared.rangeOfString( writerName as String ) as NSRange
+            var locWriterName : NSRange? = textToBeCleared.rangeOfString( (writerName as String).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) ) as NSRange
             var endWriterNamePos = locWriterName!.location + locWriterName!.length - 1//this is the variable we want to clear till
             var clearTill_Range : NSRange = NSMakeRange(0, endWriterNamePos + 1 )
             var finalString = clearCharactersFromString(textToBeCleared, rangeToBeCleared: clearTill_Range)

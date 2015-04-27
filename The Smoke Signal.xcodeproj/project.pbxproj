@@ -24,6 +24,7 @@
 		EE13F6AC1AEE0C6600FE93FE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F69B1AEE0C6600FE93FE /* UIImageView+WebCache.m */; };
 		EE13F6AD1AEE0C6600FE93FE /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F69D1AEE0C6600FE93FE /* UIView+WebCacheOperation.m */; };
 		EE13F6AF1AEE0C8600FE93FE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */; };
+		EE1759071AEEECBC0031EA2C /* NavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1759061AEEECBC0031EA2C /* NavBar.xib */; };
 		EE1C6EDF1A9038150068C8DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C6EDE1A9038150068C8DA /* MainViewController.swift */; };
 		EE1C6EE51A9038EF0068C8DA /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C6EE11A9038EF0068C8DA /* AnimatedMenuButton.swift */; };
 		EE1C6EE61A9038EF0068C8DA /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C6EE21A9038EF0068C8DA /* DrawerBarButtonItem.swift */; };
@@ -188,6 +189,7 @@
 		EE13F69C1AEE0C6600FE93FE /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		EE13F69D1AEE0C6600FE93FE /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		EE1759061AEEECBC0031EA2C /* NavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBar.xib; sourceTree = "<group>"; };
 		EE1C6EDE1A9038150068C8DA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EE1C6EE11A9038EF0068C8DA /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMenuButton.swift; sourceTree = "<group>"; };
 		EE1C6EE21A9038EF0068C8DA /* DrawerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerBarButtonItem.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 		EE99AAA71A0F5432001B9AEF /* SmokeSignalMobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				EE1759061AEEECBC0031EA2C /* NavBar.xib */,
 				EE206BD61A90B300007A3103 /* External */,
 				EE1C6ED31A900FD80068C8DA /* Models */,
 				EE21C3F91A882CD9003EF515 /* Resources */,
@@ -811,6 +814,7 @@
 				EE62D1E21A883C3800221D65 /* SEGUIBL.TTF in Resources */,
 				EEFFB0111AA4282900AD2354 /* Opinion Color.png in Resources */,
 				EE206BD41A90B1D0007A3103 /* Photo Color.png in Resources */,
+				EE1759071AEEECBC0031EA2C /* NavBar.xib in Resources */,
 				EE62D1E31A883C3800221D65 /* SEGUIBLI.TTF in Resources */,
 				EE206BCB1A90B1D0007A3103 /* Settings Banner Old.png in Resources */,
 				EE1C6EFB1A903BDD0068C8DA /* 03 Opinion Bar- Old.png in Resources */,

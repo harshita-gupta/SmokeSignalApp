@@ -36,7 +36,7 @@
         <!--Side Menu-->
         <scene sceneID="dyP-oB-9NL">
             <objects>
-                <tableViewController storyboardIdentifier="sideMenuView" title="Side Menu" id="4zU-W8-gJM" customClass="SideMenuViewController" customModule="SmokeSignalMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="sideMenuView" title="Side Menu" id="4zU-W8-gJM" customClass="SideMenuViewController" customModule="The_Smoke_Signal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="kAs-RF-SfV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,7 +418,7 @@
         <!--CenterViewPhotosCollection-->
         <scene sceneID="KLm-Hw-xeL">
             <objects>
-                <collectionViewController title="CenterViewPhotosCollection" id="Fsg-SY-rXs" customClass="PhotosViewController" customModule="SmokeSignalMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="CenterViewPhotosCollection" id="Fsg-SY-rXs" customClass="PhotosViewController" customModule="The_Smoke_Signal" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HTC-AJ-xMe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,7 +473,7 @@
         <!--About-->
         <scene sceneID="vbp-cH-Bv6">
             <objects>
-                <viewController storyboardIdentifier="centerViewAboutUs" title="About" id="rer-DO-fLL" customClass="AboutUsViewController" customModule="SmokeSignalMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="centerViewAboutUs" title="About" id="rer-DO-fLL" customClass="AboutUsViewController" customModule="The_Smoke_Signal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NFI-Gh-cjo"/>
                         <viewControllerLayoutGuide type="bottom" id="OpO-dk-shU"/>
@@ -701,7 +701,7 @@ The </string>
         <!--Main View Controller-->
         <scene sceneID="iUO-7z-zVb">
             <objects>
-                <viewController id="NTu-pb-qfh" customClass="MainViewController" customModule="SmokeSignalMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NTu-pb-qfh" customClass="MainViewController" customModule="The_Smoke_Signal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TJx-NS-vUb"/>
                         <viewControllerLayoutGuide type="bottom" id="hlK-Yu-ILg"/>
@@ -734,7 +734,7 @@ The </string>
         <!--CenterViewListTable-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
-                <tableViewController storyboardIdentifier="centerViewList" title="CenterViewListTable" id="pGg-6v-bdr" customClass="MasterViewController" customModule="SmokeSignalMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="centerViewList" title="CenterViewListTable" id="pGg-6v-bdr" customClass="MasterViewController" customModule="The_Smoke_Signal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="144" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -744,7 +744,7 @@ The </string>
                             <rect key="frame" x="0.0" y="0.0" width="600" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="UXl-sl-qNI" customClass="MyFooter" customModule="SmokeSignalMobileApp" customModuleProvider="target">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="UXl-sl-qNI" customClass="MyFooter" customModule="The_Smoke_Signal" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="66" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -787,10 +787,10 @@ The </string>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthMonth xy, 1294" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-vf-30M">
-                                            <rect key="frame" x="13" y="43" width="150" height="12"/>
+                                            <rect key="frame" x="13" y="43" width="100" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="Wxz-CP-BgY"/>
-                                                <constraint firstAttribute="width" constant="150" id="p5u-iE-WbP"/>
+                                                <constraint firstAttribute="width" constant="100" id="p5u-iE-WbP"/>
                                                 <constraint firstAttribute="height" constant="10" id="tZc-Gp-07t"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
@@ -803,7 +803,7 @@ The </string>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R30-7T-C8D">
-                                            <rect key="frame" x="165" y="43" width="331" height="12"/>
+                                            <rect key="frame" x="115" y="43" width="381" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="hNt-qd-9gc"/>
                                             </constraints>
@@ -900,7 +900,7 @@ The </string>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Staff Writer Room for Long Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkv-uk-nNM">
-                                            <rect key="frame" x="146" y="237" width="446" height="12"/>
+                                            <rect key="frame" x="116" y="237" width="476" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="Ded-Q8-cKu"/>
                                             </constraints>
@@ -909,10 +909,10 @@ The </string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthMonth xy, 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5n-70-zeb">
-                                            <rect key="frame" x="13" y="237" width="130" height="12"/>
+                                            <rect key="frame" x="13" y="237" width="100" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="oZY-FV-7Lc"/>
-                                                <constraint firstAttribute="width" constant="130" id="s4n-cg-OQS"/>
+                                                <constraint firstAttribute="width" constant="100" id="s4n-cg-OQS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1003,7 +1003,7 @@ The </string>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
-                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DetailViewController" customModule="SmokeSignalMobileApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DetailViewController" customModule="The_Smoke_Signal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
                         <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
