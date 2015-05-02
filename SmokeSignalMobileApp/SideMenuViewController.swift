@@ -12,7 +12,9 @@ class SideMenuViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        ((self.parentViewController) as! MainViewController).toggleLeft()
+        //((self.parentViewController) as! MainViewController).toggleLeft()
+        
+        println("side menu row selected")
         
         // setting variable for center view at start of tap ---- idk if this will work but try
         var currentCenterController: UIViewController = (((self.parentViewController as! MainViewController).centerViewController) as! UINavigationController).viewControllers[0] as! UIViewController
@@ -20,7 +22,7 @@ class SideMenuViewController: UITableViewController {
         
         // if on something other than about and about is selected, will switch to about
         if (indexPath.row == 9 &&  ((currentCenterController is AboutUsViewController) == false )) {
-            (self.parentViewController as! MainViewController).setCenterControllerAndBarButton("centerViewAboutUs")
+            (self.parentViewController as! MainViewController).setCenterController("centerViewAboutUs")
             return
         }
         
@@ -121,11 +123,14 @@ class SideMenuViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        println("side menu view loading started")
+
         var tableFrame = self.tableView.frame
         tableFrame.origin = CGPointMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y + 20)
         self.tableView.frame = tableFrame
         self.tableView.setTranslatesAutoresizingMaskIntoConstraints(true)
 
+        println("side menu view loaded")
         
     }
 }

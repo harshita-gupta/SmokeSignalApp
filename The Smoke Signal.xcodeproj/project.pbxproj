@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0B45891AF4523E000BBC38 /* FacingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B457B1AF4523E000BBC38 /* FacingView.m */; };
+		EE0B458A1AF4523E000BBC38 /* FoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B457D1AF4523E000BBC38 /* FoldView.m */; };
+		EE0B458B1AF4523E000BBC38 /* MultiFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B457F1AF4523E000BBC38 /* MultiFoldView.m */; };
+		EE0B458C1AF4523E000BBC38 /* PaperFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B45811AF4523E000BBC38 /* PaperFoldView.m */; };
+		EE0B458D1AF4523E000BBC38 /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B45831AF4523E000BBC38 /* ShadowView.m */; };
+		EE0B458E1AF4523E000BBC38 /* TouchThroughUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B45851AF4523E000BBC38 /* TouchThroughUIView.m */; };
+		EE0B458F1AF4523E000BBC38 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0B45871AF4523E000BBC38 /* UIView+Screenshot.m */; };
 		EE13F69E1AEE0C6600FE93FE /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F67E1AEE0C6600FE93FE /* MKAnnotationView+WebCache.m */; };
 		EE13F69F1AEE0C6600FE93FE /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F6801AEE0C6600FE93FE /* NSData+ImageContentType.m */; };
 		EE13F6A01AEE0C6600FE93FE /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F6821AEE0C6600FE93FE /* SDImageCache.m */; };
@@ -155,6 +162,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE0B457A1AF4523E000BBC38 /* FacingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacingView.h; sourceTree = "<group>"; };
+		EE0B457B1AF4523E000BBC38 /* FacingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacingView.m; sourceTree = "<group>"; };
+		EE0B457C1AF4523E000BBC38 /* FoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldView.h; sourceTree = "<group>"; };
+		EE0B457D1AF4523E000BBC38 /* FoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldView.m; sourceTree = "<group>"; };
+		EE0B457E1AF4523E000BBC38 /* MultiFoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiFoldView.h; sourceTree = "<group>"; };
+		EE0B457F1AF4523E000BBC38 /* MultiFoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiFoldView.m; sourceTree = "<group>"; };
+		EE0B45801AF4523E000BBC38 /* PaperFoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldView.h; sourceTree = "<group>"; };
+		EE0B45811AF4523E000BBC38 /* PaperFoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperFoldView.m; sourceTree = "<group>"; };
+		EE0B45821AF4523E000BBC38 /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
+		EE0B45831AF4523E000BBC38 /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowView.m; sourceTree = "<group>"; };
+		EE0B45841AF4523E000BBC38 /* TouchThroughUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchThroughUIView.h; sourceTree = "<group>"; };
+		EE0B45851AF4523E000BBC38 /* TouchThroughUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchThroughUIView.m; sourceTree = "<group>"; };
+		EE0B45861AF4523E000BBC38 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		EE0B45871AF4523E000BBC38 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		EE0B45881AF4523E000BBC38 /* PaperFoldConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperFoldConstants.h; sourceTree = "<group>"; };
 		EE13F67D1AEE0C6600FE93FE /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKAnnotationView+WebCache.h"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		EE13F67E1AEE0C6600FE93FE /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKAnnotationView+WebCache.m"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		EE13F67F1AEE0C6600FE93FE /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -247,7 +269,6 @@
 		EE21C3EE1A86D650003EF515 /* SEGUISBI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEGUISBI.TTF; sourceTree = "<group>"; };
 		EE21C3EF1A86D650003EF515 /* SEGUISLI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEGUISLI.TTF; sourceTree = "<group>"; };
 		EE21C3F01A86E549003EF515 /* SmokeSignalMobileApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmokeSignalMobileApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		EE21C3F11A86E54A003EF515 /* SmokeSignalMobileAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmokeSignalMobileAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE21C3F21A86E54B003EF515 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		EE21C3F31A86E54B003EF515 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		EE21C3F61A86FA21003EF515 /* MyFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFooter.swift; sourceTree = "<group>"; };
@@ -338,6 +359,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE0B45791AF45229000BBC38 /* PaperFold */ = {
+			isa = PBXGroup;
+			children = (
+				EE0B457A1AF4523E000BBC38 /* FacingView.h */,
+				EE0B457B1AF4523E000BBC38 /* FacingView.m */,
+				EE0B457C1AF4523E000BBC38 /* FoldView.h */,
+				EE0B457D1AF4523E000BBC38 /* FoldView.m */,
+				EE0B457E1AF4523E000BBC38 /* MultiFoldView.h */,
+				EE0B457F1AF4523E000BBC38 /* MultiFoldView.m */,
+				EE0B45801AF4523E000BBC38 /* PaperFoldView.h */,
+				EE0B45811AF4523E000BBC38 /* PaperFoldView.m */,
+				EE0B45821AF4523E000BBC38 /* ShadowView.h */,
+				EE0B45831AF4523E000BBC38 /* ShadowView.m */,
+				EE0B45841AF4523E000BBC38 /* TouchThroughUIView.h */,
+				EE0B45851AF4523E000BBC38 /* TouchThroughUIView.m */,
+				EE0B45861AF4523E000BBC38 /* UIView+Screenshot.h */,
+				EE0B45871AF4523E000BBC38 /* UIView+Screenshot.m */,
+				EE0B45881AF4523E000BBC38 /* PaperFoldConstants.h */,
+			);
+			name = PaperFold;
+			sourceTree = "<group>";
+		};
+		EE0B45901AF45287000BBC38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE13F67C1AEE0C5700FE93FE /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +488,7 @@
 		EE206BD61A90B300007A3103 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				EE0B45791AF45229000BBC38 /* PaperFold */,
 				EE13F67C1AEE0C5700FE93FE /* SDWebImage */,
 				EE206BD71A90B319007A3103 /* UIColorExtension.swift */,
 				EE21C3F21A86E54B003EF515 /* NSString+HTML.h */,
@@ -484,7 +536,6 @@
 				EE4CB3371A7566B600013975 /* parsing.swift */,
 				EE4CB3391A7572CB00013975 /* Singleton.swift */,
 				EE21C3F01A86E549003EF515 /* SmokeSignalMobileApp-Bridging-Header.h */,
-				EE21C3F11A86E54A003EF515 /* SmokeSignalMobileAppTests-Bridging-Header.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -571,7 +622,7 @@
 		EE99AA9C1A0F5432001B9AEF = {
 			isa = PBXGroup;
 			children = (
-				EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */,
+				EE0B45901AF45287000BBC38 /* Frameworks */,
 				EE99AAA71A0F5432001B9AEF /* SmokeSignalMobileApp */,
 				EE99AABF1A0F5432001B9AEF /* SmokeSignalMobileAppTests */,
 				EE99AAA61A0F5432001B9AEF /* Products */,
@@ -916,13 +967,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE13F6AD1AEE0C6600FE93FE /* UIView+WebCacheOperation.m in Sources */,
+				EE0B458A1AF4523E000BBC38 /* FoldView.m in Sources */,
+				EE0B45891AF4523E000BBC38 /* FacingView.m in Sources */,
+				EE0B458B1AF4523E000BBC38 /* MultiFoldView.m in Sources */,
 				EE21C3F71A86FA21003EF515 /* MyFooter.swift in Sources */,
 				EE4CB3381A7566B600013975 /* parsing.swift in Sources */,
 				EE13F6AB1AEE0C6600FE93FE /* UIImageView+HighlightedWebCache.m in Sources */,
 				EE1C6EE71A9038EF0068C8DA /* DrawerController.swift in Sources */,
 				EE99AAAF1A0F5432001B9AEF /* DetailViewController.swift in Sources */,
 				EE1C6F0A1A9052140068C8DA /* SideMenuViewController.swift in Sources */,
+				EE0B458C1AF4523E000BBC38 /* PaperFoldView.m in Sources */,
 				EE13F6A51AEE0C6600FE93FE /* SDWebImageManager.m in Sources */,
+				EE0B458E1AF4523E000BBC38 /* TouchThroughUIView.m in Sources */,
 				EE13F6A21AEE0C6600FE93FE /* SDWebImageDecoder.m in Sources */,
 				EE99AAAD1A0F5432001B9AEF /* MasterViewController.swift in Sources */,
 				EE4CB33A1A7572CB00013975 /* Singleton.swift in Sources */,
@@ -935,6 +991,7 @@
 				EE13F6AA1AEE0C6600FE93FE /* UIImage+WebP.m in Sources */,
 				EE13F69F1AEE0C6600FE93FE /* NSData+ImageContentType.m in Sources */,
 				EE13F6A11AEE0C6600FE93FE /* SDWebImageCompat.m in Sources */,
+				EE0B458F1AF4523E000BBC38 /* UIView+Screenshot.m in Sources */,
 				EE1C6EDF1A9038150068C8DA /* MainViewController.swift in Sources */,
 				EE21C3F41A86E54B003EF515 /* NSString+HTML.m in Sources */,
 				EE13F6A01AEE0C6600FE93FE /* SDImageCache.m in Sources */,
@@ -944,6 +1001,7 @@
 				EE13F6A91AEE0C6600FE93FE /* UIImage+MultiFormat.m in Sources */,
 				EE13F6A71AEE0C6600FE93FE /* UIButton+WebCache.m in Sources */,
 				EE206BA81A90AECA007A3103 /* Category.swift in Sources */,
+				EE0B458D1AF4523E000BBC38 /* ShadowView.m in Sources */,
 				EE13F69E1AEE0C6600FE93FE /* MKAnnotationView+WebCache.m in Sources */,
 				EE13F6A41AEE0C6600FE93FE /* SDWebImageDownloaderOperation.m in Sources */,
 				EE99AAAB1A0F5432001B9AEF /* AppDelegate.swift in Sources */,
@@ -1058,6 +1116,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SmokeSignalMobileApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1076,6 +1138,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SmokeSignalMobileApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";

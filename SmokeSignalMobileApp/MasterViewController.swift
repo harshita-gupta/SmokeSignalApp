@@ -25,6 +25,8 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println("master table view loaded")
         Singleton.sharedInstance.masterViewControllerReference = self;
         // Do any additional setup after loading the view, typically from a nib.
         
