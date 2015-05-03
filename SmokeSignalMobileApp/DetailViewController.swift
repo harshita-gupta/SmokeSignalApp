@@ -42,6 +42,13 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
     func webViewDidFinishLoad(webView: UIWebView) {
         
         
+        categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        headlineLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        writerNameLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        postedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        updatedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+
+        
         ////handles checking required height of webview//////
         var webViewHeightString : String = webView.stringByEvaluatingJavaScriptFromString("document.body.scrollHeight")!
         var webViewHeight = (webViewHeightString as NSString).floatValue + 700
@@ -54,7 +61,6 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         ////creates frame for scrollview and sets the scrollview to that frame////////
         var scrollFrame = scrollView.frame
         scrollFrame.size.height = cgWebViewHeight + 102
-        
         scrollView.contentSize = scrollFrame.size
         ////////////////////////////////////////////////////////////
 
@@ -68,21 +74,12 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         ////////////////////////////////////////////////////////////
         
         
-        var categoryFrame = categoryLabel.frame
-        categoryFrame.size.height = 17
-        categoryFrame.size.width = scrollView.frame.size.width
-        categoryFrame.origin.x = scrollView.frame.origin.x
-        categoryFrame.origin.y = scrollView.frame.origin.y
-        
-        
         webView.setTranslatesAutoresizingMaskIntoConstraints(true)
         scrollView.addSubview(webView)
         webView.frame = webFrame
         
         
-       
-        
-
+    
 }
     
     func configureView() {
@@ -97,6 +94,36 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         
         self.categoryLabel.text = currentArticle!.categoriesString!
         self.headlineLabel.text = currentArticle!.headline!
+
+        categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        headlineLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        writerNameLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        postedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        updatedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        
+        
+        var categoryFrame = categoryLabel.frame
+//        categoryFrame.size.height = 17
+        categoryFrame.size.width = self.view.frame.size.width - 16
+//        categoryFrame.origin.x = scrollView.frame.origin.x
+//        categoryFrame.origin.y = scrollView.frame.origin.y
+        categoryLabel.frame = categoryFrame
+        
+        var headlineFrame = self.headlineLabel.frame
+        headlineFrame.size.width = self.view.frame.size.width - 16
+        print("headline frame size : ")
+        println(headlineFrame.size.width)
+        self.headlineLabel.frame = headlineFrame
+        
+        var heightBefore = self.headlineLabel.frame.height
+
+        self.headlineLabel.sizeToFit()
+        
+        var heightAfter = self.headlineLabel.frame.height
+
+        var changeInHeight = heightAfter - heightBefore
+        
+        self.headlineLabel.frame.height
         self.writerNameLabel.text = (currentArticle!.writerString!).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         self.postedDateLabel.text = currentArticle!.postedDateText!
         
@@ -106,6 +133,22 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         else {
             self.updatedDateLabel.text = "Updated: " + currentArticle!.updatedDateText!
         }
+        
+        
+        //Moving writerlabel and postdate and updatedatelabel
+        var writerLabelFrame = writerNameLabel.frame
+        writerLabelFrame.origin.y = writerLabelFrame.origin.y + changeInHeight
+        writerLabelFrame.size.width = self.view.frame.size.width - 16
+        writerNameLabel.frame = writerLabelFrame
+        
+        var postedLabelFrame = postedDateLabel.frame
+        postedLabelFrame.origin.y = postedLabelFrame.origin.y + changeInHeight
+        postedDateLabel.frame = postedLabelFrame
+        
+        var updateFrame = updatedDateLabel.frame
+        updateFrame.origin.y = updateFrame.origin.y + changeInHeight
+        updatedDateLabel.frame = updateFrame
+        
         
         
         // loads webview with content

@@ -488,7 +488,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountains 640 x 960.png" translatesAutoresizingMaskIntoConstraints="NO" id="C9L-hG-KwB">
                                 <rect key="frame" x="-7" y="-352" width="607" height="960"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCw-yK-tYm">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCw-yK-tYm">
                                 <rect key="frame" x="16" y="28" width="573" height="472"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" link="YES" staticText="YES"/>
@@ -676,21 +676,202 @@ The </string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGR-e1-I09">
+                                <rect key="frame" x="16" y="28" width="568" height="552"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="About Us">
+                                        <attributes>
+                                            <color key="NSColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="19" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+
+The </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Smoke Signal ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="is the official newspaper of Mission San Jose High School in Fremont, CA. The ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Smoke Signal ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">was founded in 1964. 
+ Send letters to the editor at opinion@thesmokesignal.org. Letters under 300 words may be considered for publication and must include a full name and school affiliation. The </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Smoke Signal">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> reserves the right to edit for clarity and length.
+ To advertise in the </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Smoke Signal">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", e-mail ads@thesmokesignal.org. Advertising that is included on the pages of, or carried within, the ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Smoke Signal">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">, is paid advertising, and as such is independent of the news and feature content.
+ The </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Smoke Signal’s">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> right to freedom of speech and press is protected by the First Amendment of the Constitution.
+ 510-284-7149
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="41717 Palm Ave, Fremont, CA, 94539.  Mobile Application developed by Harshita Gupta Graphics by Kevin Chen and Lillian Zhao">
+                                        <attributes>
+                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="SegoeUI"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="12" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hGR-e1-I09" secondAttribute="trailing" id="5qX-FB-WW1"/>
                             <constraint firstItem="C9L-hG-KwB" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" constant="-23" id="5we-Ez-Qsy"/>
                             <constraint firstItem="OpO-dk-shU" firstAttribute="top" secondItem="yCw-yK-tYm" secondAttribute="bottom" constant="100" id="BWI-3E-oyI"/>
                             <constraint firstItem="Oen-NG-5vW" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" constant="-23" id="FgU-OX-m7f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oen-NG-5vW" secondAttribute="trailing" constant="-16" id="Idf-c0-cRD"/>
+                            <constraint firstItem="hGR-e1-I09" firstAttribute="leading" secondItem="C9L-hG-KwB" secondAttribute="trailing" constant="-420" id="Po2-9y-sHP"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Oen-NG-5vW" secondAttribute="bottom" constant="-8" id="RFh-Be-pVG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yCw-yK-tYm" secondAttribute="trailing" constant="-5" id="Tzb-fh-j7I"/>
+                            <constraint firstItem="hGR-e1-I09" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" id="a7g-8C-cRj"/>
+                            <constraint firstItem="OpO-dk-shU" firstAttribute="top" secondItem="hGR-e1-I09" secondAttribute="bottom" constant="20" id="bJ3-uI-S19"/>
                             <constraint firstItem="yCw-yK-tYm" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" id="eVV-VB-2B8"/>
+                            <constraint firstItem="hGR-e1-I09" firstAttribute="top" secondItem="NFI-Gh-cjo" secondAttribute="bottom" constant="8" id="k3b-Nk-y2X"/>
                             <constraint firstItem="Oen-NG-5vW" firstAttribute="top" secondItem="2CY-dd-3dR" secondAttribute="topMargin" id="oUk-sG-sDK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C9L-hG-KwB" secondAttribute="trailing" constant="-16" id="pkb-YW-sem"/>
                             <constraint firstItem="yCw-yK-tYm" firstAttribute="top" secondItem="NFI-Gh-cjo" secondAttribute="bottom" constant="8" id="qdS-eX-Q8V"/>
                             <constraint firstAttribute="bottomMargin" secondItem="C9L-hG-KwB" secondAttribute="bottom" constant="-8" id="uRr-JX-Yqq"/>
+                            <constraint firstItem="hGR-e1-I09" firstAttribute="top" secondItem="C9L-hG-KwB" secondAttribute="bottom" constant="-372" id="xT0-g4-5Kf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Po2-9y-sHP"/>
+                                <exclude reference="xT0-g4-5Kf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Ie9-zG-il7"/>
                 </viewController>
@@ -933,7 +1114,8 @@ The </string>
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="text preview" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-V5-fJB">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="text preview" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-V5-fJB">
+                                            <rect key="frame" x="13" y="251" width="574" height="0.0"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -981,7 +1163,9 @@ The </string>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz" userLabel="The Smoke Signal"/>
+                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz" userLabel="The Smoke Signal">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="0l7-27-7gc"/>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ids-Q4-Ojg">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1015,8 +1199,8 @@ The </string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goi-1o-xpl">
                                 <rect key="frame" x="16" y="20" width="568" height="580"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-fx-kPu">
-                                        <rect key="frame" x="0.0" y="0.0" width="605" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-fx-kPu">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="yGf-KB-nEA"/>
                                         </constraints>
@@ -1024,17 +1208,22 @@ The </string>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="headline" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-nB-cCw">
-                                        <rect key="frame" x="0.0" y="17" width="568" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="headline" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-nB-cCw">
+                                        <rect key="frame" x="0.0" y="17" width="265" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="1t5-HS-heH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1t5-HS-heH"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WriterName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
-                                        <rect key="frame" x="0.0" y="67" width="568" height="16"/>
+                                        <rect key="frame" x="0.0" y="43" width="560" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="kca-Gg-8kF"/>
                                         </constraints>
@@ -1043,8 +1232,9 @@ The </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMo-kP-fTL">
-                                        <rect key="frame" x="0.0" y="88" width="45" height="16"/>
+                                        <rect key="frame" x="0.0" y="59" width="110" height="16"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="AeN-pX-QDN"/>
                                             <constraint firstAttribute="height" constant="16" id="P62-k4-UJY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
@@ -1052,7 +1242,7 @@ The </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-IJ-3cK">
-                                        <rect key="frame" x="50" y="88" width="45" height="16"/>
+                                        <rect key="frame" x="115" y="59" width="150" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="Jqx-nb-vCL"/>
                                         </constraints>
@@ -1061,7 +1251,7 @@ The </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <webView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
-                                        <rect key="frame" x="0.0" y="112" width="568" height="495"/>
+                                        <rect key="frame" x="5" y="78" width="555" height="500"/>
                                         <color key="backgroundColor" red="0.81553819444444442" green="0.81553819444444442" blue="0.81553819444444442" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="500" id="ny6-Ld-Azb"/>
@@ -1092,7 +1282,7 @@ The </string>
                                     <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="ZXe-OT-8iQ"/>
                                     <constraint firstAttribute="width" secondItem="F8Z-ft-DJu" secondAttribute="width" id="Zlx-yJ-HBo"/>
                                     <constraint firstItem="8IV-fx-kPu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="cU6-HA-Q4l"/>
-                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="width" secondItem="yEe-IJ-3cK" secondAttribute="width" id="dbs-l2-u9p"/>
+                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="width" secondItem="yEe-IJ-3cK" secondAttribute="width" constant="-40" id="dbs-l2-u9p"/>
                                     <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="5" id="dlE-Rn-ZOV"/>
                                     <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" constant="8" id="eMI-e8-55W"/>
                                     <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" id="g9W-5S-wXU"/>
