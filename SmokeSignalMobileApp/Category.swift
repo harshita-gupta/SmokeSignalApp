@@ -14,7 +14,6 @@ class Category : NSObject {
     var slug: String?
     var catName : String?
     var highlightColor: UIColor?
-    var topBanner: UIImage?
     var navBarFinal: NavBarViewController?
     
     override init() {
@@ -51,47 +50,36 @@ class Category : NSObject {
         case "":
             catName = "the Smoke Signal"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.regular)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.regular)!
         case "about-us":
             catName = "About Us"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.regular)
-            topBanner = nil
         case "ae":
             catName = "Arts & Entertainment"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.ae)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.ae)!
         case "centerspread" :
             catName = "Centerspread"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.centerspread)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.centerspread)!
         case "news":
             catName = "News"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.news)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.news)!
         case "feature":
             catName = "Feature"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.feautre)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.feature)!
         case "online-exclusives" :
             catName = "Online Exclusives"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.onlineExclusives)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.onlineExclusives)!
         case "opinion" :
             catName = "Opinion"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.opinion)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.opinion)!
         case "photos" :
             catName = "Photos"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.graphics)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.graphics)!
         case "sports" :
             catName = "Sports"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.sports)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.sports)!
         default:
             catName = "the Smoke Signal"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.regular)
-            topBanner = UIImage(named: Singleton.catBannerFileNames.regular)!
         }
         
         self.createNavBarView()

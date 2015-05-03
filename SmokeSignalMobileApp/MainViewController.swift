@@ -38,11 +38,6 @@ class MainViewController: SWRevealViewController {
     
     func setCenterControllerAndBarButton(storyboardTag : String) {
         (self.frontViewController as! UINavigationController).viewControllers[0] = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardTag) as! UIViewController!
-//        (self.frontViewController as! UINavigationController).viewControllers[0].navigationItem.leftBarButtonItem = DrawerBarButtonItem(target: self.parentViewController, action: "toggleLeft")
 
     }
-    
-//    func toggleLeft() {
-//        self.revealToggleAnimated(true)
-//    }
 }

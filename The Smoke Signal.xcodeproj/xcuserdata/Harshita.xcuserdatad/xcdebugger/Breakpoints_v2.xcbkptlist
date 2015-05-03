@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452372309.679679"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452372309.679679"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452372309.679679"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452372309.679679"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452372309.679679"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452372309.679679"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452372309.679679"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,59 +314,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452380139.370264"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "addNavBarBanner()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452380139.370264"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "addNavBarBanner()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452380139.370264"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "addNavBarBanner()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452380139.370264"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
             endingLineNumber = "157"
+            landmarkName = "addNavBarBanner()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmokeSignalMobileApp/MasterViewController.swift"
+            timestampString = "452381183.29976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -394,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452380139.370264"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/MasterViewController.swift"
-            timestampString = "452380139.370264"
+            timestampString = "452381183.29976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "addNavBarBanner()"
             landmarkType = "5">
          </BreakpointContent>
