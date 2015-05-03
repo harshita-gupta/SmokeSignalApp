@@ -48,7 +48,7 @@ class Category : NSObject {
         self.slug = slug_name
         switch self.slug! {
         case "":
-            catName = "the Smoke Signal"
+            catName = "the smoke signal"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.regular)
         case "about-us":
             catName = "About Us"
