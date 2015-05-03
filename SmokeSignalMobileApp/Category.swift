@@ -15,18 +15,41 @@ class Category : NSObject {
     var catName : String?
     var highlightColor: UIColor?
     var topBanner: UIImage?
-    
+    var navBarFinal: NavBarViewController?
     
     override init() {
         
     }
     
-    init (slug_name: String) {
+    func createNavBarView() {
         
+        var navBarViewController = (NSBundle.mainBundle().loadNibNamed("NavBars", owner: self, options: nil)).last as! NavBarViewController
+        
+        
+            navBarViewController.topLabel.text = self.catName!
+        
+        
+        if self.slug! == "" {
+            
+        }
+        else {
+            navBarViewController.topImage.setTranslatesAutoresizingMaskIntoConstraints(true)
+            var imFrame = navBarViewController.topImage.frame
+            imFrame.size.width = 0
+            imFrame.size.height = 0
+            navBarViewController.topImage.frame = imFrame
+        }
+        
+        navBarFinal = navBarViewController
+        
+    }
+    
+    init (slug_name: String) {
+        super.init()
         self.slug = slug_name
         switch self.slug! {
         case "":
-            catName = "Recents"
+            catName = "the Smoke Signal"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.regular)
             topBanner = UIImage(named: Singleton.catBannerFileNames.regular)!
         case "about-us":
@@ -66,12 +89,12 @@ class Category : NSObject {
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.sports)
             topBanner = UIImage(named: Singleton.catBannerFileNames.sports)!
         default:
-            catName = ""
+            catName = "the Smoke Signal"
             highlightColor = UIColor(rgba: "#" + Singleton.catColorHexes.regular)
             topBanner = UIImage(named: Singleton.catBannerFileNames.regular)!
         }
         
-
+        self.createNavBarView()
         
     }
     

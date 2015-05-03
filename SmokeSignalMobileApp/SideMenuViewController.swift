@@ -12,7 +12,7 @@ class SideMenuViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        ((self.parentViewController) as! MainViewController).toggleLeft()
+        (Singleton.sharedInstance.masterViewControllerReference).toggleLeft()
         
         // setting variable for center view at start of tap ---- idk if this will work but try
         var currentCenterController: UIViewController = (((self.parentViewController as! MainViewController).frontViewController) as! UINavigationController).viewControllers[0] as! UIViewController

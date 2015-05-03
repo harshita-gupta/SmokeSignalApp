@@ -17,6 +17,8 @@ class MainViewController: SWRevealViewController {
         
         self.rearViewController = self.storyboard?.instantiateViewControllerWithIdentifier("sideMenuView") as? UIViewController
         
+        Singleton.sharedInstance.mainViewControllerReference = self
+        
         print("frontViewController set to:")
         println(self.frontViewController)
 
@@ -36,11 +38,11 @@ class MainViewController: SWRevealViewController {
     
     func setCenterControllerAndBarButton(storyboardTag : String) {
         (self.frontViewController as! UINavigationController).viewControllers[0] = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardTag) as! UIViewController!
-        (self.frontViewController as! UINavigationController).viewControllers[0].navigationItem.leftBarButtonItem = DrawerBarButtonItem(target: self.parentViewController, action: "toggleLeft")
+//        (self.frontViewController as! UINavigationController).viewControllers[0].navigationItem.leftBarButtonItem = DrawerBarButtonItem(target: self.parentViewController, action: "toggleLeft")
 
     }
     
-    func toggleLeft() {
-        self.revealToggleAnimated(true)
-    }
+//    func toggleLeft() {
+//        self.revealToggleAnimated(true)
+//    }
 }

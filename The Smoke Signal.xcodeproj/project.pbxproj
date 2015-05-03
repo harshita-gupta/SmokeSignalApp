@@ -25,7 +25,7 @@
 		EE13F6AC1AEE0C6600FE93FE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F69B1AEE0C6600FE93FE /* UIImageView+WebCache.m */; };
 		EE13F6AD1AEE0C6600FE93FE /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F69D1AEE0C6600FE93FE /* UIView+WebCacheOperation.m */; };
 		EE13F6AF1AEE0C8600FE93FE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */; };
-		EE1759071AEEECBC0031EA2C /* NavBarViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1759061AEEECBC0031EA2C /* NavBarViews.xib */; };
+		EE1759071AEEECBC0031EA2C /* NavBars.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1759061AEEECBC0031EA2C /* NavBars.xib */; };
 		EE1C6EDF1A9038150068C8DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C6EDE1A9038150068C8DA /* MainViewController.swift */; };
 		EE1C6F061A90474B0068C8DA /* iconmonstr-menu-icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1C6F051A90474B0068C8DA /* iconmonstr-menu-icon-128.png */; };
 		EE1C6F081A9047820068C8DA /* iconmonstr-menu-icon-24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1C6F071A9047820068C8DA /* iconmonstr-menu-icon-24.png */; };
@@ -101,6 +101,7 @@
 		EEFC5C551AF5DD4700614494 /* 13 Archives Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFC5C461AF5DD4700614494 /* 13 Archives Bar.png */; };
 		EEFC5C561AF5DD4700614494 /* 14 Awards Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFC5C471AF5DD4700614494 /* 14 Awards Bar.png */; };
 		EEFC5C571AF5DD4700614494 /* 15 Staff Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFC5C481AF5DD4700614494 /* 15 Staff Bar.png */; };
+		EEFC5C591AF5EE2200614494 /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5C581AF5EE2200614494 /* NavBarViewController.swift */; };
 		EEFFAFFC1AA4282900AD2354 /* Feature Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFE61AA4282900AD2354 /* Feature Color.png */; };
 		EEFFAFFD1AA4282900AD2354 /* Sports Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFE71AA4282900AD2354 /* Sports Color.png */; };
 		EEFFAFFE1AA4282900AD2354 /* Opinion Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFE81AA4282900AD2354 /* Opinion Banner.png */; };
@@ -162,7 +163,7 @@
 		EE13F69C1AEE0C6600FE93FE /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		EE13F69D1AEE0C6600FE93FE /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		EE1759061AEEECBC0031EA2C /* NavBarViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarViews.xib; sourceTree = "<group>"; };
+		EE1759061AEEECBC0031EA2C /* NavBars.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBars.xib; sourceTree = "<group>"; };
 		EE1C6EDE1A9038150068C8DA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EE1C6F051A90474B0068C8DA /* iconmonstr-menu-icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconmonstr-menu-icon-128.png"; sourceTree = "<group>"; };
 		EE1C6F071A9047820068C8DA /* iconmonstr-menu-icon-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconmonstr-menu-icon-24.png"; sourceTree = "<group>"; };
@@ -244,6 +245,7 @@
 		EEFC5C461AF5DD4700614494 /* 13 Archives Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13 Archives Bar.png"; sourceTree = "<group>"; };
 		EEFC5C471AF5DD4700614494 /* 14 Awards Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14 Awards Bar.png"; sourceTree = "<group>"; };
 		EEFC5C481AF5DD4700614494 /* 15 Staff Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "15 Staff Bar.png"; sourceTree = "<group>"; };
+		EEFC5C581AF5EE2200614494 /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
 		EEFFAFE61AA4282900AD2354 /* Feature Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Feature Color.png"; path = "../Banners/Feature Color.png"; sourceTree = "<group>"; };
 		EEFFAFE71AA4282900AD2354 /* Sports Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sports Color.png"; path = "../Banners/Sports Color.png"; sourceTree = "<group>"; };
 		EEFFAFE81AA4282900AD2354 /* Opinion Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Opinion Banner.png"; sourceTree = "<group>"; };
@@ -563,7 +565,8 @@
 				EE206BD61A90B300007A3103 /* External */,
 				EE21C3E11A86D4CC003EF515 /* View Controllers */,
 				EE21C3E21A86D4DC003EF515 /* Core */,
-				EE1759061AEEECBC0031EA2C /* NavBarViews.xib */,
+				EE1759061AEEECBC0031EA2C /* NavBars.xib */,
+				EEFC5C581AF5EE2200614494 /* NavBarViewController.swift */,
 				EE1C6ED31A900FD80068C8DA /* Models */,
 				EE21C3F91A882CD9003EF515 /* Resources */,
 				EE99AAB01A0F5432001B9AEF /* Main.storyboard */,
@@ -683,7 +686,7 @@
 				EE62D1E21A883C3800221D65 /* SEGUIBL.TTF in Resources */,
 				EEFC5C501AF5DD4700614494 /* 08 Photo Bar.png in Resources */,
 				EEFFB0111AA4282900AD2354 /* Opinion Color.png in Resources */,
-				EE1759071AEEECBC0031EA2C /* NavBarViews.xib in Resources */,
+				EE1759071AEEECBC0031EA2C /* NavBars.xib in Resources */,
 				EE62D1E31A883C3800221D65 /* SEGUIBLI.TTF in Resources */,
 				EEFFAFFC1AA4282900AD2354 /* Feature Color.png in Resources */,
 				EEFFB00C1AA4282900AD2354 /* Photo Color.png in Resources */,
@@ -772,6 +775,7 @@
 				EE99AAAD1A0F5432001B9AEF /* MasterViewController.swift in Sources */,
 				EE4CB33A1A7572CB00013975 /* Singleton.swift in Sources */,
 				EE13F6A61AEE0C6600FE93FE /* SDWebImagePrefetcher.m in Sources */,
+				EEFC5C591AF5EE2200614494 /* NavBarViewController.swift in Sources */,
 				EE13F6AC1AEE0C6600FE93FE /* UIImageView+WebCache.m in Sources */,
 				EEF50DF41A911F1E00E733BE /* PhotosViewController.swift in Sources */,
 				EEFC5C361AF5D98700614494 /* DrawerController.swift in Sources */,

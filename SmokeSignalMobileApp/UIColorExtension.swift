@@ -47,7 +47,7 @@ extension UIColor {
                 println("Scan hex error")
             }
         } else {
-            print("Invalid RGB string, missing '#' as prefix")
+            println("Invalid RGB string, missing '#' as prefix")
         }
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }

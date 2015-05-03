@@ -20,13 +20,17 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     
     var currentCategory : Category = Category()
     
+    
     var currentPage = 0
     var currentlyLoading = false
     
     override func viewDidLoad() {
+        println("master view loaded")
         super.viewDidLoad()
         Singleton.sharedInstance.masterViewControllerReference = self;
         // Do any additional setup after loading the view, typically from a nib.
+        
+        setBarButton()
         
         self.automaticallyAdjustsScrollViewInsets = false
         currentCategory = Category(slug_name: "")
@@ -38,8 +42,24 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         //getting the json data from thesmokesignal.org
         parsing.getWebDataFromCategory("", page_number: currentPage)
         
+        
     }
     
+    
+    func setBarButton() {
+        println("starts setting leftBarButtonItem")
+        self.mainNavBar!.leftBarButtonItem = DrawerBarButtonItem(target: self, action: "toggleLeft")
+        print("leftBarButtonItem set to: ")
+        println(self.mainNavBar!.leftBarButtonItem)
+        println("finished setting leftBarButtonItem")
+        println("")
+
+    }
+    
+    func toggleLeft() {
+        println("DrawerBarButtonItem tapped.")
+        ((Singleton.sharedInstance.mainViewControllerReference) as SWRevealViewController).revealToggleAnimated(true)
+    }
     
     func refreshWithNewCatSort(slug_name: String) {
         currentCategory = Category(slug_name: slug_name)
@@ -51,33 +71,150 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     }
  
     func addNavBarBanner() {
-        print(currentCategory.topBanner!.description)
-        var topLogo : UIImage = currentCategory.topBanner!
-        var topLogoView : UIImageView = UIImageView(image: topLogo)
+        println("started adding top Navigation Bar")
         
-        var logoSizeLength :CGFloat = topLogo.size.width//(navigationController!.navigationBar.frame.size.width - 30) * 0.7
-        var logoSizeHeight : CGFloat = topLogo.size.height//logoSizeLength * (83/462)
+        var navBarVCFromCat = currentCategory.navBarFinal!
         
-        var logoSize = CGSizeMake(logoSizeLength, logoSizeHeight)
+        mainNavBar.titleView = navBarVCFromCat.view
         
-        print(logoSize)
-        print(topLogo)
         
-        var resizedImage = topLogo//parsing.RBResizeImage(topLogo, targetSize: logoSize)
+        var leftBarButtonWidth = mainNavBar!.leftBarButtonItem!.customView!.frame.width  + 10.0
+        print("leftbarbutton width: ")
+        println(mainNavBar!.leftBarButtonItem?.customView?.frame.width)
+
+        print("titleView frame: ")
+        println(mainNavBar.titleView?.frame)
         
-        var yPos = floor(self.navigationController!.navigationBar.frame.size.height - resizedImage.size.height) / 2
         
-        var xPos = floor(self.navigationController!.navigationBar.frame.size.width - resizedImage.size.width) / 2
+        var totalAvailW = navigationController!.navigationBar.frame.size.width
         
-        topLogoView.frame = CGRectMake(xPos, yPos, resizedImage.size.width, resizedImage.size.height)
+        print("available width: ")
+        println(totalAvailW)
         
-        print(topLogoView.frame)
         
-        var width = 0.9 * self.view.frame.size.width
+        var contentW = navBarVCFromCat.topLabel.frame.size.width + navBarVCFromCat.topImage.frame.size.width + 3
         
-        var topLogoContainerView : UIView = UIView(frame: CGRectMake(0, 0, width, self.navigationController!.navigationBar.frame.size.height))
-        topLogoContainerView.addSubview(topLogoView)
+        
+        print("content width: ")
+        println(contentW)
+
+        
+        var spaceEachSide = (totalAvailW - contentW) / 2
+        
+        print("space on either side: ")
+        println(spaceEachSide)
+
+
+        navBarVCFromCat.topLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        navBarVCFromCat.topImage.setTranslatesAutoresizingMaskIntoConstraints(true)
+
+        
+        var labelFrame = navBarVCFromCat.topLabel.frame
+        
+        labelFrame.origin.x = 0.0//spaceEachSide
+        //CGRectMake(spaceEachSide, 0, navBarVCFromCat.topLabel.frame.size.width, self.navigationController!.navigationBar.frame.size.height)
+        
+        labelFrame.origin.y = floor(self.navigationController!.navigationBar.frame.size.height - labelFrame.size.height) / 2.0
+        
+        var imageFrame = navBarVCFromCat.topImage.frame//CGRectMake(spaceEachSide + navBarVCFromCat.topLabel.frame.size.width + 3, 0, navBarVCFromCat.topLabel.frame.size.width, self.navigationController!.navigationBar.frame.size.height)
+        
+        imageFrame.origin.x = labelFrame.origin.x + labelFrame.width + 3.0
+        
+        imageFrame.origin.y = floor(self.navigationController!.navigationBar.frame.size.height - imageFrame.size.height) / 2
+
+        
+        navBarVCFromCat.topLabel.frame = labelFrame
+        navBarVCFromCat.topImage.frame = imageFrame
+
+        print("label value: ")
+        println(navBarVCFromCat.topLabel.text)
+
+        print("image value: ")
+        println(navBarVCFromCat.topImage.image)
+
+    
+        print("label frame: ")
+        println(navBarVCFromCat.topLabel.frame)
+        
+        print("image frame: ")
+        println(navBarVCFromCat.topImage.frame)
+        
+        var width = self.view.frame.size.width
+        
+        navBarVCFromCat.view.addSubview(navBarVCFromCat.topLabel!)
+        navBarVCFromCat.view.addSubview(navBarVCFromCat.topImage!)
+
+        
+        //navBarVCFromCat.topLabel.backgroundColor = UIColor.yellowColor()
+        
+        var topLogoContainerView : UIView = UIView(frame: CGRectMake(leftBarButtonWidth, 0, self.navigationController!.navigationBar.frame.size.width - leftBarButtonWidth, self.navigationController!.navigationBar.frame.size.height))
+        
+        print("toplogocontainerview: ")
+        println(topLogoContainerView)
+
+        
+        navBarVCFromCat.view.frame = CGRectMake(spaceEachSide - topLogoContainerView.frame.origin.x , 0, contentW, self.navigationController!.navigationBar.frame.size.height)
+        
+        //navBarVCFromCat.view.backgroundColor = UIColor.blueColor()
+        topLogoContainerView.addSubview(navBarVCFromCat.view)
+        
+        navBarVCFromCat.view.frame = CGRectMake(spaceEachSide - topLogoContainerView.frame.origin.x , 0, contentW, self.navigationController!.navigationBar.frame.size.height)
+
+        //topLogoContainerView.backgroundColor = UIColor.redColor()
+        
         mainNavBar.titleView = topLogoContainerView
+        //mainNavBar.titleView?.backgroundColor = UIColor.greenColor()
+        Singleton.sharedInstance.headlineView = topLogoContainerView
+        
+        //self.view = topLogoContainerView
+        
+        print("navbar title view: ")
+        println(navBarVCFromCat.view)
+
+        
+        print("title view: ")
+        println(mainNavBar.titleView)
+
+//        var testView = UIView()
+//        var testLabel = UILabel(frame: CGRectMake(0, 0, 120, 44))
+//        testLabel.text = "YOOOO"
+//        testView.addSubview(testLabel)
+//        
+//        
+//        mainNavBar.titleView = testView
+//        mainNavBar.title = "Harshita is Great"
+        
+        
+//        print(currentCategory.topBanner!.description)
+//        var topLogo : UIImage = currentCategory.topBanner!
+//        var topLogoView : UIImageView = UIImageView(image: topLogo)
+//
+//        var logoSizeLength :CGFloat = topLogo.size.width//(navigationController!.navigationBar.frame.size.width - 30) * 0.7
+//        var logoSizeHeight : CGFloat = topLogo.size.height//logoSizeLength * (83/462)
+//        
+//        var logoSize = CGSizeMake(logoSizeLength, logoSizeHeight)
+//        
+//        print(logoSize)
+//        print(topLogo)
+//        
+//        var resizedImage = topLogo//parsing.RBResizeImage(topLogo, targetSize: logoSize)
+//        
+//        var yPos = floor(self.navigationController!.navigationBar.frame.size.height - resizedImage.size.height) / 2
+//        
+//        var xPos = floor(self.navigationController!.navigationBar.frame.size.width - resizedImage.size.width) / 2
+//        
+//        topLogoView.frame = CGRectMake(xPos, yPos, resizedImage.size.width, resizedImage.size.height)
+//        
+//        println(topLogoView.frame)
+//        
+//        var width = 0.9 * self.view.frame.size.width
+//        
+//        var topLogoContainerView : UIView = UIView(frame: CGRectMake(0, 0, width, self.navigationController!.navigationBar.frame.size.height))
+//        topLogoContainerView.addSubview(topLogoView)
+//        mainNavBar.titleView = topLogoContainerView
+   
+    
+        println("finished adding top navigation bar")
     }
     
     

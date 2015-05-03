@@ -70,7 +70,10 @@ class Singleton {
     
     var posts : [NSMutableDictionary] = [NSMutableDictionary]()
     var currIndex = Int()
+    var mainViewControllerReference = MainViewController()
     var masterViewControllerReference = MasterViewController()
+    var headlineView = UIView()
+    
     var universalCSS : NSString = "p { font-family: \"Segoe UI\"; src: url(\"Regular.eot?\") format(\"eot\"),url(\"Regular.woff\") format(\"woff\"),url(\"Regular.ttf\") format(\"truetype\");} i {    font-family: \"Segoe UI\";    src: url(\"Italic.eot?\") format(\"eot\"),    url(\"Italic.woff\") format(\"woff\"),    url(\"Italic.ttf\") format(\"truetype\");}b {    font-family: \"Segoe UI\";    src: url(\"Semibold.eot?\") format(\"eot\"),    url(\"Semibold.woff\") format(\"woff\"),    url(\"Seimibold.ttf\") format(\"truetype\");    }-webkit-border-radius: 0 0 0 0;border-radius: 0 0 0 0;p {padding-top: 25px;    padding-right: 50px;padding-bottom: 25px;    padding-left: 50px;}body {    margin: 3;    padding: 0;}P { text-align: justify }img {    max-width: 100%;    height: auto;}"
 
 }
