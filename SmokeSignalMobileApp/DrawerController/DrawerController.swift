@@ -466,7 +466,7 @@ public class DrawerController: UIViewController, UIGestureRecognizerDelegate {
     :returns: The newly-initialized drawer container view controller.
     */
     public init(centerViewController: UIViewController, leftDrawerViewController: UIViewController?, rightDrawerViewController: UIViewController?) {
-        super.init(nibName:nil, bundle:nil)
+        super.init(nibName: nil, bundle: nil)
         
         self.centerViewController = centerViewController
         self.leftDrawerViewController = leftDrawerViewController
@@ -1400,20 +1400,16 @@ public class DrawerController: UIViewController, UIGestureRecognizerDelegate {
         //If a rotation begins, we are going to cancel the current gesture and reset transform and anchor points so everything works correctly
         var gestureInProgress = false
         
-        
-        if (self.view.gestureRecognizers != nil) {
-            for gesture in self.view.gestureRecognizers as! [UIGestureRecognizer] {
-                if gesture.state == .Changed {
-                    gesture.enabled = false
-                    gesture.enabled = true
-                    gestureInProgress = true
-                }
-                
-                if gestureInProgress {
-                    self.resetDrawerVisualStateForDrawerSide(self.openSide)
-                }
+        for gesture in self.view.gestureRecognizers as! [UIGestureRecognizer] {
+            if gesture.state == .Changed {
+                gesture.enabled = false
+                gesture.enabled = true
+                gestureInProgress = true
             }
-
+            
+            if gestureInProgress {
+                self.resetDrawerVisualStateForDrawerSide(self.openSide)
+            }
         }
         
         coordinator.animateAlongsideTransition({ (context) -> Void in

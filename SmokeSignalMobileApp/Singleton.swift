@@ -24,15 +24,15 @@ class Singleton {
   }
     
     struct catColorHexes {
-        static var regular = "9acd9b"
-        static var ae = "f6c545"
-        static var centerspread = "33c0ba"
-        static var feautre = "6a0012"
-        static var news = "cc1616"
-        static var onlineExclusives = "fb743e"
-        static var opinion = "9b18df"
-        static var graphics = "049ce7"
-        static var sports = "570ef4"
+        static var regular = "729977"
+        static var ae = "9acd9b"
+        static var centerspread = "9acd9b"
+        static var feautre = "9acd9b"
+        static var news = "9acd9b"
+        static var onlineExclusives = "9acd9b"
+        static var opinion = "9acd9b"
+        static var graphics = "9acd9b"
+        static var sports = "9acd9b"
     }
     
     struct catSlug {
