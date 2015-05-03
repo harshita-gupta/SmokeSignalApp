@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0FB0201AF5CCF000E9D430 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0FB01F1AF5CCF000E9D430 /* SWRevealViewController.m */; };
 		EE13F69E1AEE0C6600FE93FE /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F67E1AEE0C6600FE93FE /* MKAnnotationView+WebCache.m */; };
 		EE13F69F1AEE0C6600FE93FE /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F6801AEE0C6600FE93FE /* NSData+ImageContentType.m */; };
 		EE13F6A01AEE0C6600FE93FE /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EE13F6821AEE0C6600FE93FE /* SDImageCache.m */; };
@@ -155,6 +156,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE0FB01E1AF5CCF000E9D430 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		EE0FB01F1AF5CCF000E9D430 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EE13F67D1AEE0C6600FE93FE /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKAnnotationView+WebCache.h"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		EE13F67E1AEE0C6600FE93FE /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKAnnotationView+WebCache.m"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		EE13F67F1AEE0C6600FE93FE /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../00 Open Source/SDWebImage-3.7.2/SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -247,7 +250,6 @@
 		EE21C3EE1A86D650003EF515 /* SEGUISBI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEGUISBI.TTF; sourceTree = "<group>"; };
 		EE21C3EF1A86D650003EF515 /* SEGUISLI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEGUISLI.TTF; sourceTree = "<group>"; };
 		EE21C3F01A86E549003EF515 /* SmokeSignalMobileApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmokeSignalMobileApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		EE21C3F11A86E54A003EF515 /* SmokeSignalMobileAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmokeSignalMobileAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE21C3F21A86E54B003EF515 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		EE21C3F31A86E54B003EF515 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		EE21C3F61A86FA21003EF515 /* MyFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFooter.swift; sourceTree = "<group>"; };
@@ -338,6 +340,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE0FB01D1AF5CCF000E9D430 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE0FB01E1AF5CCF000E9D430 /* SWRevealViewController.h */,
+				EE0FB01F1AF5CCF000E9D430 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		EE13F67C1AEE0C5700FE93FE /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +448,7 @@
 		EE206BD61A90B300007A3103 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				EE0FB01D1AF5CCF000E9D430 /* SWRevealViewController */,
 				EE13F67C1AEE0C5700FE93FE /* SDWebImage */,
 				EE206BD71A90B319007A3103 /* UIColorExtension.swift */,
 				EE21C3F21A86E54B003EF515 /* NSString+HTML.h */,
@@ -484,7 +496,6 @@
 				EE4CB3371A7566B600013975 /* parsing.swift */,
 				EE4CB3391A7572CB00013975 /* Singleton.swift */,
 				EE21C3F01A86E549003EF515 /* SmokeSignalMobileApp-Bridging-Header.h */,
-				EE21C3F11A86E54A003EF515 /* SmokeSignalMobileAppTests-Bridging-Header.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -922,6 +933,7 @@
 				EE1C6EE71A9038EF0068C8DA /* DrawerController.swift in Sources */,
 				EE99AAAF1A0F5432001B9AEF /* DetailViewController.swift in Sources */,
 				EE1C6F0A1A9052140068C8DA /* SideMenuViewController.swift in Sources */,
+				EE0FB0201AF5CCF000E9D430 /* SWRevealViewController.m in Sources */,
 				EE13F6A51AEE0C6600FE93FE /* SDWebImageManager.m in Sources */,
 				EE13F6A21AEE0C6600FE93FE /* SDWebImageDecoder.m in Sources */,
 				EE99AAAD1A0F5432001B9AEF /* MasterViewController.swift in Sources */,
