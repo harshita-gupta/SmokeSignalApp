@@ -15,7 +15,7 @@ class SideMenuViewController: UITableViewController {
         ((self.parentViewController) as! MainViewController).toggleLeft()
         
         // setting variable for center view at start of tap ---- idk if this will work but try
-        var currentCenterController: UIViewController = (((self.parentViewController as! MainViewController).centerViewController) as! UINavigationController).viewControllers[0] as! UIViewController
+        var currentCenterController: UIViewController = (((self.parentViewController as! MainViewController).frontViewController) as! UINavigationController).viewControllers[0] as! UIViewController
         print(currentCenterController)
         
         // if on something other than about and about is selected, will switch to about
@@ -32,7 +32,7 @@ class SideMenuViewController: UITableViewController {
         //if on about and another section is selected
         if (indexPath.row < 9 && (currentCenterController is AboutUsViewController) ) {
             println("yoyoyo")
-            ((self.parentViewController as! MainViewController).centerViewController as! UINavigationController).viewControllers[0] = Singleton.sharedInstance.masterViewControllerReference
+            ((self.parentViewController as! MainViewController).frontViewController as! UINavigationController).viewControllers[0] = Singleton.sharedInstance.masterViewControllerReference
             Singleton.sharedInstance.posts = [NSMutableDictionary]()
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 Singleton.sharedInstance.masterViewControllerReference.tableView.reloadData()
