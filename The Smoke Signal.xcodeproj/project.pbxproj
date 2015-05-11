@@ -80,6 +80,8 @@
 		EE99AAB21A0F5432001B9AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB01A0F5432001B9AEF /* Main.storyboard */; };
 		EE99AAB41A0F5432001B9AEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB31A0F5432001B9AEF /* Images.xcassets */; };
 		EE99AAB71A0F5432001B9AEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB51A0F5432001B9AEF /* LaunchScreen.xib */; };
+		EEA404291B009A7800F22A7E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA404271B009A7800F22A7E /* Fabric.framework */; };
+		EEA4042A1B009A7800F22A7E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA404281B009A7800F22A7E /* Crashlytics.framework */; };
 		EEF50DF01A90F1D300E733BE /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */; };
 		EEF50DF41A911F1E00E733BE /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DF31A911F1E00E733BE /* PhotosViewController.swift */; };
 		EEFC5C341AF5D98700614494 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5C301AF5D98700614494 /* AnimatedMenuButton.swift */; };
@@ -224,6 +226,8 @@
 		EE99AAB61A0F5432001B9AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EE99AAC11A0F5432001B9AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE99AAC21A0F5432001B9AEF /* SmokeSignalMobileAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeSignalMobileAppTests.swift; sourceTree = "<group>"; };
+		EEA404271B009A7800F22A7E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		EEA404281B009A7800F22A7E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		EEF50DF31A911F1E00E733BE /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		EEFC5C301AF5D98700614494 /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMenuButton.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE13F6AF1AEE0C8600FE93FE /* ImageIO.framework in Frameworks */,
+				EEA4042A1B009A7800F22A7E /* Crashlytics.framework in Frameworks */,
+				EEA404291B009A7800F22A7E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +550,8 @@
 		EE99AA9C1A0F5432001B9AEF = {
 			isa = PBXGroup;
 			children = (
+				EEA404271B009A7800F22A7E /* Fabric.framework */,
+				EEA404281B009A7800F22A7E /* Crashlytics.framework */,
 				EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */,
 				EE99AAA71A0F5432001B9AEF /* SmokeSignalMobileApp */,
 				EE99AABF1A0F5432001B9AEF /* SmokeSignalMobileAppTests */,
@@ -623,6 +631,7 @@
 				EE99AAA11A0F5432001B9AEF /* Sources */,
 				EE99AAA21A0F5432001B9AEF /* Frameworks */,
 				EE99AAA31A0F5432001B9AEF /* Resources */,
+				EEA404261B0098AD00F22A7E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -755,6 +764,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEA404261B0098AD00F22A7E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run c32363d0de48ca62cbd5aa6d345a24a09c734ac1 07b06bff018fd88bc12e0d186d455777c795f634f0e8b64a86902667eec8e4a6";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE99AAA11A0F5432001B9AEF /* Sources */ = {
@@ -906,6 +931,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SmokeSignalMobileApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -924,6 +953,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SmokeSignalMobileApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";

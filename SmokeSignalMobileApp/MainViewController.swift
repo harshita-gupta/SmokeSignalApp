@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Fabric
+import Crashlytics
 
 class MainViewController: SWRevealViewController {
     

@@ -2,21 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SEGOEUI.TTF</string>
-		<string>SEGOEUIB.TTF</string>
-		<string>SEGOEUII.TTF</string>
-		<string>SEGOEUIL.TTF</string>
-		<string>SEGOEUISL.TTF</string>
-		<string>SEGOEUIZ.TTF</string>
-		<string>SEGOEUIBL.TTF</string>
-		<string>SEGOEUIBLI.TTF</string>
-		<string>SEGOEUILI.TTF</string>
-		<string>SEGOEUISB.TTF</string>
-		<string>SEGOEUISBI.TTF</string>
-		<string>SEGOEUISLI.TTF</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -35,8 +20,37 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>c32363d0de48ca62cbd5aa6d345a24a09c734ac1</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SEGOEUI.TTF</string>
+		<string>SEGOEUIB.TTF</string>
+		<string>SEGOEUII.TTF</string>
+		<string>SEGOEUIL.TTF</string>
+		<string>SEGOEUISL.TTF</string>
+		<string>SEGOEUIZ.TTF</string>
+		<string>SEGOEUIBL.TTF</string>
+		<string>SEGOEUIBLI.TTF</string>
+		<string>SEGOEUILI.TTF</string>
+		<string>SEGOEUISB.TTF</string>
+		<string>SEGOEUISBI.TTF</string>
+		<string>SEGOEUISLI.TTF</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

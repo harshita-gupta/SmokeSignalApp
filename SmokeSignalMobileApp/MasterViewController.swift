@@ -8,6 +8,8 @@
 
 import UIKit
 import Foundation
+import Crashlytics
+
 class MasterViewController: UITableViewController, UIScrollViewDelegate{
     
     @IBOutlet var activityBar: UIProgressView!
@@ -29,6 +31,7 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         super.viewDidLoad()
         Singleton.sharedInstance.masterViewControllerReference = self;
         // Do any additional setup after loading the view, typically from a nib.
+        
         
         setBarButton()
         
