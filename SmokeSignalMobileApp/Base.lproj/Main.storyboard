@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NTu-pb-qfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NTu-pb-qfh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -945,7 +945,7 @@ The </string>
                             </connections>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="article" rowHeight="120" id="m0d-ak-lc9" customClass="ArticleUITableCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="article" rowHeight="110" id="m0d-ak-lc9" customClass="ArticleUITableCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" tag="9" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
@@ -953,7 +953,7 @@ The </string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtm-gn-y2e">
-                                            <rect key="frame" x="13" y="24" width="483" height="17"/>
+                                            <rect key="frame" x="13" y="18" width="493" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="yw5-j1-1Rg"/>
                                             </constraints>
@@ -962,13 +962,13 @@ The </string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ULv-Zu-pQu">
-                                            <rect key="frame" x="499" y="13" width="98" height="98"/>
+                                            <rect key="frame" x="509" y="13" width="88" height="88"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="ULv-Zu-pQu" secondAttribute="height" multiplier="1:1" id="m6E-Jq-II7"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthMonth xy, 1294" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-vf-30M">
-                                            <rect key="frame" x="13" y="43" width="100" height="12"/>
+                                            <rect key="frame" x="13" y="37" width="100" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="Wxz-CP-BgY"/>
                                                 <constraint firstAttribute="width" constant="100" id="p5u-iE-WbP"/>
@@ -984,7 +984,7 @@ The </string>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R30-7T-C8D">
-                                            <rect key="frame" x="115" y="43" width="381" height="12"/>
+                                            <rect key="frame" x="115" y="37" width="391" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="hNt-qd-9gc"/>
                                             </constraints>
@@ -993,16 +993,21 @@ The </string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview Text" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-TF-56D">
-                                            <rect key="frame" x="13" y="57" width="483" height="52"/>
+                                            <rect key="frame" x="13" y="51" width="493" height="58"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="52" id="EUu-K1-z0z"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="EUu-K1-z0z"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dJ-sB-hP6">
-                                            <rect key="frame" x="13" y="10" width="483" height="12"/>
+                                            <rect key="frame" x="13" y="4" width="493" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="oei-Ac-sbA"/>
                                             </constraints>
@@ -1018,7 +1023,7 @@ The </string>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="trailing" secondItem="d3P-M7-ByW" secondAttribute="trailingMargin" constant="5" id="IWj-vn-FEy"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="0dJ-sB-hP6" secondAttribute="trailing" id="KIg-sf-uR0"/>
                                         <constraint firstItem="V0C-vf-30M" firstAttribute="top" secondItem="vtm-gn-y2e" secondAttribute="bottom" constant="2" id="NPf-Vi-TND"/>
-                                        <constraint firstItem="0dJ-sB-hP6" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="2" id="SLa-Iu-3SN"/>
+                                        <constraint firstItem="0dJ-sB-hP6" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="-4" id="SLa-Iu-3SN"/>
                                         <constraint firstItem="vtm-gn-y2e" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="TG2-Mr-B2Q"/>
                                         <constraint firstItem="jkQ-TF-56D" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="UlR-P5-dvA"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="5" id="Wz3-g4-JFx"/>
@@ -1028,6 +1033,7 @@ The </string>
                                         <constraint firstItem="0dJ-sB-hP6" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="cWj-bg-3U4"/>
                                         <constraint firstItem="R30-7T-C8D" firstAttribute="leading" secondItem="V0C-vf-30M" secondAttribute="trailing" constant="2" id="eT0-Sb-vUg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="vtm-gn-y2e" secondAttribute="trailing" constant="5" id="fgO-9a-iKS"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jkQ-TF-56D" secondAttribute="bottom" constant="-8" id="iYp-cP-8RO"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="vtm-gn-y2e" secondAttribute="trailing" constant="3" id="jUh-Z4-xRt"/>
                                         <constraint firstItem="jkQ-TF-56D" firstAttribute="bottom" secondItem="d3P-M7-ByW" secondAttribute="bottomMargin" constant="-8" id="kJt-PU-fUd"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="0dJ-sB-hP6" secondAttribute="trailing" constant="3" id="lcA-25-tdA"/>
@@ -1053,7 +1059,7 @@ The </string>
                                     <segue destination="Ah7-4n-0Wa" kind="show" identifier="showDetail" id="jUr-3t-vfg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mostRecentPreview" rowHeight="260" id="ZtY-Ev-a3H" customClass="ArticleUITableCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mostRecentPreview" rowHeight="220" id="ZtY-Ev-a3H" customClass="ArticleUITableCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="9" contentMode="center" tableViewCell="ZtY-Ev-a3H" id="V7Y-Yv-TEv">
@@ -1061,14 +1067,15 @@ The </string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jhm-Qo-IeF">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="426" height="133"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Jhm-Qo-IeF" secondAttribute="height" multiplier="800:250" id="8tF-eL-c8X"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-ly-tbU">
-                                            <rect key="frame" x="13" y="212" width="574" height="22"/>
+                                            <rect key="frame" x="13" y="151" width="574" height="24"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="SzE-ZX-O3G"/>
                                                 <constraint firstAttribute="height" constant="20" id="hm2-0y-XZ2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="20"/>
@@ -1081,18 +1088,18 @@ The </string>
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Staff Writer Room for Long Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkv-uk-nNM">
-                                            <rect key="frame" x="116" y="237" width="476" height="12"/>
+                                            <rect key="frame" x="116" y="178" width="476" height="15"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="Ded-Q8-cKu"/>
+                                                <constraint firstAttribute="height" constant="15" id="Ded-Q8-cKu"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthMonth xy, 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5n-70-zeb">
-                                            <rect key="frame" x="13" y="237" width="100" height="12"/>
+                                            <rect key="frame" x="13" y="178" width="100" height="15"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="oZY-FV-7Lc"/>
+                                                <constraint firstAttribute="height" constant="15" id="oZY-FV-7Lc"/>
                                                 <constraint firstAttribute="width" constant="100" id="s4n-cg-OQS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
@@ -1100,7 +1107,7 @@ The </string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-GU-iKY">
-                                            <rect key="frame" x="13" y="198" width="50" height="12"/>
+                                            <rect key="frame" x="13" y="137" width="50" height="12"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="12" id="ah6-uB-iza"/>
                                                 <constraint firstAttribute="height" constant="14" id="n0Z-sW-kUM"/>
@@ -1114,8 +1121,8 @@ The </string>
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="text preview" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-V5-fJB">
-                                            <rect key="frame" x="13" y="251" width="574" height="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="text preview" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-V5-fJB">
+                                            <rect key="frame" x="13" y="195" width="574" height="16"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1128,7 +1135,7 @@ The </string>
                                         <constraint firstItem="Mvh-GU-iKY" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="5" id="Fyt-TO-x48"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Gkv-uk-nNM" secondAttribute="trailing" id="GT7-1s-EiR"/>
                                         <constraint firstItem="USQ-V5-fJB" firstAttribute="top" secondItem="Gkv-uk-nNM" secondAttribute="bottom" constant="2" id="HoN-aR-pYM"/>
-                                        <constraint firstItem="Mvh-GU-iKY" firstAttribute="top" secondItem="Jhm-Qo-IeF" secondAttribute="bottom" constant="10" id="NQs-qj-D6l"/>
+                                        <constraint firstItem="Mvh-GU-iKY" firstAttribute="top" secondItem="Jhm-Qo-IeF" secondAttribute="bottom" constant="4" id="NQs-qj-D6l"/>
                                         <constraint firstItem="Jhm-Qo-IeF" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="-8" id="TQX-lA-1vE"/>
                                         <constraint firstItem="Gkv-uk-nNM" firstAttribute="top" secondItem="ldV-ly-tbU" secondAttribute="bottom" constant="3" id="VXB-oi-nh6"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="USQ-V5-fJB" secondAttribute="bottom" id="Vme-5Q-yf9"/>

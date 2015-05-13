@@ -81,7 +81,7 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         mainNavBar.titleView = navBarVCFromCat.view
         
         
-        var leftBarButtonWidth = mainNavBar!.leftBarButtonItem!.customView!.frame.width  + 10.0
+        var leftBarButtonWidth = mainNavBar!.leftBarButtonItem!.customView!.frame.width // + 10.0
         print("leftbarbutton width: ")
         println(mainNavBar!.leftBarButtonItem?.customView?.frame.width)
 
@@ -205,14 +205,14 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         return Singleton.sharedInstance.posts.count
     }
 
-    //cell heights
+   // cell heights
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            return 250
+            return 220
         }
         
         else {
-            return 120
+            return 110
         }
     }
     
@@ -223,6 +223,7 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         
         if (indexPath.row == 0) {
             cell = tableView.dequeueReusableCellWithIdentifier("mostRecentPreview", forIndexPath: indexPath) as! UITableViewCell
+            (cell.viewWithTag(1) as! UILabel!).sizeToFit()
         }
         
         else {
