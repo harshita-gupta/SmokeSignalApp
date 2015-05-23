@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-hC-Czb">
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-hC-Czb">
                     <rect key="frame" x="188" y="280" width="65" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="2Qz-UL-Nm2"/>

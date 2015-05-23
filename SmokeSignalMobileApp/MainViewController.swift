@@ -33,7 +33,6 @@ class MainViewController: SWRevealViewController {
         print("first member of NavigationController")
         println((self.frontViewController as! UINavigationController).viewControllers[0])
 
-        panGestureRecognizer()
         setCenterControllerAndBarButton("centerViewList")
 
     }

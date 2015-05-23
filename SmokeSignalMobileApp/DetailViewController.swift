@@ -82,15 +82,29 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
     
 }
     
+    func moveBack() {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        println("latermethod")
+        println(self.navigationItem.leftBarButtonItem)
+    }
+    
     func configureView() {
         // Update the user interface for the detail item.
         self.view.addSubview(webView)
         var currentArticle = (self.detailItem)
             if let detail: Article = self.detailItem {
                 if var label = self.centerBar {
-                    label.title = ((self.currentArticle.headline!).kv_decodeHTMLCharacterEntities())
+                    label.title = ""//((self.currentArticle.headline!).kv_decodeHTMLCharacterEntities())
                 }
-        }
+    }
+        
+
+        //self.centerBar.leftBarButtonItem = nil
+        println("view being configured")
+        println(self.navigationItem.leftBarButtonItem)//leftBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Done, target: self, action: "moveBack")
         
         self.categoryLabel.text = currentArticle!.categoriesString!
         self.headlineLabel.text = currentArticle!.headline!

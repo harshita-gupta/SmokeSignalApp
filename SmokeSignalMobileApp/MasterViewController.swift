@@ -28,6 +28,9 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         println("master view loaded")
+
+        ((self.parentViewController)?.parentViewController as! MainViewController).panGestureRecognizer()
+
         super.viewDidLoad()
         Singleton.sharedInstance.masterViewControllerReference = self;
         // Do any additional setup after loading the view, typically from a nib.
