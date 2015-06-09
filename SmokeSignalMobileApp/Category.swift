@@ -14,37 +14,11 @@ class Category : NSObject {
     var slug: String?
     var catName : String?
     var highlightColor: UIColor?
-//    var navBarFinal: NavBarViewController?
     var width : CGFloat?//space title takes for navbar
     
     override init() {
         
     }
-    
-//    func createNavBarView() {
-//        
-//        let navBarViewController = (NSBundle.mainBundle().loadNibNamed("NavBars", owner: self, options: nil)).last as! NavBarViewController
-//        
-//        
-//            navBarViewController.topLabel.text = self.catName!
-//            var tempframe = navBarViewController.topLabel.frame
-//            tempframe.size.width = self.width!
-//            navBarViewController.topLabel.frame = tempframe
-//        
-//        if self.slug! == "" {
-//            
-//        }
-//        else {
-//            navBarViewController.topImage.translatesAutoresizingMaskIntoConstraints = true
-//            var imFrame = navBarViewController.topImage.frame
-//            imFrame.size.width = 0
-//            imFrame.size.height = 0
-//            navBarViewController.topImage.frame = imFrame
-//        }
-//        
-//        navBarFinal = navBarViewController
-//        
-//    }
     
     init (slug_name: String) {
         super.init()
@@ -96,9 +70,7 @@ class Category : NSObject {
             width = 165.0
 
         }
-        
-       // self.createNavBarView()
-        
+                
     }
     
 }

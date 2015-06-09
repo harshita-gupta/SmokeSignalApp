@@ -92,7 +92,7 @@ class MasterViewController: UITableViewController{
             imPresent = false
         }
         
-        let titleView = navBarTitleView(frame: CGRectZero, title: currentCategory.catName!,imagePresent: imPresent)
+        let titleView = NavBarTitleView(frame: CGRectZero, title: currentCategory.catName!,imagePresent: imPresent)
 
         let titleSize = titleView.systemLayoutSizeFittingSize(CGSizeZero)
         
@@ -100,112 +100,6 @@ class MasterViewController: UITableViewController{
         
         mainNavBar.titleView = titleView
         
-        //mainNavBar.titleView?.backgroundColor = UIColor.redColor()
-        
-                            //        let navBarVCFromCat = currentCategory.navBarFinal!
-                            //        
-                            //        mainNavBar.titleView = navBarVCFromCat.view
-                            //        
-                            //
-                            //        let leftBarButtonWidth = mainNavBar!.leftBarButtonItem!.customView!.frame.width // + 10.0
-                            //        print("leftbarbutton width: ", appendNewline: false)
-                            //        print(mainNavBar!.leftBarButtonItem?.customView?.frame.width, appendNewline: true)
-                            //
-                            //        print("titleView frame: ", appendNewline: false)
-                            //        print(mainNavBar.titleView?.frame, appendNewline: true)
-                            //        
-                            //        
-                            //        let totalAvailW = navigationController!.navigationBar.frame.size.width
-                            //        
-                            //        print("available width: ", appendNewline: false)
-                            //        print(totalAvailW, appendNewline: true)
-                            //        
-                            //        
-                            //        let contentW = navBarVCFromCat.topLabel.frame.size.width + navBarVCFromCat.topImage.frame.size.width + 3
-                            //        
-                            //        
-                            //        print("content width: ", appendNewline: false)
-                            //        print(contentW, appendNewline: true)
-                            //
-                            //        
-                            //        let spaceEachSide = (totalAvailW - contentW) / 2
-                            //        
-                            //        print("space on either side: ", appendNewline: false)
-                            //        print(spaceEachSide, appendNewline: true)
-                            //
-                            //
-                            //        navBarVCFromCat.topLabel.translatesAutoresizingMaskIntoConstraints = true
-                            //        navBarVCFromCat.topImage.translatesAutoresizingMaskIntoConstraints = true
-                            //
-                            //        
-                            //        var labelFrame = navBarVCFromCat.topLabel.frame
-                            //        
-                            //        labelFrame.origin.x = 0.0
-                            //        
-                            //        labelFrame.origin.y = floor(self.navigationController!.navigationBar.frame.size.height - labelFrame.size.height) / 2.0
-                            //        
-                            //        var imageFrame = navBarVCFromCat.topImage.frame
-                            //        
-                            //        imageFrame.origin.x = labelFrame.origin.x + labelFrame.width + 3.0
-                            //        
-                            //        imageFrame.origin.y = floor(self.navigationController!.navigationBar.frame.size.height - imageFrame.size.height) / 2
-                            //
-                            //        
-                            //        navBarVCFromCat.topLabel.frame = labelFrame
-                            //        navBarVCFromCat.topImage.frame = imageFrame
-                            //
-                            //        print("label value: ", appendNewline: false)
-                            //        print(navBarVCFromCat.topLabel.text, appendNewline: true)
-                            //
-                            //        print("image value: ", appendNewline: false)
-                            //        print(navBarVCFromCat.topImage.image, appendNewline: true)
-                            //
-                            //    
-                            //        print("label frame: ", appendNewline: false)
-                            //        print(navBarVCFromCat.topLabel.frame, appendNewline: true)
-                            //        
-                            //        print("image frame: ", appendNewline: false)
-                            //        print(navBarVCFromCat.topImage.frame, appendNewline: true)
-                            //        
-                            //        _ = self.view.frame.size.width
-                            //        
-                            //        navBarVCFromCat.view.addSubview(navBarVCFromCat.topLabel!)
-                            //        
-                            //        if (currentCategory.slug == "") {
-                            //            navBarVCFromCat.view.addSubview(navBarVCFromCat.topImage!)
-                            //        }
-                            //
-                            //        
-                            //        let containerFrame = labelFrame.rectByUnion(imageFrame)
-                            //        let topLogoContainerView : UIView = UIView(frame: containerFrame)//CGRectMake(leftBarButtonWidth, 0, self.navigationController!.navigationBar.frame.size.width - leftBarButtonWidth, self.navigationController!.navigationBar.frame.size.height))
-                            //        
-                            //        print("toplogocontainerview: ", appendNewline: false)
-                            //        print(topLogoContainerView, appendNewline: true)
-                            //
-                            //        
-                            //        navBarVCFromCat.view.frame = CGRectMake(spaceEachSide - topLogoContainerView.frame.origin.x , 0, contentW, self.navigationController!.navigationBar.frame.size.height)
-                            //        
-                            //        topLogoContainerView.addSubview(navBarVCFromCat.view)
-                            //        
-                            //        navBarVCFromCat.view.frame = CGRectMake(spaceEachSide - topLogoContainerView.frame.origin.x , 0, contentW, self.navigationController!.navigationBar.frame.size.height)
-                            //
-                            //        
-                            //        mainNavBar.titleView = topLogoContainerView
-                            //        Singleton.sharedInstance.headlineView = topLogoContainerView
-                            //        
-                            //        
-                            //        print("navbar title view: ", appendNewline: false)
-                            //        print(navBarVCFromCat.view, appendNewline: true)
-                            //
-                            //
-                            //        mainNavBar.titleView?.backgroundColor = UIColor.redColor()
-                            //        
-                            //        
-                            //        print("title view: ", appendNewline: false)
-                            //        print(mainNavBar.titleView, appendNewline: true)
-                            //
-                            //
-                            //        print("finished adding top navigation bar", appendNewline: true)
     }
     
     

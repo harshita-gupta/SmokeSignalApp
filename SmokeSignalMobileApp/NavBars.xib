@@ -11,7 +11,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="navBarTitleView" customModule="The_Smoke_Signal" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavBarTitleView" customModule="The_Smoke_Signal" customModuleProvider="target">
             <connections>
                 <outlet property="image" destination="RiR-hC-Czb" id="rBp-BW-Bd6"/>
                 <outlet property="label" destination="4uc-nk-Vep" id="aZ6-0N-vtx"/>

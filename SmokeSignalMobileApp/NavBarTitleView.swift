@@ -1,5 +1,5 @@
 //
-//  navBarTitleView.swift
+//  NavBarTitleView.swift
 //  The Smoke Signal
 //
 //  Created by Harshita Gupta on 6/9/15.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class navBarTitleView : UIView {
+class NavBarTitleView : UIView {
     
     @IBOutlet var label: UILabel!
     @IBOutlet var image: UIImageView!
@@ -27,7 +27,6 @@ class navBarTitleView : UIView {
         
         if (imagePresent) {
             self.addSubview(image)
-//            self.translatesAutoresizingMaskIntoConstraints = false
             self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-0-[label]-0-[image]-0-|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: bindings))
             self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[image]-0-|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: bindings))
         }
