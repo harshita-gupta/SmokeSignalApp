@@ -70,9 +70,9 @@ class Article : NSObject {
         
         if (imageExists == true) {
 
-            var thumbnailsLib = articleJSONDictionary!["thumbnail_images"] as! NSDictionary!
+            let thumbnailsLib = articleJSONDictionary!["thumbnail_images"] as! NSDictionary!
 
-            var fullsizeImageDic = thumbnailsLib["full"] as! NSDictionary!
+            let fullsizeImageDic = thumbnailsLib["full"] as! NSDictionary!
 
             self.fullImageURL = NSURL(string: (fullsizeImageDic["url"] as! NSString) as String ) as NSURL!
 
@@ -98,31 +98,31 @@ class Article : NSObject {
     }
     
     func setPostedDateString() {
-        var dateStringFromJSON : String = articleJSONDictionary!["date"] as! String
-        var dateFormatter = NSDateFormatter()
+        let dateStringFromJSON : String = articleJSONDictionary!["date"] as! String
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-M-d H:m:s"
         self.postedDate = ((dateFormatter.dateFromString(dateStringFromJSON))) as NSDate!
         
-        var dateFormatter2 = NSDateFormatter()
+        let dateFormatter2 = NSDateFormatter()
         dateFormatter2.dateFormat = "MMMM d, yyyy"
         
         self.postedDateText = dateFormatter2.stringFromDate(self.postedDate!)
     }
     
     func setUpdatedDateString() {
-        var dateStringFromJSON : String = articleJSONDictionary!["modified"] as! String
-        var dateFormatter = NSDateFormatter()
+        let dateStringFromJSON : String = articleJSONDictionary!["modified"] as! String
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-M-d H:m:s"
         self.updatedDate = ((dateFormatter.dateFromString(dateStringFromJSON))) as NSDate!
         
-        var dateFormatter2 = NSDateFormatter()
+        let dateFormatter2 = NSDateFormatter()
         dateFormatter2.dateFormat = "MMMM d, yyyy"
         
         self.updatedDateText = dateFormatter2.stringFromDate(self.updatedDate!)
     }
     
     func setWriter() {
-        var writerNameString = parsing.extractWriter((articleJSONDictionary!["content"]) as! NSMutableString)
+        let writerNameString = parsing.extractWriter((articleJSONDictionary!["content"]) as! NSMutableString)
         if writerNameString == nil {
             self.writerString = ""
         }
@@ -141,10 +141,10 @@ class Article : NSObject {
     func setCategoriesString() {
         var categoryLabelString : String = ""
         if articleJSONDictionary!["categories"] != nil {
-            var categoriesArray : NSArray = articleJSONDictionary!["categories"] as! NSArray
+            let categoriesArray : NSArray = articleJSONDictionary!["categories"] as! NSArray
             if (categoriesArray.count != 0) {
                 for var index = 0; index < categoriesArray.count; ++index {
-                    var currTitle : String = (categoriesArray[index] as! NSDictionary)["title"] as! String
+                    let currTitle : String = (categoriesArray[index] as! NSDictionary)["title"] as! String
                     if index == 0 {
                         categoryLabelString += currTitle
                     }

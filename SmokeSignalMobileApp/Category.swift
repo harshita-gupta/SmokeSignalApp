@@ -23,7 +23,7 @@ class Category : NSObject {
     
     func createNavBarView() {
         
-        var navBarViewController = (NSBundle.mainBundle().loadNibNamed("NavBars", owner: self, options: nil)).last as! NavBarViewController
+        let navBarViewController = (NSBundle.mainBundle().loadNibNamed("NavBars", owner: self, options: nil)).last as! NavBarViewController
         
         
             navBarViewController.topLabel.text = self.catName!
@@ -35,7 +35,7 @@ class Category : NSObject {
             
         }
         else {
-            navBarViewController.topImage.setTranslatesAutoresizingMaskIntoConstraints(true)
+            navBarViewController.topImage.translatesAutoresizingMaskIntoConstraints = true
             var imFrame = navBarViewController.topImage.frame
             imFrame.size.width = 0
             imFrame.size.height = 0

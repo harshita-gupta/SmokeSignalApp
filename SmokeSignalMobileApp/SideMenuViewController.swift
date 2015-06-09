@@ -15,8 +15,8 @@ class SideMenuViewController: UITableViewController {
         (Singleton.sharedInstance.masterViewControllerReference).toggleLeft()
         
         // setting variable for center view at start of tap ---- idk if this will work but try
-        var currentCenterController: UIViewController = (((self.parentViewController as! MainViewController).frontViewController) as! UINavigationController).viewControllers[0] as! UIViewController
-        print(currentCenterController)
+        let currentCenterController: UIViewController = (((self.parentViewController as! MainViewController).frontViewController) as! UINavigationController).viewControllers[0] as UIViewController
+        print(currentCenterController, appendNewline: false)
         
         // if on something other than about and about is selected, will switch to about
         if (indexPath.row == 9 &&  ((currentCenterController is AboutUsViewController) == false )) {
@@ -31,12 +31,12 @@ class SideMenuViewController: UITableViewController {
         
         //if on about and another section is selected
         if (indexPath.row < 9 && (currentCenterController is AboutUsViewController) ) {
-            println("yoyoyo")
+            print("yoyoyo", appendNewline: true)
             ((self.parentViewController as! MainViewController).frontViewController as! UINavigationController).viewControllers[0] = Singleton.sharedInstance.masterViewControllerReference
             Singleton.sharedInstance.posts = [NSMutableDictionary]()
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 Singleton.sharedInstance.masterViewControllerReference.tableView.reloadData()
-                print(self.giveSlugForSideMenuIndex(indexPath.row))
+                print(self.giveSlugForSideMenuIndex(indexPath.row), appendNewline: false)
                 Singleton.sharedInstance.masterViewControllerReference.refreshWithNewCatSort(self.giveSlugForSideMenuIndex(indexPath.row))
             })
             return
@@ -49,7 +49,7 @@ class SideMenuViewController: UITableViewController {
                 Singleton.sharedInstance.masterViewControllerReference.tableView.reloadData()
             })
             
-            var catLabel : String = giveSlugForSideMenuIndex(indexPath.row)
+            let catLabel : String = giveSlugForSideMenuIndex(indexPath.row)
             
             if (indexPath.row < 9 ) {
                 Singleton.sharedInstance.masterViewControllerReference.refreshWithNewCatSort(catLabel)
@@ -124,7 +124,7 @@ class SideMenuViewController: UITableViewController {
         var tableFrame = self.tableView.frame
         tableFrame.origin = CGPointMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y + 20)
         self.tableView.frame = tableFrame
-        self.tableView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.tableView.translatesAutoresizingMaskIntoConstraints = true
 
         
     }

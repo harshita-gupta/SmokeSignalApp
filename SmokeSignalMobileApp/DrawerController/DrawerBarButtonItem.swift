@@ -36,7 +36,8 @@ public class DrawerBarButtonItem: UIBarButtonItem {
         self.menuButton = AnimatedMenuButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         self.menuButton.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
         
-        super.init(customView: self.menuButton)
+        super.init()
+        self.customView = self.menuButton//(customView: self.menuButton!)
     }
     
     public required convenience init(coder aDecoder: NSCoder) {

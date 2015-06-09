@@ -8,9 +8,9 @@
 
 import UIKit
 import Foundation
-import Crashlytics
+//import Crashlytics
 
-class MasterViewController: UITableViewController, UIScrollViewDelegate{
+class MasterViewController: UITableViewController{
     
     @IBOutlet var activityBar: UIProgressView!
     
@@ -27,7 +27,7 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     var currentlyLoading = false
     
     override func viewDidLoad() {
-        println("master view loaded")
+        print("master view loaded", appendNewline: true)
 
         ((self.parentViewController)?.parentViewController as! MainViewController).panGestureRecognizer()
 
@@ -37,7 +37,6 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         
         
         setBarButton()
-        
         self.automaticallyAdjustsScrollViewInsets = false
         currentCategory = Category(slug_name: "")
         addNavBarBanner()
@@ -53,17 +52,17 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     
     
     func setBarButton() {
-        println("starts setting leftBarButtonItem")
+        print("starts setting leftBarButtonItem", appendNewline: true)
         self.mainNavBar!.leftBarButtonItem = DrawerBarButtonItem(target: self, action: "toggleLeft")
-        print("leftBarButtonItem set to: ")
-        println(self.mainNavBar!.leftBarButtonItem)
-        println("finished setting leftBarButtonItem")
-        println("")
+        print("leftBarButtonItem set to: ", appendNewline: false)
+        print(self.mainNavBar!.leftBarButtonItem, appendNewline: true)
+        print("finished setting leftBarButtonItem", appendNewline: true)
+        print("", appendNewline: true)
 
     }
     
     func toggleLeft() {
-        println("DrawerBarButtonItem tapped.")
+        print("DrawerBarButtonItem tapped.", appendNewline: true)
         ((Singleton.sharedInstance.mainViewControllerReference) as SWRevealViewController).revealToggleAnimated(true)
     }
     
@@ -77,42 +76,42 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     }
  
     func addNavBarBanner() {
-        println("started adding top Navigation Bar")
+        print("started adding top Navigation Bar", appendNewline: true)
         
-        var navBarVCFromCat = currentCategory.navBarFinal!
+        let navBarVCFromCat = currentCategory.navBarFinal!
         
         mainNavBar.titleView = navBarVCFromCat.view
         
         
-        var leftBarButtonWidth = mainNavBar!.leftBarButtonItem!.customView!.frame.width // + 10.0
-        print("leftbarbutton width: ")
-        println(mainNavBar!.leftBarButtonItem?.customView?.frame.width)
+        let leftBarButtonWidth = mainNavBar!.leftBarButtonItem!.customView!.frame.width // + 10.0
+        print("leftbarbutton width: ", appendNewline: false)
+        print(mainNavBar!.leftBarButtonItem?.customView?.frame.width, appendNewline: true)
 
-        print("titleView frame: ")
-        println(mainNavBar.titleView?.frame)
+        print("titleView frame: ", appendNewline: false)
+        print(mainNavBar.titleView?.frame, appendNewline: true)
         
         
-        var totalAvailW = navigationController!.navigationBar.frame.size.width
+        let totalAvailW = navigationController!.navigationBar.frame.size.width
         
-        print("available width: ")
-        println(totalAvailW)
-        
-        
-        var contentW = navBarVCFromCat.topLabel.frame.size.width + navBarVCFromCat.topImage.frame.size.width + 3
+        print("available width: ", appendNewline: false)
+        print(totalAvailW, appendNewline: true)
         
         
-        print("content width: ")
-        println(contentW)
+        let contentW = navBarVCFromCat.topLabel.frame.size.width + navBarVCFromCat.topImage.frame.size.width + 3
+        
+        
+        print("content width: ", appendNewline: false)
+        print(contentW, appendNewline: true)
 
         
-        var spaceEachSide = (totalAvailW - contentW) / 2
+        let spaceEachSide = (totalAvailW - contentW) / 2
         
-        print("space on either side: ")
-        println(spaceEachSide)
+        print("space on either side: ", appendNewline: false)
+        print(spaceEachSide, appendNewline: true)
 
 
-        navBarVCFromCat.topLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        navBarVCFromCat.topImage.setTranslatesAutoresizingMaskIntoConstraints(true)
+        navBarVCFromCat.topLabel.translatesAutoresizingMaskIntoConstraints = true
+        navBarVCFromCat.topImage.translatesAutoresizingMaskIntoConstraints = true
 
         
         var labelFrame = navBarVCFromCat.topLabel.frame
@@ -131,20 +130,20 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         navBarVCFromCat.topLabel.frame = labelFrame
         navBarVCFromCat.topImage.frame = imageFrame
 
-        print("label value: ")
-        println(navBarVCFromCat.topLabel.text)
+        print("label value: ", appendNewline: false)
+        print(navBarVCFromCat.topLabel.text, appendNewline: true)
 
-        print("image value: ")
-        println(navBarVCFromCat.topImage.image)
+        print("image value: ", appendNewline: false)
+        print(navBarVCFromCat.topImage.image, appendNewline: true)
 
     
-        print("label frame: ")
-        println(navBarVCFromCat.topLabel.frame)
+        print("label frame: ", appendNewline: false)
+        print(navBarVCFromCat.topLabel.frame, appendNewline: true)
         
-        print("image frame: ")
-        println(navBarVCFromCat.topImage.frame)
+        print("image frame: ", appendNewline: false)
+        print(navBarVCFromCat.topImage.frame, appendNewline: true)
         
-        var width = self.view.frame.size.width
+        _ = self.view.frame.size.width
         
         navBarVCFromCat.view.addSubview(navBarVCFromCat.topLabel!)
         
@@ -154,10 +153,10 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
 
         
         
-        var topLogoContainerView : UIView = UIView(frame: CGRectMake(leftBarButtonWidth, 0, self.navigationController!.navigationBar.frame.size.width - leftBarButtonWidth, self.navigationController!.navigationBar.frame.size.height))
+        let topLogoContainerView : UIView = UIView(frame: CGRectMake(leftBarButtonWidth, 0, self.navigationController!.navigationBar.frame.size.width - leftBarButtonWidth, self.navigationController!.navigationBar.frame.size.height))
         
-        print("toplogocontainerview: ")
-        println(topLogoContainerView)
+        print("toplogocontainerview: ", appendNewline: false)
+        print(topLogoContainerView, appendNewline: true)
 
         
         navBarVCFromCat.view.frame = CGRectMake(spaceEachSide - topLogoContainerView.frame.origin.x , 0, contentW, self.navigationController!.navigationBar.frame.size.height)
@@ -171,22 +170,22 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         Singleton.sharedInstance.headlineView = topLogoContainerView
         
         
-        print("navbar title view: ")
-        println(navBarVCFromCat.view)
+        print("navbar title view: ", appendNewline: false)
+        print(navBarVCFromCat.view, appendNewline: true)
 
         
-        print("title view: ")
-        println(mainNavBar.titleView)
+        print("title view: ", appendNewline: false)
+        print(mainNavBar.titleView, appendNewline: true)
 
 
-        println("finished adding top navigation bar")
+        print("finished adding top navigation bar", appendNewline: true)
     }
     
     
     //handles loading of extra table cells
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        var currentOffset : CGFloat = scrollView.contentOffset.y
-        var maximumOffset : CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
+        let currentOffset : CGFloat = scrollView.contentOffset.y
+        let maximumOffset : CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
         
         //checks if user has scrolled to bottom
         if (  (maximumOffset - currentOffset <= 10.0)  &&  (currentlyLoading == false)   ) { //the boolean currentlyLoading was created so that we can make sure the getWebData method isn't called over and over again while the user is at the bottom. It is called once, then stops.
@@ -225,12 +224,12 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         var cell : UITableViewCell
         
         if (indexPath.row == 0) {
-            cell = tableView.dequeueReusableCellWithIdentifier("mostRecentPreview", forIndexPath: indexPath) as! UITableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("mostRecentPreview", forIndexPath: indexPath) as UITableViewCell
             (cell.viewWithTag(1) as! UILabel!).sizeToFit()
         }
         
         else {
-            cell = tableView.dequeueReusableCellWithIdentifier("article", forIndexPath: indexPath) as! UITableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("article", forIndexPath: indexPath) as UITableViewCell
         }
         
         fillCells(cell, indexPath: indexPath)
@@ -240,16 +239,16 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     
     // configures stuff for cells
     func fillCells(cell: UITableViewCell, indexPath: NSIndexPath) {
-        var currentPostDictionary : NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
+        let currentPostDictionary : NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
         
-        var currentArticle : Article = Article(article: currentPostDictionary)
+        let currentArticle : Article = Article(article: currentPostDictionary)
         
-        var categoryLabel = cell.viewWithTag(8) as! UILabel
-        var headline = cell.viewWithTag(1) as! UILabel
-        var dateLabel = cell.viewWithTag(4) as! UILabel
-        var writerLabel = cell.viewWithTag(5) as! UILabel
-        var textPreview = cell.viewWithTag(2) as! UILabel
-        var imageView = cell.viewWithTag(3) as! UIImageView
+        let categoryLabel = cell.viewWithTag(8) as! UILabel
+        let headline = cell.viewWithTag(1) as! UILabel
+        let dateLabel = cell.viewWithTag(4) as! UILabel
+        let writerLabel = cell.viewWithTag(5) as! UILabel
+        let textPreview = cell.viewWithTag(2) as! UILabel
+        let imageView = cell.viewWithTag(3) as! UIImageView
 
         
         if (currentArticle.categoriesString != nil) {
@@ -278,35 +277,62 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
         }
         else {
             
-            var leadingSpaceToImg : CGFloat = 3.0
-            var imWidth = imageView.frame.size.width
+            print("", appendNewline: false)
+            print("", appendNewline: false)
+            print("", appendNewline: false)
+            
+            
+            //var leadingSpaceToImg : CGFloat = 3.0
+            let imWidth = imageView.frame.size.width
+            print("image width before change: ", appendNewline: false)
+            print(imWidth, appendNewline: true)
             imageView.hidden = true
             
-            headline.setTranslatesAutoresizingMaskIntoConstraints(true)
-            writerLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-            textPreview.setTranslatesAutoresizingMaskIntoConstraints(true)
-            categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+            headline.translatesAutoresizingMaskIntoConstraints = true
+            writerLabel.translatesAutoresizingMaskIntoConstraints = true
+            textPreview.translatesAutoresizingMaskIntoConstraints = true
+            categoryLabel.translatesAutoresizingMaskIntoConstraints = true
 
+            
+            print("headline width before change: ", appendNewline: false)
+            print(headline.frame.size.width, appendNewline: true)
             var headFrame = headline.frame
             headFrame.size.width = headline.frame.size.width + imWidth //+ leadingSpaceToImg
             headline.frame = headFrame
+            print("headline width after change: ", appendNewline: false)
+            print(headline.frame.size.width, appendNewline: true)
+
             
+            print("writer width before change: ", appendNewline: false)
+            print(writerLabel.frame.size.width, appendNewline: true)
             var writerFrame = writerLabel.frame
             writerFrame.size.width = writerLabel.frame.size.width + imWidth //+ leadingSpaceToImg
             writerLabel.frame = writerFrame
-            
+            print("headline width after change: ", appendNewline: false)
+            print(writerLabel.frame.size.width, appendNewline: true)
+
+            print("textframe width before change: ", appendNewline: false)
+            print(textPreview.frame.size.width, appendNewline: true)
             var textFrame = textPreview.frame
             textFrame.size.width = textPreview.frame.size.width + imWidth //+ leadingSpaceToImg
             textPreview.frame = textFrame
-            
+            print("textframe width after change: ", appendNewline: false)
+            print(textPreview.frame.size.width, appendNewline: true)
+
+            print("catframe width before change: ", appendNewline: false)
+            print(categoryLabel.frame.size.width, appendNewline: true)
             var catFrame = categoryLabel.frame
             catFrame.size.width = categoryLabel.frame.size.width + imWidth //+ leadingSpaceToImg
             categoryLabel.frame = catFrame
+            print("catframe width after change: ", appendNewline: false)
+            print(categoryLabel.frame.size.width, appendNewline: true)
+
             
-            headline.setTranslatesAutoresizingMaskIntoConstraints(true)
-            writerLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-            textPreview.setTranslatesAutoresizingMaskIntoConstraints(true)
-            categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+            
+            headline.translatesAutoresizingMaskIntoConstraints = true
+            writerLabel.translatesAutoresizingMaskIntoConstraints = true
+            textPreview.translatesAutoresizingMaskIntoConstraints = true
+            categoryLabel.translatesAutoresizingMaskIntoConstraints = true
 
 
         }
@@ -324,7 +350,7 @@ class MasterViewController: UITableViewController, UIScrollViewDelegate{
     //DONE
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if ((segue.identifier == "showDetail") || (segue.identifier == "showDetailFirst")) {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 Singleton.sharedInstance.currIndex = indexPath.row
                 let selectedPost: NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
                 (segue.destinationViewController as! DetailViewController).detailItem = Article(article: selectedPost)

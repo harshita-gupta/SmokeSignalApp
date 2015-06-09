@@ -14,31 +14,31 @@ import Crashlytics
 class MainViewController: SWRevealViewController {
     
     override func viewDidLoad() {
-        println("MainView loaded")
-        self.frontViewController = self.storyboard?.instantiateViewControllerWithIdentifier("centerNavController") as? UIViewController
+        print("MainView loaded", appendNewline: true)
+        self.frontViewController = self.storyboard!.instantiateViewControllerWithIdentifier("centerNavController") as UIViewController?
         
-        self.rearViewController = self.storyboard?.instantiateViewControllerWithIdentifier("sideMenuView") as? UIViewController
+        self.rearViewController = self.storyboard!.instantiateViewControllerWithIdentifier("sideMenuView") as UIViewController?
         
         Singleton.sharedInstance.mainViewControllerReference = self
         
-        print("frontViewController set to:")
-        println(self.frontViewController)
+        print("frontViewController set to:", appendNewline: false)
+        print(self.frontViewController, appendNewline: true)
 
-        println("")
-        print("rearViewController set to:")
-        println(self.rearViewController)
+        print("", appendNewline: true)
+        print("rearViewController set to:", appendNewline: false)
+        print(self.rearViewController, appendNewline: true)
 
         
-        println("")
-        print("first member of NavigationController")
-        println((self.frontViewController as! UINavigationController).viewControllers[0])
+        print("", appendNewline: true)
+        print("first member of NavigationController", appendNewline: false)
+        print((self.frontViewController as! UINavigationController).viewControllers[0], appendNewline: true)
 
         setCenterControllerAndBarButton("centerViewList")
 
     }
     
     func setCenterControllerAndBarButton(storyboardTag : String) {
-        (self.frontViewController as! UINavigationController).viewControllers[0] = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardTag) as! UIViewController!
+        (self.frontViewController as! UINavigationController).viewControllers[0] = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardTag) as UIViewController!
 
     }
 }

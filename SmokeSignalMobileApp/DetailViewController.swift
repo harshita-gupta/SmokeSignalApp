@@ -42,21 +42,21 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
     func webViewDidFinishLoad(webView: UIWebView) {
         
         
-        categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        headlineLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        writerNameLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        postedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        updatedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        categoryLabel.translatesAutoresizingMaskIntoConstraints = true
+        headlineLabel.translatesAutoresizingMaskIntoConstraints = true
+        writerNameLabel.translatesAutoresizingMaskIntoConstraints = true
+        postedDateLabel.translatesAutoresizingMaskIntoConstraints = true
+        updatedDateLabel.translatesAutoresizingMaskIntoConstraints = true
 
         
         ////handles checking required height of webview//////
-        var webViewHeightString : String = webView.stringByEvaluatingJavaScriptFromString("document.body.scrollHeight")!
-        var webViewHeight = (webViewHeightString as NSString).floatValue + 700
-        var cgWebViewHeight : CGFloat = CGFloat(webViewHeight)
+        let webViewHeightString : String = webView.stringByEvaluatingJavaScriptFromString("document.body.scrollHeight")!
+        let webViewHeight = (webViewHeightString as NSString).floatValue + 700
+        let cgWebViewHeight : CGFloat = CGFloat(webViewHeight)
         ////////////////////////////////////////////////////////////
         
-        println(cgWebViewHeight)
-        println("")
+        print(cgWebViewHeight, appendNewline: true)
+        print("", appendNewline: true)
         
         ////creates frame for scrollview and sets the scrollview to that frame////////
         var scrollFrame = scrollView.frame
@@ -74,7 +74,7 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         ////////////////////////////////////////////////////////////
         
         
-        webView.setTranslatesAutoresizingMaskIntoConstraints(true)
+        webView.translatesAutoresizingMaskIntoConstraints = true
         scrollView.addSubview(webView)
         webView.frame = webFrame
         
@@ -87,33 +87,33 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
     }
     
     override func viewWillLayoutSubviews() {
-        println("latermethod")
-        println(self.navigationItem.leftBarButtonItem)
+        print("latermethod", appendNewline: true)
+        print(self.navigationItem.leftBarButtonItem, appendNewline: true)
     }
     
     func configureView() {
         // Update the user interface for the detail item.
         self.view.addSubview(webView)
-        var currentArticle = (self.detailItem)
-            if let detail: Article = self.detailItem {
-                if var label = self.centerBar {
+        let currentArticle = (self.detailItem)
+            if let _: Article = self.detailItem {
+                if let label = self.centerBar {
                     label.title = ""//((self.currentArticle.headline!).kv_decodeHTMLCharacterEntities())
                 }
     }
         
 
         //self.centerBar.leftBarButtonItem = nil
-        println("view being configured")
-        println(self.navigationItem.leftBarButtonItem)//leftBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Done, target: self, action: "moveBack")
+        print("view being configured", appendNewline: true)
+        print(self.navigationItem.leftBarButtonItem, appendNewline: true)//leftBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Done, target: self, action: "moveBack")
         
         self.categoryLabel.text = currentArticle!.categoriesString!
         self.headlineLabel.text = currentArticle!.headline!
 
-        categoryLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        headlineLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        writerNameLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        postedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
-        updatedDateLabel.setTranslatesAutoresizingMaskIntoConstraints(true)
+        categoryLabel.translatesAutoresizingMaskIntoConstraints = true
+        headlineLabel.translatesAutoresizingMaskIntoConstraints = true
+        writerNameLabel.translatesAutoresizingMaskIntoConstraints = true
+        postedDateLabel.translatesAutoresizingMaskIntoConstraints = true
+        updatedDateLabel.translatesAutoresizingMaskIntoConstraints = true
         
         
         var categoryFrame = categoryLabel.frame
@@ -125,17 +125,17 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         
         var headlineFrame = self.headlineLabel.frame
         headlineFrame.size.width = self.view.frame.size.width - 16
-        print("headline frame size : ")
-        println(headlineFrame.size.width)
+        print("headline frame size : ", appendNewline: false)
+        print(headlineFrame.size.width, appendNewline: true)
         self.headlineLabel.frame = headlineFrame
         
-        var heightBefore = self.headlineLabel.frame.height
+        let heightBefore = self.headlineLabel.frame.height
 
         self.headlineLabel.sizeToFit()
         
-        var heightAfter = self.headlineLabel.frame.height
+        let heightAfter = self.headlineLabel.frame.height
 
-        var changeInHeight = heightAfter - heightBefore
+        let changeInHeight = heightAfter - heightBefore
         
         self.headlineLabel.frame.height
         self.writerNameLabel.text = (currentArticle!.writerString!).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
@@ -166,12 +166,12 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         
         
         // loads webview with content
-        var loadContent = self.currentArticle.content!
+        let loadContent = self.currentArticle.content!
         // if debugging, add "body {background: green}" to CSS
-        var stringToBeLoadedPt1 = "<html><head><style>" + "p { font-size: 13px;}" + (Singleton.sharedInstance.universalCSS as String)
-        var stringToBeLoadedPt2 = "</head></style><body>" + (loadContent) + "</body></html>"
+        let stringToBeLoadedPt1 = "<html><head><style>" + "p { font-size: 13px;}" + (Singleton.sharedInstance.universalCSS as String)
+        let stringToBeLoadedPt2 = "</head></style><body>" + (loadContent) + "</body></html>"
 
-        var stringToBeLoaded = ( stringToBeLoadedPt1 + stringToBeLoadedPt2 )
+        let stringToBeLoaded = ( stringToBeLoadedPt1 + stringToBeLoadedPt2 )
         webView.loadHTMLString(stringToBeLoaded, baseURL: nil)
         ///////////////////////////////////////////////////
     }

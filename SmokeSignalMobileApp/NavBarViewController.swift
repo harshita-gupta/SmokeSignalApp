@@ -16,7 +16,7 @@ class NavBarViewController : UIViewController {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        println("awoke from nib")
+        print("awoke from nib", appendNewline: true)
         //self.backgroundColor
     }
         

@@ -19,9 +19,9 @@ struct parsing {
     //page number must always be specified
     static func getWebDataFromCategory (category_slug: String, page_number: Int, completion: (()->())? = nil) ->Void{
         
-        println("webdatarequested")
-        println(category_slug)
-        println(page_number)
+        print("webdatarequested", appendNewline: true)
+        print(category_slug, appendNewline: true)
+        print(page_number, appendNewline: true)
         
         var baseURLString : String = ("http://thesmokesignal.org/json_api/")
        
@@ -35,27 +35,32 @@ struct parsing {
         
         baseURLString = baseURLString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet());
         
-        var url : NSURL = (NSURL(string:baseURLString)) as NSURL!
+        let url : NSURL = (NSURL(string:baseURLString)) as NSURL!
         
-        var request = NSMutableURLRequest(URL: url)
-        
-
-        let backgroundQueue: dispatch_queue_t = dispatch_queue_create("com.a.identifier", DISPATCH_QUEUE_CONCURRENT)
+        let request = NSURLRequest(URL: url)
         
 
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
-            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.AllowFragments, error: error) as? NSMutableDictionary
-            println("sent request for json")
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+            
+            var jsonResult : NSMutableDictionary?
+            
+            do {
+                try jsonResult = NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.AllowFragments) as? NSMutableDictionary
+            }
+            catch {
+                
+            }
+            
+            print("sent request for json", appendNewline: true)
             var updatedPostsArray = [NSMutableDictionary]()
             
             if (jsonResult != nil) {
-                println("found a json result")
+                print("found a json result", appendNewline: true)
                 let postsArray = (jsonResult!["posts"] as! NSArray).mutableCopy() as! [NSMutableDictionary]
-                println("stored JSON in array")
+                print("stored JSON in array", appendNewline: true)
                 for post in postsArray {
                    
-                    var updatedPost = post.mutableCopy() as! NSMutableDictionary
+                    let updatedPost = post.mutableCopy() as! NSMutableDictionary
                     
 //                    //IMAGE STUFF
 //                    if ((post["thumbnail"] as! String!) != nil) {
@@ -151,7 +156,7 @@ struct parsing {
      static func extractWriter (text: NSMutableString) -> NSMutableString? {
         var writer : NSMutableString = text.mutableCopy() as! NSMutableString
         
-        var loc : NSRange? = text.rangeOfString("By:")
+        let loc : NSRange? = text.rangeOfString("By:")
         
         // if the writer name isn't present, returns nil
         if loc!.location == NSNotFound || loc!.location == NSNotFound{
@@ -193,13 +198,13 @@ struct parsing {
             //we proceed to remove everything after the name.
             //after name, there is always a <
             //we create an optional just in case, but highly unlikely that article will only be writer name LOL. unless it's an image. so good robustness gj harshita
-            var firstCharAfterName: NSRange? = writer.rangeOfString("<")
+            let firstCharAfterName: NSRange? = writer.rangeOfString("<")
             
             if firstCharAfterName!.location == NSNotFound {
                 // we do nothing, bc there's nothing after the name so like LOL
             }
             else {
-                var rangeAfter : NSRange = NSMakeRange(firstCharAfterName!.location, (  (writer.length) -  (firstCharAfterName!.location) ))
+                let rangeAfter : NSRange = NSMakeRange(firstCharAfterName!.location, (  (writer.length) -  (firstCharAfterName!.location) ))
                 writer = clearCharactersFromString(writer, rangeToBeCleared: rangeAfter)
             }
         
@@ -258,7 +263,7 @@ struct parsing {
             
         }
 
-        var finalString: NSMutableString = (clearedText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())).mutableCopy() as! NSMutableString
+        let finalString: NSMutableString = (clearedText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())).mutableCopy() as! NSMutableString
          
         return finalString
     
@@ -267,11 +272,11 @@ struct parsing {
      static func clearTillEndWriterName (textToBeCleared : NSMutableString) -> NSMutableString {
         
         if extractWriter(NSMutableString(string: textToBeCleared)) != nil { //there is a writer name
-            var writerName = extractWriter(NSMutableString(string: textToBeCleared))!
-            var locWriterName : NSRange? = textToBeCleared.rangeOfString( (writerName as String).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) ) as NSRange
-            var endWriterNamePos = locWriterName!.location + locWriterName!.length - 1//this is the variable we want to clear till
-            var clearTill_Range : NSRange = NSMakeRange(0, endWriterNamePos + 1 )
-            var finalString = clearCharactersFromString(textToBeCleared, rangeToBeCleared: clearTill_Range)
+            let writerName = extractWriter(NSMutableString(string: textToBeCleared))!
+            let locWriterName : NSRange? = textToBeCleared.rangeOfString( (writerName as String).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) ) as NSRange
+            let endWriterNamePos = locWriterName!.location + locWriterName!.length - 1//this is the variable we want to clear till
+            let clearTill_Range : NSRange = NSMakeRange(0, endWriterNamePos + 1 )
+            let finalString = clearCharactersFromString(textToBeCleared, rangeToBeCleared: clearTill_Range)
             
             return finalString
         }
@@ -283,9 +288,9 @@ struct parsing {
     }
     
      static func clearTillNextTag (textToBeCleared : NSMutableString, tagToClear : NSString) -> NSMutableString {
-        var locTagRange : NSRange? = textToBeCleared.rangeOfString(tagToClear as String)
+        let locTagRange : NSRange? = textToBeCleared.rangeOfString(tagToClear as String)
         if locTagRange != nil {
-            var posTag = locTagRange!.location
+            let posTag = locTagRange!.location
             
             if posTag == NSNotFound {// checks if there isnt anything before the <p>, if there is, then the else executes-- removed everything before the p
                 return textToBeCleared
@@ -299,7 +304,7 @@ struct parsing {
                     unneededRange = NSMakeRange(0, (posTag))
 
                 }
-                var clearedString: NSMutableString = textToBeCleared.mutableCopy() as! NSMutableString
+                let clearedString: NSMutableString = textToBeCleared.mutableCopy() as! NSMutableString
                 clearedString.replaceCharactersInRange(unneededRange, withString: "")
                 return clearedString
             }
@@ -313,7 +318,7 @@ struct parsing {
     
      static func findRangeOfFirstTriangleTag (incoming: NSMutableString) -> NSRange? {
         var text = incoming as NSString
-        var rangeOfTag : NSRange? = (text.rangeOfString("<"))
+        let rangeOfTag : NSRange? = (text.rangeOfString("<"))
         if (rangeOfTag?.location == NSNotFound) {
             return nil
         }
@@ -324,12 +329,12 @@ struct parsing {
             locOfStartTag = (text.rangeOfString("<") as NSRange).location
             locOfCloseTag = (text.rangeOfString(">") as NSRange).location
         }
-        var rangeToReturn = NSMakeRange(locOfStartTag, ((locOfCloseTag - locOfStartTag) + 1))
+        let rangeToReturn = NSMakeRange(locOfStartTag, ((locOfCloseTag - locOfStartTag) + 1))
         return rangeToReturn
     }
     
      static func clearAllTriangeTags (incoming: NSMutableString) -> NSMutableString {
-        var freshText = incoming.mutableCopy() as! NSMutableString
+        let freshText = incoming.mutableCopy() as! NSMutableString
         var triangeTagsLeft : NSRange? = findRangeOfFirstTriangleTag(freshText)
         while (triangeTagsLeft != nil)  {
             if ((triangeTagsLeft?.location) > 300) {
@@ -343,7 +348,7 @@ struct parsing {
     
      static func clearCharactersFromString(text: NSMutableString, rangeToBeCleared: NSRange) -> NSMutableString {
         
-        var finalString: NSMutableString = text.mutableCopy() as! NSMutableString
+        let finalString: NSMutableString = text.mutableCopy() as! NSMutableString
         finalString.replaceCharactersInRange(rangeToBeCleared , withString: "")
 
         return finalString
@@ -356,7 +361,7 @@ struct parsing {
     
         //TODO
         
-        var jbLink = (NSURL(string: text)) as NSURL!!
+        let jbLink = (NSURL(string: text)) as NSURL!!
         
         return (jbLink)
     }
@@ -365,14 +370,14 @@ struct parsing {
     // this will go through the XML link and return an array with all the images in it
      static func extractJuiceboxGallery (url: NSURL) -> NSMutableArray {
         
-        var imageGallery = NSMutableArray()
+        let imageGallery = NSMutableArray()
         //TODO
         return imageGallery
     }
     
     //replace HTML tags with text
      static func convertToPlain (text: NSMutableString) -> NSMutableString {
-        var finalText = text
+        let finalText = text
         
        // TODO
         
