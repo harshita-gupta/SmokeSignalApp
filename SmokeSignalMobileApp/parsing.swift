@@ -62,34 +62,6 @@ struct parsing {
                    
                     let updatedPost = post.mutableCopy() as! NSMutableDictionary
                     
-//                    //IMAGE STUFF
-//                    if ((post["thumbnail"] as! String!) != nil) {
-//                        
-//                        println("a thumbnail and image exists, we shall download them in the background")
-//                        var thumbnailsLib = post["thumbnail_images"] as! NSDictionary!
-//                        
-//                        var fullsizeImageDic = thumbnailsLib["full"] as! NSDictionary!
-//                        
-//                        var fullImageURL = NSURL(string: (fullsizeImageDic["url"] as! NSString) as String ) as NSURL!
-//                        
-//                        var thumbnailURL = NSURL(string: post["thumbnail"] as! String) as NSURL!
-//                        
-//                        // can be called as often as needed
-//                        dispatch_async(backgroundQueue) {
-//                            var imageDataThumbnail = NSData(contentsOfURL: thumbnailURL)
-//                            var imageDataFull = NSData(contentsOfURL: fullImageURL)
-//                            
-//                            post["savedThumbImage"] = UIImage(data: imageDataThumbnail!)
-//                            post["savedFullImage"] = UIImage(data: imageDataFull!)
-//                        }
-//                        
-//                        
-//                    }
-//                    else {//if there isnt an image, it hides the imageview
-//                        post["savedThumbImage"] = nil
-//                        post["savedFullImage"] = nil
-//                    }
-//                    
                     var previewContents  = parsing.createPreview(post["content"] as! NSMutableString)  //created to store the string that will contain the preview text
                     previewContents = ((previewContents as String).kv_decodeHTMLCharacterEntities()).mutableCopy() as! NSMutableString
                     previewContents = NSMutableString(string: previewContents.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))
@@ -117,9 +89,6 @@ struct parsing {
             } else {
                 // couldn't load JSON, look at error
             }
-            
-        
-                
             
             
         })
