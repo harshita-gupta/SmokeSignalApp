@@ -80,8 +80,7 @@
 		EE99AAB21A0F5432001B9AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB01A0F5432001B9AEF /* Main.storyboard */; };
 		EE99AAB41A0F5432001B9AEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB31A0F5432001B9AEF /* Images.xcassets */; };
 		EE99AAB71A0F5432001B9AEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB51A0F5432001B9AEF /* LaunchScreen.xib */; };
-		EEA404291B009A7800F22A7E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA404271B009A7800F22A7E /* Fabric.framework */; };
-		EEA4042A1B009A7800F22A7E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA404281B009A7800F22A7E /* Crashlytics.framework */; };
+		EEB87EAE1B27736100752884 /* navBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EAD1B27736100752884 /* navBarTitleView.swift */; };
 		EEF50DF01A90F1D300E733BE /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */; };
 		EEF50DF41A911F1E00E733BE /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DF31A911F1E00E733BE /* PhotosViewController.swift */; };
 		EEFC5C341AF5D98700614494 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5C301AF5D98700614494 /* AnimatedMenuButton.swift */; };
@@ -228,6 +227,7 @@
 		EE99AAC21A0F5432001B9AEF /* SmokeSignalMobileAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeSignalMobileAppTests.swift; sourceTree = "<group>"; };
 		EEA404271B009A7800F22A7E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		EEA404281B009A7800F22A7E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		EEB87EAD1B27736100752884 /* navBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navBarTitleView.swift; sourceTree = "<group>"; };
 		EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		EEF50DF31A911F1E00E733BE /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		EEFC5C301AF5D98700614494 /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMenuButton.swift; sourceTree = "<group>"; };
@@ -280,8 +280,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE13F6AF1AEE0C8600FE93FE /* ImageIO.framework in Frameworks */,
-				EEA4042A1B009A7800F22A7E /* Crashlytics.framework in Frameworks */,
-				EEA404291B009A7800F22A7E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +340,7 @@
 			children = (
 				EE206BA51A90AE65007A3103 /* Article.swift */,
 				EE206BA71A90AECA007A3103 /* Category.swift */,
+				EEB87EAD1B27736100752884 /* navBarTitleView.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -792,6 +791,7 @@
 				EE4CB3381A7566B600013975 /* parsing.swift in Sources */,
 				EE13F6AB1AEE0C6600FE93FE /* UIImageView+HighlightedWebCache.m in Sources */,
 				EE99AAAF1A0F5432001B9AEF /* DetailViewController.swift in Sources */,
+				EEB87EAE1B27736100752884 /* navBarTitleView.swift in Sources */,
 				EE1C6F0A1A9052140068C8DA /* SideMenuViewController.swift in Sources */,
 				EE0FB0201AF5CCF000E9D430 /* SWRevealViewController.m in Sources */,
 				EEFC5C341AF5D98700614494 /* AnimatedMenuButton.swift in Sources */,

@@ -895,6 +895,9 @@ The </string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Ie9-zG-il7"/>
+                    <connections>
+                        <outlet property="mainTextView" destination="hGR-e1-I09" id="pl5-2B-erU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgB-JG-mfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1193,6 +1196,7 @@ The </string>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="tQt-TN-PWz" userLabel="The Smoke Signal">
+                        <barButtonItem key="backBarButtonItem" title=" " id="SPQ-vM-MhJ"/>
                         <barButtonItem key="leftBarButtonItem" title="Item" id="0l7-27-7gc"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -1226,7 +1230,7 @@ The </string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="goi-1o-xpl">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goi-1o-xpl">
                                 <rect key="frame" x="16" y="20" width="568" height="580"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-fx-kPu">
@@ -1252,7 +1256,7 @@ The </string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WriterName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WriterName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
                                         <rect key="frame" x="0.0" y="43" width="560" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="kca-Gg-8kF"/>
@@ -1280,7 +1284,7 @@ The </string>
                                         <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <webView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
+                                    <webView userInteractionEnabled="NO" contentMode="scaleToFill" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
                                         <rect key="frame" x="5" y="78" width="555" height="500"/>
                                         <color key="backgroundColor" red="0.81553819444444442" green="0.81553819444444442" blue="0.81553819444444442" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1297,16 +1301,16 @@ The </string>
                                     <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="1oq-gT-PyP"/>
                                     <constraint firstAttribute="height" constant="536" id="31h-55-8V5"/>
                                     <constraint firstItem="yEe-IJ-3cK" firstAttribute="leading" secondItem="AMo-kP-fTL" secondAttribute="trailing" constant="5" id="37Y-aV-JWn"/>
-                                    <constraint firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" id="59q-mA-bMv"/>
+                                    <constraint firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="303" id="59q-mA-bMv"/>
                                     <constraint firstItem="yEe-IJ-3cK" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" id="7mL-9K-76z"/>
                                     <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="8Oo-1G-w4W"/>
-                                    <constraint firstAttribute="trailing" secondItem="mQ7-nB-cCw" secondAttribute="trailing" id="8SH-fG-nbQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="mQ7-nB-cCw" secondAttribute="trailing" constant="303" id="8SH-fG-nbQ"/>
                                     <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="-32" id="8zM-XH-itK"/>
                                     <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" id="Apr-gg-gxB"/>
-                                    <constraint firstAttribute="trailing" secondItem="yEe-IJ-3cK" secondAttribute="trailing" id="Biu-U8-1Kh"/>
+                                    <constraint firstAttribute="trailing" secondItem="yEe-IJ-3cK" secondAttribute="trailing" constant="303" id="Biu-U8-1Kh"/>
                                     <constraint firstItem="mQ7-nB-cCw" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottom" id="CjM-16-DFs"/>
                                     <constraint firstAttribute="width" constant="568" id="Dzz-C0-fKS"/>
-                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" constant="5" id="Qd6-eC-2fD"/>
+                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" constant="8" id="Qd6-eC-2fD"/>
                                     <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="RrS-4P-5nt"/>
                                     <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" id="UJk-SF-bOb"/>
                                     <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="ZXe-OT-8iQ"/>
@@ -1314,10 +1318,10 @@ The </string>
                                     <constraint firstItem="8IV-fx-kPu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="cU6-HA-Q4l"/>
                                     <constraint firstItem="AMo-kP-fTL" firstAttribute="width" secondItem="yEe-IJ-3cK" secondAttribute="width" constant="-40" id="dbs-l2-u9p"/>
                                     <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="5" id="dlE-Rn-ZOV"/>
-                                    <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" constant="8" id="eMI-e8-55W"/>
+                                    <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" constant="2" id="eMI-e8-55W"/>
                                     <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" id="g9W-5S-wXU"/>
                                     <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="gyi-lf-omX"/>
-                                    <constraint firstAttribute="trailing" secondItem="UqJ-R0-r3M" secondAttribute="trailing" id="hfM-Yg-ofi"/>
+                                    <constraint firstAttribute="trailing" secondItem="UqJ-R0-r3M" secondAttribute="trailing" constant="8" id="hfM-Yg-ofi"/>
                                     <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottom" id="jeZ-52-co7"/>
                                     <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" constant="8" id="lCu-Ue-kbS"/>
                                     <constraint firstItem="AMo-kP-fTL" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="lwz-gT-fec"/>
@@ -1352,10 +1356,10 @@ The </string>
                             <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="-44" id="Kqm-Hy-oQT"/>
                             <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="LN2-dw-3oc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="goi-1o-xpl" secondAttribute="trailing" id="VtO-79-xSK"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="XaZ-1C-YEC"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="-4" id="XaZ-1C-YEC"/>
                             <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="bottom" id="amk-Bh-7x3"/>
-                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="bottom" id="dM4-J7-zBl"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="trailing" secondItem="MMQ-IT-qOo" secondAttribute="trailingMargin" id="dV4-0C-dDw"/>
+                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="bottom" constant="-44" id="dM4-J7-zBl"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="trailing" secondItem="MMQ-IT-qOo" secondAttribute="trailingMargin" constant="4" id="dV4-0C-dDw"/>
                             <constraint firstAttribute="bottomMargin" secondItem="goi-1o-xpl" secondAttribute="bottom" id="fID-xc-1uA"/>
                             <constraint firstItem="goi-1o-xpl" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="ft9-2M-np3"/>
                             <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="bottom" id="ihc-mp-flb"/>
@@ -1407,6 +1411,6 @@ The </string>
         <image name="Mountains 640 x 960.png" width="640" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pgy-7S-5M9"/>
+        <segue reference="jUr-3t-vfg"/>
     </inferredMetricsTieBreakers>
 </document>

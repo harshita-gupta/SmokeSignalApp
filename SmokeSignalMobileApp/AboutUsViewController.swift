@@ -11,6 +11,13 @@ import UIKit
 
 class AboutUsViewController: UIViewController {
     
+    @IBOutlet var mainTextView: UITextView!
     var currentCategory = Category(slug_name: "about-us")
+    override func viewDidLoad() {
+        //mainTextView.font = UIFont(name: "SegoeUI", size: 12)
+        
+       // mainTextView.attributedText
+    }
+    
     
 }

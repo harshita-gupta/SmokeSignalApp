@@ -27,8 +27,6 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet var updatedDateLabel: UILabel!
     
-    
-    
     var currentArticle : Article = Article()
 
     var detailItem: Article? {
@@ -49,9 +47,17 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         updatedDateLabel.translatesAutoresizingMaskIntoConstraints = true
 
         
+        //////creates frame for webview and sets the webview to that frame//////////////
+        var webFrame = webView.frame
+        webFrame.size.width = scrollView.frame.width - 8
+        webFrame.origin = CGPointMake(0, postedDateLabel.frame.origin.y + postedDateLabel.frame.height + 3)
+        webView.frame = webFrame
+        ////////////////////////////////////////////////////////////
+
+        
         ////handles checking required height of webview//////
         let webViewHeightString : String = webView.stringByEvaluatingJavaScriptFromString("document.body.scrollHeight")!
-        let webViewHeight = (webViewHeightString as NSString).floatValue + 700
+        let webViewHeight = (webViewHeightString as NSString).floatValue
         let cgWebViewHeight : CGFloat = CGFloat(webViewHeight)
         ////////////////////////////////////////////////////////////
         
@@ -66,9 +72,8 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
 
         
         //////creates frame for webview and sets the webview to that frame//////////////
-        var webFrame = webView.frame
+        webFrame = webView.frame
         webFrame.size.height = cgWebViewHeight
-        webFrame.size.width = scrollView.frame.width - 8
         webFrame.origin = CGPointMake(0, postedDateLabel.frame.origin.y + postedDateLabel.frame.height + 3)
         webView.frame = webFrame
         ////////////////////////////////////////////////////////////
@@ -182,7 +187,6 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         self.configureView()
         webView.delegate = self
         self.navigationController?.navigationBar.translucent = true
-
     }
 
     override func didReceiveMemoryWarning() {

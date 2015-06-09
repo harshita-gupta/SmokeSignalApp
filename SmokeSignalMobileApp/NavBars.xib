@@ -11,43 +11,45 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="navBarTitleView" customModule="The_Smoke_Signal" customModuleProvider="target">
+            <connections>
+                <outlet property="image" destination="RiR-hC-Czb" id="rBp-BW-Bd6"/>
+                <outlet property="label" destination="4uc-nk-Vep" id="aZ6-0N-vtx"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="ECi-8O-MDJ" customClass="NavBarViewController" customModule="The_Smoke_Signal" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="RO8-lr-KYZ">
+            <rect key="frame" x="0.0" y="0.0" width="238" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-hC-Czb">
-                    <rect key="frame" x="188" y="280" width="65" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="2Qz-UL-Nm2"/>
-                        <constraint firstAttribute="width" secondItem="RiR-hC-Czb" secondAttribute="height" multiplier="65:40" id="hQf-Rd-Avf"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="the Smoke Signal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uc-nk-Vep">
-                    <rect key="frame" x="148" y="287" width="165" height="26"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="the Smoke Signal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uc-nk-Vep">
+                    <rect key="frame" x="0.0" y="14" width="165" height="26"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="165" id="jYx-R0-VOS"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="19"/>
                     <color key="textColor" red="0.16470588235294117" green="0.42352941176470588" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="jYx-R0-VOS"/>
+                        </mask>
+                    </variation>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-hC-Czb">
+                    <rect key="frame" x="165" y="0.0" width="65" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="130" id="2Qz-UL-Nm2"/>
+                        <constraint firstAttribute="width" secondItem="RiR-hC-Czb" secondAttribute="height" multiplier="65:40" id="hQf-Rd-Avf"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="RiR-hC-Czb" secondAttribute="trailing" constant="20" symbolic="YES" id="L9t-rO-iaw"/>
-                <constraint firstAttribute="centerY" secondItem="RiR-hC-Czb" secondAttribute="centerY" id="X7I-MN-Eo9"/>
-                <constraint firstItem="RiR-hC-Czb" firstAttribute="centerY" secondItem="4uc-nk-Vep" secondAttribute="centerY" id="b0e-hR-5LA"/>
-                <constraint firstAttribute="centerY" secondItem="4uc-nk-Vep" secondAttribute="centerY" id="gV1-iT-BhG"/>
-                <constraint firstItem="4uc-nk-Vep" firstAttribute="leading" secondItem="ECi-8O-MDJ" secondAttribute="leading" constant="20" symbolic="YES" id="qQX-mD-ewn"/>
-                <constraint firstItem="RiR-hC-Czb" firstAttribute="leading" secondItem="4uc-nk-Vep" secondAttribute="trailing" constant="3" id="tBC-mE-dSN"/>
-            </constraints>
-            <connections>
-                <outlet property="topImage" destination="RiR-hC-Czb" id="eXQ-fQ-yhz"/>
-                <outlet property="topLabel" destination="4uc-nk-Vep" id="xHR-8c-RM6"/>
-            </connections>
-            <point key="canvasLocation" x="-361" y="-227"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-478" y="170"/>
         </view>
     </objects>
     <resources>
