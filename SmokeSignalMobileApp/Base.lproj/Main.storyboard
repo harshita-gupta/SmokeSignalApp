@@ -503,202 +503,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oen-NG-5vW">
-                                <rect key="frame" x="-7" y="0.0" width="607" height="608"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oen-NG-5vW">
+                                <rect key="frame" x="-3" y="0.0" width="599" height="608"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mountains 640 x 960.png" translatesAutoresizingMaskIntoConstraints="NO" id="C9L-hG-KwB">
-                                <rect key="frame" x="-7" y="-352" width="607" height="960"/>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountains 640 x 960.png" translatesAutoresizingMaskIntoConstraints="NO" id="C9L-hG-KwB">
+                                <rect key="frame" x="-3" y="-352" width="599" height="960"/>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCw-yK-tYm">
-                                <rect key="frame" x="16" y="28" width="573" height="472"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" link="YES" staticText="YES"/>
-                                </accessibility>
-                                <attributedString key="attributedText">
-                                    <fragment content="About Us">
-                                        <attributes>
-                                            <color key="NSColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="19" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-
-The </string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Smoke Signal ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="is the official newspaper of Mission San Jose High School in Fremont, CA. The ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Smoke Signal ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">was founded in 1964. 
- Send letters to the editor at opinion@thesmokesignal.org. Letters under 300 words may be considered for publication and must include a full name and school affiliation. The </string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Smoke Signal">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> reserves the right to edit for clarity and length.
- To advertise in the </string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Smoke Signal">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=", e-mail ads@thesmokesignal.org. Advertising that is included on the pages of, or carried within, the ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Smoke Signal">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <font key="NSOriginalFont" size="12" name="SegoeUI-Italic"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">, is paid advertising, and as such is independent of the news and feature content.
- The </string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Smoke Signal’s">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI-Italic"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <font key="NSOriginalFont" size="12" name="SegoeUI-Italic"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> right to freedom of speech and press is protected by the First Amendment of the Constitution.
- 510-284-7149
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="41717 Palm Ave, Fremont, CA, 94539.  Mobile Application developed by Harshita Gupta Graphics by Kevin Chen and Lillian Zhao">
-                                        <attributes>
-                                            <color key="NSColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="SegoeUI"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="12" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.24705882352941178" green="0.22352941176470589" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGR-e1-I09">
-                                <rect key="frame" x="16" y="28" width="568" height="552"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGR-e1-I09">
+                                <rect key="frame" x="20" y="28" width="560" height="552"/>
                                 <attributedString key="attributedText">
                                     <fragment content="About Us">
                                         <attributes>
@@ -871,19 +683,15 @@ The </string>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="hGR-e1-I09" secondAttribute="trailing" id="5qX-FB-WW1"/>
                             <constraint firstItem="C9L-hG-KwB" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" constant="-23" id="5we-Ez-Qsy"/>
-                            <constraint firstItem="OpO-dk-shU" firstAttribute="top" secondItem="yCw-yK-tYm" secondAttribute="bottom" constant="100" id="BWI-3E-oyI"/>
                             <constraint firstItem="Oen-NG-5vW" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" constant="-23" id="FgU-OX-m7f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oen-NG-5vW" secondAttribute="trailing" constant="-16" id="Idf-c0-cRD"/>
                             <constraint firstItem="hGR-e1-I09" firstAttribute="leading" secondItem="C9L-hG-KwB" secondAttribute="trailing" constant="-420" id="Po2-9y-sHP"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Oen-NG-5vW" secondAttribute="bottom" constant="-8" id="RFh-Be-pVG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yCw-yK-tYm" secondAttribute="trailing" constant="-5" id="Tzb-fh-j7I"/>
                             <constraint firstItem="hGR-e1-I09" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" id="a7g-8C-cRj"/>
                             <constraint firstItem="OpO-dk-shU" firstAttribute="top" secondItem="hGR-e1-I09" secondAttribute="bottom" constant="20" id="bJ3-uI-S19"/>
-                            <constraint firstItem="yCw-yK-tYm" firstAttribute="leading" secondItem="2CY-dd-3dR" secondAttribute="leadingMargin" id="eVV-VB-2B8"/>
                             <constraint firstItem="hGR-e1-I09" firstAttribute="top" secondItem="NFI-Gh-cjo" secondAttribute="bottom" constant="8" id="k3b-Nk-y2X"/>
                             <constraint firstItem="Oen-NG-5vW" firstAttribute="top" secondItem="2CY-dd-3dR" secondAttribute="topMargin" id="oUk-sG-sDK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C9L-hG-KwB" secondAttribute="trailing" constant="-16" id="pkb-YW-sem"/>
-                            <constraint firstItem="yCw-yK-tYm" firstAttribute="top" secondItem="NFI-Gh-cjo" secondAttribute="bottom" constant="8" id="qdS-eX-Q8V"/>
                             <constraint firstAttribute="bottomMargin" secondItem="C9L-hG-KwB" secondAttribute="bottom" constant="-8" id="uRr-JX-Yqq"/>
                             <constraint firstItem="hGR-e1-I09" firstAttribute="top" secondItem="C9L-hG-KwB" secondAttribute="bottom" constant="-372" id="xT0-g4-5Kf"/>
                         </constraints>
@@ -950,7 +758,7 @@ The </string>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <view key="tableFooterView" contentMode="scaleToFill" id="UXl-sl-qNI" customClass="MyFooter" customModule="The_Smoke_Signal" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="354" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="455" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-Jl-cwK">
@@ -969,7 +777,7 @@ The </string>
                             </connections>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="article" rowHeight="110" id="m0d-ak-lc9" customClass="ArticleUITableCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="article" rowHeight="110" id="m0d-ak-lc9" customClass="GeneralArticleTableViewCell" customModule="The_Smoke_Signal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24" width="600" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" tag="9" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
@@ -977,176 +785,125 @@ The </string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtm-gn-y2e">
-                                            <rect key="frame" x="13" y="18" width="493" height="17"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="yw5-j1-1Rg"/>
-                                            </constraints>
+                                            <rect key="frame" x="13" y="17" width="493" height="19"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ULv-Zu-pQu">
+                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ULv-Zu-pQu">
                                             <rect key="frame" x="509" y="13" width="88" height="88"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="ULv-Zu-pQu" secondAttribute="height" multiplier="1:1" id="m6E-Jq-II7"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthMonth xy, 1294" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-vf-30M">
-                                            <rect key="frame" x="13" y="37" width="100" height="12"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="Wxz-CP-BgY"/>
-                                                <constraint firstAttribute="width" constant="100" id="p5u-iE-WbP"/>
-                                                <constraint firstAttribute="height" constant="10" id="tZc-Gp-07t"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
-                                            <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="tZc-Gp-07t"/>
-                                                </mask>
-                                            </variation>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R30-7T-C8D">
-                                            <rect key="frame" x="115" y="37" width="391" height="12"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="hNt-qd-9gc"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="749" text="MonthMonth xy, 1294" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-vf-30M">
+                                            <rect key="frame" x="13" y="38" width="117" height="16"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview Text" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-TF-56D">
-                                            <rect key="frame" x="13" y="51" width="493" height="58"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="52" id="EUu-K1-z0z"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" verticalHuggingPriority="251" text="Writer Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R30-7T-C8D">
+                                            <rect key="frame" x="137" y="38" width="369" height="16"/>
+                                            <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                            <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Preview Text" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-TF-56D">
+                                            <rect key="frame" x="13" y="56" width="493" height="53"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="EUu-K1-z0z"/>
-                                                </mask>
-                                            </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dJ-sB-hP6">
-                                            <rect key="frame" x="13" y="4" width="493" height="12"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="oei-Ac-sbA"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="741" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dJ-sB-hP6">
+                                            <rect key="frame" x="13" y="0.0" width="493" height="15"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="R30-7T-C8D" firstAttribute="top" secondItem="vtm-gn-y2e" secondAttribute="bottom" constant="2" id="0RT-CV-bYS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0dJ-sB-hP6" secondAttribute="trailing" priority="900" constant="5" id="0zs-oc-J35"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="bottom" secondItem="d3P-M7-ByW" secondAttribute="bottomMargin" id="7ak-a8-eNt"/>
                                         <constraint firstItem="V0C-vf-30M" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="8TI-Pl-Paf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vtm-gn-y2e" secondAttribute="trailing" priority="900" constant="5" id="Em0-Pq-HbK"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="trailing" secondItem="d3P-M7-ByW" secondAttribute="trailingMargin" constant="5" id="IWj-vn-FEy"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="0dJ-sB-hP6" secondAttribute="trailing" id="KIg-sf-uR0"/>
                                         <constraint firstItem="V0C-vf-30M" firstAttribute="top" secondItem="vtm-gn-y2e" secondAttribute="bottom" constant="2" id="NPf-Vi-TND"/>
-                                        <constraint firstItem="0dJ-sB-hP6" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="-4" id="SLa-Iu-3SN"/>
+                                        <constraint firstItem="0dJ-sB-hP6" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="top" id="SLa-Iu-3SN"/>
+                                        <constraint firstItem="R30-7T-C8D" firstAttribute="baseline" secondItem="V0C-vf-30M" secondAttribute="baseline" id="SmW-wJ-Lqc"/>
                                         <constraint firstItem="vtm-gn-y2e" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="TG2-Mr-B2Q"/>
                                         <constraint firstItem="jkQ-TF-56D" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="UlR-P5-dvA"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="5" id="Wz3-g4-JFx"/>
-                                        <constraint firstItem="R30-7T-C8D" firstAttribute="trailing" secondItem="d3P-M7-ByW" secondAttribute="trailingMargin" constant="5" id="YEV-bK-JZ9"/>
-                                        <constraint firstItem="jkQ-TF-56D" firstAttribute="top" secondItem="R30-7T-C8D" secondAttribute="bottom" constant="2" id="alE-aN-fcN"/>
-                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="jkQ-TF-56D" secondAttribute="trailing" constant="3" id="bny-mh-ePf"/>
+                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="jkQ-TF-56D" secondAttribute="trailing" priority="999" constant="3" id="bny-mh-ePf"/>
                                         <constraint firstItem="0dJ-sB-hP6" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="cWj-bg-3U4"/>
-                                        <constraint firstItem="R30-7T-C8D" firstAttribute="leading" secondItem="V0C-vf-30M" secondAttribute="trailing" constant="2" id="eT0-Sb-vUg"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="vtm-gn-y2e" secondAttribute="trailing" constant="5" id="fgO-9a-iKS"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="jkQ-TF-56D" secondAttribute="bottom" constant="-8" id="iYp-cP-8RO"/>
-                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="vtm-gn-y2e" secondAttribute="trailing" constant="3" id="jUh-Z4-xRt"/>
-                                        <constraint firstItem="jkQ-TF-56D" firstAttribute="bottom" secondItem="d3P-M7-ByW" secondAttribute="bottomMargin" constant="-8" id="kJt-PU-fUd"/>
-                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="0dJ-sB-hP6" secondAttribute="trailing" constant="3" id="lcA-25-tdA"/>
+                                        <constraint firstItem="R30-7T-C8D" firstAttribute="leading" secondItem="V0C-vf-30M" secondAttribute="trailing" constant="7" id="eT0-Sb-vUg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jkQ-TF-56D" secondAttribute="trailing" priority="900" constant="5" id="go9-yK-NQc"/>
+                                        <constraint firstAttribute="bottom" secondItem="jkQ-TF-56D" secondAttribute="bottom" id="iYp-cP-8RO"/>
+                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="vtm-gn-y2e" secondAttribute="trailing" priority="999" constant="3" id="jUh-Z4-xRt"/>
+                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="0dJ-sB-hP6" secondAttribute="trailing" priority="999" constant="3" id="lcA-25-tdA"/>
                                         <constraint firstItem="jkQ-TF-56D" firstAttribute="top" secondItem="V0C-vf-30M" secondAttribute="bottom" constant="2" id="pc9-0F-uH4"/>
                                         <constraint firstItem="vtm-gn-y2e" firstAttribute="top" secondItem="0dJ-sB-hP6" secondAttribute="bottom" constant="2" id="tWo-0t-wGW"/>
-                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="R30-7T-C8D" secondAttribute="trailing" constant="3" id="tkg-0p-CKh"/>
-                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="top" secondItem="R30-7T-C8D" secondAttribute="bottom" constant="2" id="xV7-U9-NX2"/>
-                                        <constraint firstItem="vtm-gn-y2e" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="5" id="yiA-eS-z3z"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="R30-7T-C8D" secondAttribute="trailing" priority="900" constant="5" id="tYT-WM-fSE"/>
+                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="R30-7T-C8D" secondAttribute="trailing" priority="999" constant="3" id="tkg-0p-CKh"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="KIg-sf-uR0"/>
-                                            <exclude reference="fgO-9a-iKS"/>
-                                            <exclude reference="yiA-eS-z3z"/>
-                                            <exclude reference="kJt-PU-fUd"/>
-                                            <exclude reference="YEV-bK-JZ9"/>
-                                            <exclude reference="xV7-U9-NX2"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="categoriesConstraintExtra" destination="0zs-oc-J35" id="hIv-8o-IJz"/>
+                                    <outlet property="categoriesConstraintImage" destination="lcA-25-tdA" id="mq5-xN-r8I"/>
+                                    <outlet property="categoryLabel" destination="0dJ-sB-hP6" id="rO6-d0-aIK"/>
+                                    <outlet property="dateLabel" destination="V0C-vf-30M" id="5fo-4a-zCI"/>
+                                    <outlet property="headline" destination="vtm-gn-y2e" id="PzE-EO-7yg"/>
+                                    <outlet property="headlineConstraintExtra" destination="Em0-Pq-HbK" id="772-fp-ErM"/>
+                                    <outlet property="headlineConstraintImage" destination="jUh-Z4-xRt" id="JR5-cU-5fn"/>
+                                    <outlet property="imView" destination="ULv-Zu-pQu" id="ZA8-0v-OA4"/>
+                                    <outlet property="previewConstraintExtra" destination="go9-yK-NQc" id="zha-ai-5fS"/>
+                                    <outlet property="previewContraintImage" destination="bny-mh-ePf" id="q5j-lQ-UYH"/>
+                                    <outlet property="textPreview" destination="jkQ-TF-56D" id="G6w-xW-oau"/>
+                                    <outlet property="writerLabel" destination="R30-7T-C8D" id="Fcg-ig-atK"/>
+                                    <outlet property="writerNameConstraintExtra" destination="tYT-WM-fSE" id="7xd-CH-XKt"/>
+                                    <outlet property="writerNameConstraintImage" destination="tkg-0p-CKh" id="4Vi-YY-bzD"/>
                                     <segue destination="Ah7-4n-0Wa" kind="show" identifier="showDetail" id="jUr-3t-vfg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mostRecentPreview" rowHeight="220" id="ZtY-Ev-a3H" customClass="ArticleUITableCell">
-                                <rect key="frame" x="0.0" y="134" width="600" height="220"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mostRecentPreview" rowHeight="321" id="ZtY-Ev-a3H" customClass="LeadArticleTableViewCell" customModule="The_Smoke_Signal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="134" width="600" height="321"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="9" contentMode="center" ambiguous="YES" tableViewCell="ZtY-Ev-a3H" id="V7Y-Yv-TEv">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="219"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="9" contentMode="center" tableViewCell="ZtY-Ev-a3H" id="V7Y-Yv-TEv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jhm-Qo-IeF">
-                                            <rect key="frame" x="0.0" y="0.0" width="426" height="133"/>
+                                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jhm-Qo-IeF">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Jhm-Qo-IeF" secondAttribute="height" multiplier="800:250" id="8tF-eL-c8X"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-ly-tbU">
-                                            <rect key="frame" x="13" y="151" width="574" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="24" id="SzE-ZX-O3G"/>
-                                                <constraint firstAttribute="height" constant="20" id="hm2-0y-XZ2"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="headline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-ly-tbU">
+                                            <rect key="frame" x="13" y="209" width="574" height="27"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="hm2-0y-XZ2"/>
-                                                </mask>
-                                            </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="By: Staff Writer Room for Long Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkv-uk-nNM">
-                                            <rect key="frame" x="116" y="178" width="476" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="15" id="Ded-Q8-cKu"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Staff Writer Room for Long Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkv-uk-nNM">
+                                            <rect key="frame" x="133" y="239" width="459" height="16"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="MonthMonth xy, 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5n-70-zeb">
-                                            <rect key="frame" x="13" y="178" width="100" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="15" id="oZY-FV-7Lc"/>
-                                                <constraint firstAttribute="width" constant="100" id="s4n-cg-OQS"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="749" text="MonthMonth xy, 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5n-70-zeb">
+                                            <rect key="frame" x="13" y="239" width="117" height="16"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-GU-iKY">
-                                            <rect key="frame" x="13" y="137" width="50" height="12"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="12" id="ah6-uB-iza"/>
-                                                <constraint firstAttribute="height" constant="14" id="n0Z-sW-kUM"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvh-GU-iKY">
+                                            <rect key="frame" x="13" y="192" width="50" height="15"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="n0Z-sW-kUM"/>
-                                                </mask>
-                                            </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" text="text preview" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-V5-fJB">
-                                            <rect key="frame" x="13" y="195" width="574" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="500" text="text preview" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-V5-fJB">
+                                            <rect key="frame" x="13" y="257" width="574" height="55"/>
                                             <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1154,18 +911,17 @@ The </string>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="ldV-ly-tbU" secondAttribute="trailing" constant="5" id="2IG-oR-952"/>
-                                        <constraint firstItem="Jhm-Qo-IeF" firstAttribute="top" secondItem="V7Y-Yv-TEv" secondAttribute="topMargin" constant="-8" id="9AY-Bv-YRJ"/>
+                                        <constraint firstItem="Jhm-Qo-IeF" firstAttribute="top" secondItem="V7Y-Yv-TEv" secondAttribute="top" id="9AY-Bv-YRJ"/>
                                         <constraint firstItem="USQ-V5-fJB" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="5" id="9vX-qW-1Lg"/>
+                                        <constraint firstItem="Gkv-uk-nNM" firstAttribute="baseline" secondItem="P5n-70-zeb" secondAttribute="baseline" id="EtO-wD-vkI"/>
                                         <constraint firstItem="Mvh-GU-iKY" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="5" id="Fyt-TO-x48"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Gkv-uk-nNM" secondAttribute="trailing" id="GT7-1s-EiR"/>
-                                        <constraint firstItem="USQ-V5-fJB" firstAttribute="top" secondItem="Gkv-uk-nNM" secondAttribute="bottom" constant="2" id="HoN-aR-pYM"/>
                                         <constraint firstItem="Mvh-GU-iKY" firstAttribute="top" secondItem="Jhm-Qo-IeF" secondAttribute="bottom" constant="4" id="NQs-qj-D6l"/>
-                                        <constraint firstItem="Jhm-Qo-IeF" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="-8" id="TQX-lA-1vE"/>
-                                        <constraint firstItem="Gkv-uk-nNM" firstAttribute="top" secondItem="ldV-ly-tbU" secondAttribute="bottom" constant="3" id="VXB-oi-nh6"/>
+                                        <constraint firstItem="Jhm-Qo-IeF" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leading" id="TQX-lA-1vE"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="USQ-V5-fJB" secondAttribute="bottom" id="Vme-5Q-yf9"/>
                                         <constraint firstItem="P5n-70-zeb" firstAttribute="top" secondItem="ldV-ly-tbU" secondAttribute="bottom" constant="3" id="XRD-cc-36d"/>
                                         <constraint firstItem="Gkv-uk-nNM" firstAttribute="leading" secondItem="P5n-70-zeb" secondAttribute="trailing" constant="3" id="ahf-Wo-QFc"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Jhm-Qo-IeF" secondAttribute="trailing" constant="-8" id="hVX-6g-kIv"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jhm-Qo-IeF" secondAttribute="trailing" id="hVX-6g-kIv"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="USQ-V5-fJB" secondAttribute="trailing" constant="5" id="iZS-qy-Bt8"/>
                                         <constraint firstItem="ldV-ly-tbU" firstAttribute="top" secondItem="Mvh-GU-iKY" secondAttribute="bottom" constant="2" id="j0C-QM-iEb"/>
                                         <constraint firstItem="Gkv-uk-nNM" firstAttribute="top" secondItem="ldV-ly-tbU" secondAttribute="bottom" constant="2" id="nlf-Sg-YGJ"/>
@@ -1183,6 +939,12 @@ The </string>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="categoryLabel" destination="Mvh-GU-iKY" id="wkH-gy-f6c"/>
+                                    <outlet property="dateLabel" destination="P5n-70-zeb" id="EYD-Rm-e4P"/>
+                                    <outlet property="headline" destination="ldV-ly-tbU" id="KIn-yY-r7K"/>
+                                    <outlet property="imView" destination="Jhm-Qo-IeF" id="U22-wd-Lt1"/>
+                                    <outlet property="textPreview" destination="USQ-V5-fJB" id="Za4-gR-xsF"/>
+                                    <outlet property="writerLabel" destination="Gkv-uk-nNM" id="gYr-Hc-57w"/>
                                     <segue destination="Ah7-4n-0Wa" kind="show" identifier="showDetailFirst" id="pgy-7S-5M9"/>
                                 </connections>
                             </tableViewCell>

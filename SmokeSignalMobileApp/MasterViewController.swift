@@ -22,7 +22,6 @@ class MasterViewController: UITableViewController{
     
     var currentCategory : Category = Category()
     
-    
     var currentPage = 0
     var currentlyLoading = false
     
@@ -35,7 +34,9 @@ class MasterViewController: UITableViewController{
         Singleton.sharedInstance.masterViewControllerReference = self;
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        self.tableView.estimatedRowHeight = 400 //todo find right cell height
+            
+            
         setBarButton()
 
         self.automaticallyAdjustsScrollViewInsets = false
@@ -82,22 +83,17 @@ class MasterViewController: UITableViewController{
  
     func addNavBarBanner() {
         print("started adding top Navigation Bar", appendNewline: true)
-        
         var imPresent : Bool
-        
         if self.currentCategory.slug! == "" {
             imPresent = true
         }
         else {
             imPresent = false
         }
-        
         let titleView = NavBarTitleView(frame: CGRectZero, title: currentCategory.catName!,imagePresent: imPresent)
 
         let titleSize = titleView.systemLayoutSizeFittingSize(CGSizeZero)
-        
         titleView.frame = CGRectMake(0, 0, titleSize.width, titleSize.height)
-        
         mainNavBar.titleView = titleView
         
     }
@@ -131,7 +127,7 @@ class MasterViewController: UITableViewController{
    // cell heights
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if (indexPath.row == 0) {
-            return 220
+            return UITableViewAutomaticDimension
         }
         
         else {
@@ -142,125 +138,26 @@ class MasterViewController: UITableViewController{
     //populates table with cells
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        var cell : UITableViewCell
+        var cell : ArticleTableViewCell
         
         if (indexPath.row == 0) {
-            cell = tableView.dequeueReusableCellWithIdentifier("mostRecentPreview", forIndexPath: indexPath) as UITableViewCell
-            (cell.viewWithTag(1) as! UILabel!).sizeToFit()
+            cell = tableView.dequeueReusableCellWithIdentifier("mostRecentPreview", forIndexPath: indexPath) as! LeadArticleTableViewCell
         }
         
         else {
-            cell = tableView.dequeueReusableCellWithIdentifier("article", forIndexPath: indexPath) as UITableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("article", forIndexPath: indexPath) as! GeneralArticleTableViewCell
         }
         
-        fillCells(cell, indexPath: indexPath)
-        cell.setNeedsDisplay()
-        return cell
-    }
-    
-    // configures stuff for cells
-    func fillCells(cell: UITableViewCell, indexPath: NSIndexPath) {
         let currentPostDictionary : NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
         
         let currentArticle : Article = Article(article: currentPostDictionary)
         
-        let categoryLabel = cell.viewWithTag(8) as! UILabel
-        let headline = cell.viewWithTag(1) as! UILabel
-        let dateLabel = cell.viewWithTag(4) as! UILabel
-        let writerLabel = cell.viewWithTag(5) as! UILabel
-        let textPreview = cell.viewWithTag(2) as! UILabel
-        let imageView = cell.viewWithTag(3) as! UIImageView
-
+        cell.setArticle(currentArticle)
         
-        if (currentArticle.categoriesString != nil) {
-            categoryLabel.text = currentArticle.categoriesString!
-        }
-        
-        if (currentArticle.headline != nil) {
-            headline.text = currentArticle.headline!
-        }
-        
-        if (currentArticle.postedDateText != nil) {
-            dateLabel.text = currentArticle.postedDateText!
-        }
-        
-        if (currentArticle.writerString != nil) {
-            writerLabel.text = currentArticle.writerString!
-        }
-        
-        if (currentArticle.previewText != nil) {
-            textPreview.text = currentArticle.previewText!
-        }
-        
-        if (currentArticle.imageExists!) {
-            imageView.sd_setImageWithURL(currentArticle.fullImageURL!)
-            //imageView.image = currentArticle.fullImage!
-        }
-        else {
-            
-            print("", appendNewline: false)
-            print("", appendNewline: false)
-            print("", appendNewline: false)
-            
-            
-            //var leadingSpaceToImg : CGFloat = 3.0
-            let imWidth = imageView.frame.size.width
-            print("image width before change: ", appendNewline: false)
-            print(imWidth, appendNewline: true)
-            imageView.hidden = true
-            
-            headline.translatesAutoresizingMaskIntoConstraints = true
-            writerLabel.translatesAutoresizingMaskIntoConstraints = true
-            textPreview.translatesAutoresizingMaskIntoConstraints = true
-            categoryLabel.translatesAutoresizingMaskIntoConstraints = true
-
-            
-            print("headline width before change: ", appendNewline: false)
-            print(headline.frame.size.width, appendNewline: true)
-            var headFrame = headline.frame
-            headFrame.size.width = headline.frame.size.width + imWidth //+ leadingSpaceToImg
-            headline.frame = headFrame
-            print("headline width after change: ", appendNewline: false)
-            print(headline.frame.size.width, appendNewline: true)
-
-            
-            print("writer width before change: ", appendNewline: false)
-            print(writerLabel.frame.size.width, appendNewline: true)
-            var writerFrame = writerLabel.frame
-            writerFrame.size.width = writerLabel.frame.size.width + imWidth //+ leadingSpaceToImg
-            writerLabel.frame = writerFrame
-            print("headline width after change: ", appendNewline: false)
-            print(writerLabel.frame.size.width, appendNewline: true)
-
-            print("textframe width before change: ", appendNewline: false)
-            print(textPreview.frame.size.width, appendNewline: true)
-            var textFrame = textPreview.frame
-            textFrame.size.width = textPreview.frame.size.width + imWidth //+ leadingSpaceToImg
-            textPreview.frame = textFrame
-            print("textframe width after change: ", appendNewline: false)
-            print(textPreview.frame.size.width, appendNewline: true)
-
-            print("catframe width before change: ", appendNewline: false)
-            print(categoryLabel.frame.size.width, appendNewline: true)
-            var catFrame = categoryLabel.frame
-            catFrame.size.width = categoryLabel.frame.size.width + imWidth //+ leadingSpaceToImg
-            categoryLabel.frame = catFrame
-            print("catframe width after change: ", appendNewline: false)
-            print(categoryLabel.frame.size.width, appendNewline: true)
-
-            
-            
-            headline.translatesAutoresizingMaskIntoConstraints = true
-            writerLabel.translatesAutoresizingMaskIntoConstraints = true
-            textPreview.translatesAutoresizingMaskIntoConstraints = true
-            categoryLabel.translatesAutoresizingMaskIntoConstraints = true
-
-
-        }
-        
-        imageView.clipsToBounds = true 
-
+        cell.setNeedsDisplay()
+        return cell
     }
+ 
     
     @IBAction func refreshPulled(sender: AnyObject) {
         currentPage = 1;

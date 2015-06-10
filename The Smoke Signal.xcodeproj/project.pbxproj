@@ -81,6 +81,9 @@
 		EE99AAB41A0F5432001B9AEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB31A0F5432001B9AEF /* Images.xcassets */; };
 		EE99AAB71A0F5432001B9AEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE99AAB51A0F5432001B9AEF /* LaunchScreen.xib */; };
 		EEB87EAE1B27736100752884 /* NavBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EAD1B27736100752884 /* NavBarTitleView.swift */; };
+		EEB87EB01B27B73C00752884 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EAF1B27B73C00752884 /* ArticleTableViewCell.swift */; };
+		EEB87EB41B27C05600752884 /* LeadArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EB31B27C05600752884 /* LeadArticleTableViewCell.swift */; };
+		EEB87EB61B27C07200752884 /* GeneralArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EB51B27C07200752884 /* GeneralArticleTableViewCell.swift */; };
 		EEF50DF01A90F1D300E733BE /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */; };
 		EEF50DF41A911F1E00E733BE /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DF31A911F1E00E733BE /* PhotosViewController.swift */; };
 		EEFC5C341AF5D98700614494 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC5C301AF5D98700614494 /* AnimatedMenuButton.swift */; };
@@ -227,6 +230,9 @@
 		EEA404271B009A7800F22A7E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		EEA404281B009A7800F22A7E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EEB87EAD1B27736100752884 /* NavBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarTitleView.swift; sourceTree = "<group>"; };
+		EEB87EAF1B27B73C00752884 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		EEB87EB31B27C05600752884 /* LeadArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeadArticleTableViewCell.swift; path = ../LeadArticleTableViewCell.swift; sourceTree = "<group>"; };
+		EEB87EB51B27C07200752884 /* GeneralArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneralArticleTableViewCell.swift; path = ../GeneralArticleTableViewCell.swift; sourceTree = "<group>"; };
 		EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		EEF50DF31A911F1E00E733BE /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		EEFC5C301AF5D98700614494 /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMenuButton.swift; sourceTree = "<group>"; };
@@ -447,6 +453,9 @@
 			children = (
 				EE1C6EDE1A9038150068C8DA /* MainViewController.swift */,
 				EE99AAAC1A0F5432001B9AEF /* MasterViewController.swift */,
+				EEB87EAF1B27B73C00752884 /* ArticleTableViewCell.swift */,
+				EEB87EB31B27C05600752884 /* LeadArticleTableViewCell.swift */,
+				EEB87EB51B27C07200752884 /* GeneralArticleTableViewCell.swift */,
 				EE99AAAE1A0F5432001B9AEF /* DetailViewController.swift */,
 				EE1C6F091A9052140068C8DA /* SideMenuViewController.swift */,
 				EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */,
@@ -791,6 +800,7 @@
 				EEB87EAE1B27736100752884 /* NavBarTitleView.swift in Sources */,
 				EE1C6F0A1A9052140068C8DA /* SideMenuViewController.swift in Sources */,
 				EE0FB0201AF5CCF000E9D430 /* SWRevealViewController.m in Sources */,
+				EEB87EB01B27B73C00752884 /* ArticleTableViewCell.swift in Sources */,
 				EEFC5C341AF5D98700614494 /* AnimatedMenuButton.swift in Sources */,
 				EE13F6A51AEE0C6600FE93FE /* SDWebImageManager.m in Sources */,
 				EE13F6A21AEE0C6600FE93FE /* SDWebImageDecoder.m in Sources */,
@@ -806,9 +816,11 @@
 				EE13F69F1AEE0C6600FE93FE /* NSData+ImageContentType.m in Sources */,
 				EE13F6A11AEE0C6600FE93FE /* SDWebImageCompat.m in Sources */,
 				EE1C6EDF1A9038150068C8DA /* MainViewController.swift in Sources */,
+				EEB87EB41B27C05600752884 /* LeadArticleTableViewCell.swift in Sources */,
 				EE21C3F41A86E54B003EF515 /* NSString+HTML.m in Sources */,
 				EE13F6A01AEE0C6600FE93FE /* SDImageCache.m in Sources */,
 				EE13F6A31AEE0C6600FE93FE /* SDWebImageDownloader.m in Sources */,
+				EEB87EB61B27C07200752884 /* GeneralArticleTableViewCell.swift in Sources */,
 				EE206BD81A90B319007A3103 /* UIColorExtension.swift in Sources */,
 				EEF50DF01A90F1D300E733BE /* AboutUsViewController.swift in Sources */,
 				EE13F6A91AEE0C6600FE93FE /* UIImage+MultiFormat.m in Sources */,
