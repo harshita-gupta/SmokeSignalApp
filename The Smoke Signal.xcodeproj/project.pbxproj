@@ -27,8 +27,6 @@
 		EE13F6AF1AEE0C8600FE93FE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */; };
 		EE1759071AEEECBC0031EA2C /* NavBars.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE1759061AEEECBC0031EA2C /* NavBars.xib */; };
 		EE1C6EDF1A9038150068C8DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C6EDE1A9038150068C8DA /* MainViewController.swift */; };
-		EE1C6F061A90474B0068C8DA /* iconmonstr-menu-icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1C6F051A90474B0068C8DA /* iconmonstr-menu-icon-128.png */; };
-		EE1C6F081A9047820068C8DA /* iconmonstr-menu-icon-24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1C6F071A9047820068C8DA /* iconmonstr-menu-icon-24.png */; };
 		EE1C6F0A1A9052140068C8DA /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1C6F091A9052140068C8DA /* SideMenuViewController.swift */; };
 		EE206BA61A90AE65007A3103 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE206BA51A90AE65007A3103 /* Article.swift */; };
 		EE206BA81A90AECA007A3103 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE206BA71A90AECA007A3103 /* Category.swift */; };
@@ -105,28 +103,6 @@
 		EEFC5C551AF5DD4700614494 /* 13 Archives Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFC5C461AF5DD4700614494 /* 13 Archives Bar.png */; };
 		EEFC5C561AF5DD4700614494 /* 14 Awards Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFC5C471AF5DD4700614494 /* 14 Awards Bar.png */; };
 		EEFC5C571AF5DD4700614494 /* 15 Staff Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFC5C481AF5DD4700614494 /* 15 Staff Bar.png */; };
-		EEFFAFFC1AA4282900AD2354 /* Feature Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFE61AA4282900AD2354 /* Feature Color.png */; };
-		EEFFAFFD1AA4282900AD2354 /* Sports Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFE71AA4282900AD2354 /* Sports Color.png */; };
-		EEFFAFFE1AA4282900AD2354 /* Opinion Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFE81AA4282900AD2354 /* Opinion Banner.png */; };
-		EEFFAFFF1AA4282900AD2354 /* Online Exclusives Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFE91AA4282900AD2354 /* Online Exclusives Banner.png */; };
-		EEFFB0001AA4282900AD2354 /* News Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFEA1AA4282900AD2354 /* News Color.png */; };
-		EEFFB0011AA4282900AD2354 /* Recent Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFEB1AA4282900AD2354 /* Recent Banner.png */; };
-		EEFFB0021AA4282900AD2354 /* Arts & Entertainment Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFEC1AA4282900AD2354 /* Arts & Entertainment Color.png */; };
-		EEFFB0031AA4282900AD2354 /* Settings Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFED1AA4282900AD2354 /* Settings Banner.png */; };
-		EEFFB0041AA4282900AD2354 /* About Us Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFEE1AA4282900AD2354 /* About Us Banner.png */; };
-		EEFFB0051AA4282900AD2354 /* Arts & Entertainment Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFEF1AA4282900AD2354 /* Arts & Entertainment Banner.png */; };
-		EEFFB0061AA4282900AD2354 /* Centerspread Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF01AA4282900AD2354 /* Centerspread Banner.png */; };
-		EEFFB0071AA4282900AD2354 /* SMOKIE LOGO Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF11AA4282900AD2354 /* SMOKIE LOGO Banner.png */; };
-		EEFFB0081AA4282900AD2354 /* Feature Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF21AA4282900AD2354 /* Feature Banner.png */; };
-		EEFFB0091AA4282900AD2354 /* Centerspread Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF31AA4282900AD2354 /* Centerspread Color.png */; };
-		EEFFB00A1AA4282900AD2354 /* Photo Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF41AA4282900AD2354 /* Photo Banner.png */; };
-		EEFFB00B1AA4282900AD2354 /* Online Exclusives Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF51AA4282900AD2354 /* Online Exclusives Color.png */; };
-		EEFFB00C1AA4282900AD2354 /* Photo Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF61AA4282900AD2354 /* Photo Color.png */; };
-		EEFFB00D1AA4282900AD2354 /* About Us + Favorites + Settings + Recent Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF71AA4282900AD2354 /* About Us + Favorites + Settings + Recent Color.png */; };
-		EEFFB00E1AA4282900AD2354 /* Favorites Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF81AA4282900AD2354 /* Favorites Banner.png */; };
-		EEFFB00F1AA4282900AD2354 /* News Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFF91AA4282900AD2354 /* News Banner.png */; };
-		EEFFB0101AA4282900AD2354 /* Sports Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFFA1AA4282900AD2354 /* Sports Banner.png */; };
-		EEFFB0111AA4282900AD2354 /* Opinion Color.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFFAFFB1AA4282900AD2354 /* Opinion Color.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,8 +144,6 @@
 		EE13F6AE1AEE0C8600FE93FE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EE1759061AEEECBC0031EA2C /* NavBars.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBars.xib; sourceTree = "<group>"; };
 		EE1C6EDE1A9038150068C8DA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		EE1C6F051A90474B0068C8DA /* iconmonstr-menu-icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconmonstr-menu-icon-128.png"; sourceTree = "<group>"; };
-		EE1C6F071A9047820068C8DA /* iconmonstr-menu-icon-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconmonstr-menu-icon-24.png"; sourceTree = "<group>"; };
 		EE1C6F091A9052140068C8DA /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		EE206BA51A90AE65007A3103 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		EE206BA71A90AECA007A3103 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -254,28 +228,6 @@
 		EEFC5C461AF5DD4700614494 /* 13 Archives Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "13 Archives Bar.png"; sourceTree = "<group>"; };
 		EEFC5C471AF5DD4700614494 /* 14 Awards Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14 Awards Bar.png"; sourceTree = "<group>"; };
 		EEFC5C481AF5DD4700614494 /* 15 Staff Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "15 Staff Bar.png"; sourceTree = "<group>"; };
-		EEFFAFE61AA4282900AD2354 /* Feature Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Feature Color.png"; path = "../Banners/Feature Color.png"; sourceTree = "<group>"; };
-		EEFFAFE71AA4282900AD2354 /* Sports Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sports Color.png"; path = "../Banners/Sports Color.png"; sourceTree = "<group>"; };
-		EEFFAFE81AA4282900AD2354 /* Opinion Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Opinion Banner.png"; sourceTree = "<group>"; };
-		EEFFAFE91AA4282900AD2354 /* Online Exclusives Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Online Exclusives Banner.png"; sourceTree = "<group>"; };
-		EEFFAFEA1AA4282900AD2354 /* News Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "News Color.png"; path = "../Banners/News Color.png"; sourceTree = "<group>"; };
-		EEFFAFEB1AA4282900AD2354 /* Recent Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recent Banner.png"; sourceTree = "<group>"; };
-		EEFFAFEC1AA4282900AD2354 /* Arts & Entertainment Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Arts & Entertainment Color.png"; path = "../Banners/Arts & Entertainment Color.png"; sourceTree = "<group>"; };
-		EEFFAFED1AA4282900AD2354 /* Settings Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings Banner.png"; sourceTree = "<group>"; };
-		EEFFAFEE1AA4282900AD2354 /* About Us Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "About Us Banner.png"; sourceTree = "<group>"; };
-		EEFFAFEF1AA4282900AD2354 /* Arts & Entertainment Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arts & Entertainment Banner.png"; sourceTree = "<group>"; };
-		EEFFAFF01AA4282900AD2354 /* Centerspread Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Centerspread Banner.png"; sourceTree = "<group>"; };
-		EEFFAFF11AA4282900AD2354 /* SMOKIE LOGO Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SMOKIE LOGO Banner.png"; sourceTree = "<group>"; };
-		EEFFAFF21AA4282900AD2354 /* Feature Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feature Banner.png"; sourceTree = "<group>"; };
-		EEFFAFF31AA4282900AD2354 /* Centerspread Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Centerspread Color.png"; path = "../Banners/Centerspread Color.png"; sourceTree = "<group>"; };
-		EEFFAFF41AA4282900AD2354 /* Photo Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo Banner.png"; sourceTree = "<group>"; };
-		EEFFAFF51AA4282900AD2354 /* Online Exclusives Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Online Exclusives Color.png"; path = "../Banners/Online Exclusives Color.png"; sourceTree = "<group>"; };
-		EEFFAFF61AA4282900AD2354 /* Photo Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Photo Color.png"; path = "../Banners/Photo Color.png"; sourceTree = "<group>"; };
-		EEFFAFF71AA4282900AD2354 /* About Us + Favorites + Settings + Recent Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "About Us + Favorites + Settings + Recent Color.png"; path = "../Banners/About Us + Favorites + Settings + Recent Color.png"; sourceTree = "<group>"; };
-		EEFFAFF81AA4282900AD2354 /* Favorites Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Favorites Banner.png"; sourceTree = "<group>"; };
-		EEFFAFF91AA4282900AD2354 /* News Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News Banner.png"; sourceTree = "<group>"; };
-		EEFFAFFA1AA4282900AD2354 /* Sports Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sports Banner.png"; sourceTree = "<group>"; };
-		EEFFAFFB1AA4282900AD2354 /* Opinion Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Opinion Color.png"; path = "../Banners/Opinion Color.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,7 +296,6 @@
 			children = (
 				EE206BA51A90AE65007A3103 /* Article.swift */,
 				EE206BA71A90AECA007A3103 /* Category.swift */,
-				EEB87EAD1B27736100752884 /* NavBarTitleView.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -369,51 +320,6 @@
 				EEFC5C481AF5DD4700614494 /* 15 Staff Bar.png */,
 			);
 			name = "Section Buttons- Bar";
-			sourceTree = "<group>";
-		};
-		EE206BA91A90B1D0007A3103 /* Category Colors and Banners */ = {
-			isa = PBXGroup;
-			children = (
-				EE206BAA1A90B1D0007A3103 /* Banners */,
-				EE206BB71A90B1D0007A3103 /* Colors */,
-			);
-			path = "Category Colors and Banners";
-			sourceTree = "<group>";
-		};
-		EE206BAA1A90B1D0007A3103 /* Banners */ = {
-			isa = PBXGroup;
-			children = (
-				EEFFAFE81AA4282900AD2354 /* Opinion Banner.png */,
-				EEFFAFE91AA4282900AD2354 /* Online Exclusives Banner.png */,
-				EEFFAFEB1AA4282900AD2354 /* Recent Banner.png */,
-				EEFFAFED1AA4282900AD2354 /* Settings Banner.png */,
-				EEFFAFEE1AA4282900AD2354 /* About Us Banner.png */,
-				EEFFAFEF1AA4282900AD2354 /* Arts & Entertainment Banner.png */,
-				EEFFAFF01AA4282900AD2354 /* Centerspread Banner.png */,
-				EEFFAFF11AA4282900AD2354 /* SMOKIE LOGO Banner.png */,
-				EEFFAFF21AA4282900AD2354 /* Feature Banner.png */,
-				EEFFAFF41AA4282900AD2354 /* Photo Banner.png */,
-				EEFFAFF81AA4282900AD2354 /* Favorites Banner.png */,
-				EEFFAFF91AA4282900AD2354 /* News Banner.png */,
-				EEFFAFFA1AA4282900AD2354 /* Sports Banner.png */,
-			);
-			path = Banners;
-			sourceTree = "<group>";
-		};
-		EE206BB71A90B1D0007A3103 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				EEFFAFE61AA4282900AD2354 /* Feature Color.png */,
-				EEFFAFE71AA4282900AD2354 /* Sports Color.png */,
-				EEFFAFEA1AA4282900AD2354 /* News Color.png */,
-				EEFFAFEC1AA4282900AD2354 /* Arts & Entertainment Color.png */,
-				EEFFAFF31AA4282900AD2354 /* Centerspread Color.png */,
-				EEFFAFF51AA4282900AD2354 /* Online Exclusives Color.png */,
-				EEFFAFF61AA4282900AD2354 /* Photo Color.png */,
-				EEFFAFF71AA4282900AD2354 /* About Us + Favorites + Settings + Recent Color.png */,
-				EEFFAFFB1AA4282900AD2354 /* Opinion Color.png */,
-			);
-			path = Colors;
 			sourceTree = "<group>";
 		};
 		EE206BD61A90B300007A3103 /* External */ = {
@@ -486,9 +392,6 @@
 		EE21C3FA1A882CE5003EF515 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				EE206BA91A90B1D0007A3103 /* Category Colors and Banners */,
-				EE1C6F071A9047820068C8DA /* iconmonstr-menu-icon-24.png */,
-				EE1C6F051A90474B0068C8DA /* iconmonstr-menu-icon-128.png */,
 				EE1C6EEC1A903B950068C8DA /* Section Buttons- Bar */,
 				EE21C41C1A882DF9003EF515 /* App Icon */,
 				EE21C3FB1A882CF2003EF515 /* Launch Screens */,
@@ -580,6 +483,7 @@
 				EE21C3E11A86D4CC003EF515 /* View Controllers */,
 				EE21C3E21A86D4DC003EF515 /* Core */,
 				EE1759061AEEECBC0031EA2C /* NavBars.xib */,
+				EEB87EAD1B27736100752884 /* NavBarTitleView.swift */,
 				EE1C6ED31A900FD80068C8DA /* Models */,
 				EE21C3F91A882CD9003EF515 /* Resources */,
 				EE99AAB01A0F5432001B9AEF /* Main.storyboard */,
@@ -693,36 +597,23 @@
 				EE62D1DF1A883C3800221D65 /* SEGOEUIL.TTF in Resources */,
 				EEFC5C4B1AF5DD4700614494 /* 03 Opinion Bar.png in Resources */,
 				EE62D1E01A883C3800221D65 /* SEGOEUISL.TTF in Resources */,
-				EEFFAFFF1AA4282900AD2354 /* Online Exclusives Banner.png in Resources */,
-				EEFFB0011AA4282900AD2354 /* Recent Banner.png in Resources */,
-				EEFFB0031AA4282900AD2354 /* Settings Banner.png in Resources */,
 				EEFC5C4F1AF5DD4700614494 /* 07 Sports Bar.png in Resources */,
 				EE62D1E11A883C3800221D65 /* SEGOEUIZ.TTF in Resources */,
 				EE62D1E21A883C3800221D65 /* SEGUIBL.TTF in Resources */,
 				EEFC5C501AF5DD4700614494 /* 08 Photo Bar.png in Resources */,
-				EEFFB0111AA4282900AD2354 /* Opinion Color.png in Resources */,
 				EE1759071AEEECBC0031EA2C /* NavBars.xib in Resources */,
 				EE62D1E31A883C3800221D65 /* SEGUIBLI.TTF in Resources */,
-				EEFFAFFC1AA4282900AD2354 /* Feature Color.png in Resources */,
-				EEFFB00C1AA4282900AD2354 /* Photo Color.png in Resources */,
 				EE62D1E41A883C3800221D65 /* SEGUILI.TTF in Resources */,
 				EE62D1E51A883C3800221D65 /* SEGUISB.TTF in Resources */,
 				EE62D1E61A883C3800221D65 /* SEGUISBI.TTF in Resources */,
-				EEFFAFFD1AA4282900AD2354 /* Sports Color.png in Resources */,
 				EE62D1E71A883C3800221D65 /* SEGUISLI.TTF in Resources */,
 				EE21C42A1A882E08003EF515 /* 76 x 76 App Icon.png in Resources */,
-				EEFFB0061AA4282900AD2354 /* Centerspread Banner.png in Resources */,
 				EEFC5C491AF5DD4700614494 /* 01 Recent Bar.png in Resources */,
-				EEFFB0001AA4282900AD2354 /* News Color.png in Resources */,
-				EEFFAFFE1AA4282900AD2354 /* Opinion Banner.png in Resources */,
-				EEFFB0021AA4282900AD2354 /* Arts & Entertainment Color.png in Resources */,
 				EE21C41B1A882DE8003EF515 /* Text.png in Resources */,
 				EE21C4081A882DCE003EF515 /* Splash Screen 1536 x 2048.png in Resources */,
 				EE21C4151A882DE8003EF515 /* Mountains 640 x 960.png in Resources */,
 				EE21C4301A882E08003EF515 /* 1024 x 1024 App Icon.png in Resources */,
 				EEFC5C531AF5DD4700614494 /* 11 Settings Bar.png in Resources */,
-				EEFFB00E1AA4282900AD2354 /* Favorites Banner.png in Resources */,
-				EE1C6F061A90474B0068C8DA /* iconmonstr-menu-icon-128.png in Resources */,
 				EE21C42C1A882E08003EF515 /* 87 x 87 App Icon.png in Resources */,
 				EEFC5C551AF5DD4700614494 /* 13 Archives Bar.png in Resources */,
 				EE21C4071A882DCE003EF515 /* Splash Screen 1024 x 768.png in Resources */,
@@ -730,23 +621,15 @@
 				EE21C4171A882DE8003EF515 /* Mountains 768 x 1024.png in Resources */,
 				EE21C41A1A882DE8003EF515 /* Mountains 2048 x 1536.png in Resources */,
 				EE99AAB21A0F5432001B9AEF /* Main.storyboard in Resources */,
-				EEFFB00D1AA4282900AD2354 /* About Us + Favorites + Settings + Recent Color.png in Resources */,
 				EE99AAB71A0F5432001B9AEF /* LaunchScreen.xib in Resources */,
 				EE21C4141A882DE8003EF515 /* Logo.png in Resources */,
 				EE21C4041A882DCE003EF515 /* Splash Screen 640 x 960.png in Resources */,
 				EE21C42F1A882E08003EF515 /* 180 x 180 App Icon.png in Resources */,
 				EEFC5C561AF5DD4700614494 /* 14 Awards Bar.png in Resources */,
 				EE21C4281A882E08003EF515 /* 40 x 40 App Icon.png in Resources */,
-				EEFFB0091AA4282900AD2354 /* Centerspread Color.png in Resources */,
 				EEFC5C521AF5DD4700614494 /* 10 Favorites Bar.png in Resources */,
-				EEFFB00F1AA4282900AD2354 /* News Banner.png in Resources */,
-				EE1C6F081A9047820068C8DA /* iconmonstr-menu-icon-24.png in Resources */,
 				EEFC5C4E1AF5DD4700614494 /* 06 A&E Bar.png in Resources */,
 				EEFC5C511AF5DD4700614494 /* 09 Online Exclusive Bar.png in Resources */,
-				EEFFB0081AA4282900AD2354 /* Feature Banner.png in Resources */,
-				EEFFB0101AA4282900AD2354 /* Sports Banner.png in Resources */,
-				EEFFB0041AA4282900AD2354 /* About Us Banner.png in Resources */,
-				EEFFB0071AA4282900AD2354 /* SMOKIE LOGO Banner.png in Resources */,
 				EE21C4291A882E08003EF515 /* 58 x 58 App Icon.png in Resources */,
 				EE21C42D1A882E08003EF515 /* 120 x 120 App Icon.png in Resources */,
 				EE21C4271A882E08003EF515 /* 29 x 29 App Icon.png in Resources */,
@@ -757,15 +640,12 @@
 				EE21C4131A882DE8003EF515 /* Background.png in Resources */,
 				EE21C4161A882DE8003EF515 /* Mountains 640 x 1136.png in Resources */,
 				EE21C42B1A882E08003EF515 /* 80 x 80 App Icon.png in Resources */,
-				EEFFB00A1AA4282900AD2354 /* Photo Banner.png in Resources */,
 				EEFC5C4D1AF5DD4700614494 /* 05 CS Bar.png in Resources */,
 				EE21C4091A882DCE003EF515 /* Splash Screen 2048 x 1536.png in Resources */,
 				EEFC5C4A1AF5DD4700614494 /* 02 News Bar.png in Resources */,
-				EEFFB0051AA4282900AD2354 /* Arts & Entertainment Banner.png in Resources */,
 				EE99AAB41A0F5432001B9AEF /* Images.xcassets in Resources */,
 				EE21C4181A882DE8003EF515 /* Mountains 1024 x 768.png in Resources */,
 				EE21C4191A882DE8003EF515 /* Mountains 1536 x 2048.png in Resources */,
-				EEFFB00B1AA4282900AD2354 /* Online Exclusives Color.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

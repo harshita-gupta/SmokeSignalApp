@@ -176,25 +176,6 @@ struct parsing {
                 let rangeAfter : NSRange = NSMakeRange(firstCharAfterName!.location, (  (writer.length) -  (firstCharAfterName!.location) ))
                 writer = clearCharactersFromString(writer, rangeToBeCleared: rangeAfter)
             }
-        
-//            writer.replaceOccurrencesOfString("Staff Writer", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("Staff Writers", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("News Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("Opinion Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("Feature Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("Centerspread Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("Arts and Entertainment Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("Arts & Entertainment Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("A&E Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("A & E Editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("Sports editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("graphics editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("photo editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("photos editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("web editor", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("editor in chief", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-//            writer.replaceOccurrencesOfString("editor-in-chief", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(0, writer.length))
-
             
             return writer
         }
@@ -217,9 +198,13 @@ struct parsing {
         //removes the writer name
         clearedText = clearTillEndWriterName(clearedText)
         
+        //removes juicebox script if present
+        clearedText = deleteAllScripts( clearedText )
+        
         //removes any closing tags left after the writer name
         clearedText = clearTillNextTag(clearedText, tagToClear: "<p>")
         
+        //removes all triangle tags
         clearedText = clearAllTriangeTags(clearedText)
         
         if (clearedText.hasPrefix("Local")) {
@@ -303,16 +288,25 @@ struct parsing {
     }
     
      static func clearAllTriangeTags (incoming: NSMutableString) -> NSMutableString {
+        
+        print("value before clearing all triangle tags: ", appendNewline: false)
+        print(incoming, appendNewline: true)
         let freshText = incoming.mutableCopy() as! NSMutableString
         var triangeTagsLeft : NSRange? = findRangeOfFirstTriangleTag(freshText)
         while (triangeTagsLeft != nil)  {
-            if ((triangeTagsLeft?.location) > 300) {
+            if ((triangeTagsLeft?.location) > 700) {
              break;
             }
             freshText.replaceCharactersInRange(triangeTagsLeft!, withString: "")
             triangeTagsLeft = findRangeOfFirstTriangleTag(freshText)
         }
+        
+        print("value after clearing all triangle tags: ", appendNewline: false)
+        print(freshText, appendNewline: true)
+
         return freshText
+        
+        
     }
     
      static func clearCharactersFromString(text: NSMutableString, rangeToBeCleared: NSRange) -> NSMutableString {
@@ -323,6 +317,50 @@ struct parsing {
         return finalString
     }
    
+    
+    static func deleteAllScripts(incoming: NSMutableString) -> NSMutableString {
+        
+        
+        print("value before deleting all scripts tags: ", appendNewline: false)
+        print(incoming, appendNewline: true)
+
+        
+        let text = incoming as NSString
+        let rangeOfTag : NSRange? = (text.rangeOfString("<script"))
+        
+        
+        print("range of <script tag :", appendNewline: false)
+        print(rangeOfTag, appendNewline: true)
+
+        
+        if (rangeOfTag?.location == NSNotFound) {
+            
+            print("no <script tags found, method exited ", appendNewline: true)
+
+            return incoming
+        }
+        let locOfStartTag = rangeOfTag!.location
+        let rangeOfCloseTag = text.rangeOfString("</script>") as NSRange
+        
+        
+        print("range of closing </script> tag :", appendNewline: false)
+        print(rangeOfCloseTag, appendNewline: true)
+
+        
+        let locOfCloseTag = rangeOfCloseTag.location
+        
+        let rangeOfScriptContent = NSMakeRange(locOfStartTag, (locOfCloseTag + rangeOfCloseTag.length - 1 ) - locOfStartTag + 1)
+
+        print("range of  script content to be cleared :", appendNewline: false)
+        print(rangeOfScriptContent, appendNewline: true)
+        
+        let finalText = clearCharactersFromString(text.mutableCopy() as! NSMutableString, rangeToBeCleared: rangeOfScriptContent)
+        
+        print("value before deleting all scripts tags: ", appendNewline: false)
+        print(finalText, appendNewline: true)
+        
+        return finalText
+    }
     
     
     // this will extract the juicebox embed XML Link
