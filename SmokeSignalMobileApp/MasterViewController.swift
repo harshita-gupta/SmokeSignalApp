@@ -95,6 +95,11 @@ class MasterViewController: UITableViewController{
         let titleSize = titleView.systemLayoutSizeFittingSize(CGSizeZero)
         titleView.frame = CGRectMake(0, 0, titleSize.width, titleSize.height)
         mainNavBar.titleView = titleView
+        print("finished adding top Navigation Bar, view set to : ", appendNewline: false)
+        print(mainNavBar.titleView, appendNewline: true)
+
+
+        
         
     }
     

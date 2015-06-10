@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SEGOEUISL.TTF">
@@ -17,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountains 640 x 960.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-ZD-uyg">
+                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mountains 640 x 960.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-ZD-uyg">
                     <rect key="frame" x="0.0" y="-480" width="480" height="960"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BBe-Yu-vAF">
@@ -27,25 +28,31 @@
                         <constraint firstAttribute="height" constant="356" id="cKX-hV-3bi"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="official student publication of" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-Iw-r15">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="official student publication of" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-Iw-r15">
                     <rect key="frame" x="153" y="210" width="175" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="XEz-W4-lO5"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="150" y="210" width="181" height="20"/>
+                    </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mission san jose high school" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQb-sd-0nC">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mission san jose high school" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQb-sd-0nC">
                     <rect key="frame" x="155" y="230" width="171" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="rCZ-A6-zws"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="151" y="230" width="180" height="20"/>
+                    </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fremont, ca" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vI-dz-tGg">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="fremont, ca" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vI-dz-tGg">
                     <rect key="frame" x="206" y="250" width="69" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="8Gz-an-7RK"/>
@@ -53,6 +60,9 @@
                     <fontDescription key="fontDescription" name="SegoeUI-Semilight" family="Segoe UI" pointSize="14"/>
                     <color key="textColor" red="0.16470588235294117" green="0.42745098039215684" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="205" y="250" width="72" height="20"/>
+                    </variation>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.69019607843137254" green="0.84313725490196079" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
