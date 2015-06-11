@@ -174,9 +174,8 @@ final class MasterViewController: UITableViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if ((segue.identifier == "showDetail") || (segue.identifier == "showDetailFirst")) {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                Singleton.sharedInstance.currIndex = indexPath.row
-                let selectedPost: NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
-                (segue.destinationViewController as! DetailViewController).detailItem = Article(article: selectedPost)
+                let selectedPost: Article = Singleton.sharedInstance.articleCache[indexPath.row]!
+                (segue.destinationViewController as! DetailViewController).detailItem = selectedPost
             }
             
             let gesture = ((self.parentViewController)?.parentViewController as! MainViewController).panGestureRecognizer()

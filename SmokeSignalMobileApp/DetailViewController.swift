@@ -20,6 +20,8 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     @IBOutlet var postedDateLabel: UILabel!
     @IBOutlet var updatedDateLabel: UILabel!
     @IBOutlet var webViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var imageGalleryCollView: UICollectionView!
+    @IBOutlet var collectionViewHeightConstraint: NSLayoutConstraint!
     
     var currentArticle : Article = Article()
 
@@ -33,8 +35,13 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.configureGalleryView()
+        
         webView.delegate = self
+        imageGalleryCollView.delegate = self
+        imageGalleryCollView.dataSource = self;
+        
         self.configureValues()
         self.configureView()
         self.configureWebViewValues()
@@ -82,11 +89,50 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         webView.loadHTMLString(stringToBeLoaded, baseURL: nil)
     }
     
+    func configureGalleryView() {
+        if currentArticle.juiceBoxExists!  {
+            self.collectionViewHeightConstraint.constant = scrollView.frame.size.width / 1.5
+            
+            let flowLayout = UICollectionViewFlowLayout()
+            flowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+            flowLayout.minimumInteritemSpacing = 0.0
+            flowLayout.minimumLineSpacing = 0.0
+            self.imageGalleryCollView.pagingEnabled = true
+            self.imageGalleryCollView.collectionViewLayout = flowLayout
+            print(imageGalleryCollView)
+        }
+        else {
+            self.imageGalleryCollView.removeFromSuperview()
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (currentArticle.juiceBoxImageLinks?.count)!
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
+        
+        let imageView: UIImageView = cell.viewWithTag(100) as! UIImageView
+        imageView.sd_setImageWithURL(currentArticle.juiceBoxImageLinks![indexPath.item])
+        
+        return cell
+    }
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return self.imageGalleryCollView.frame.size
+    }
+    
+    
+    
     func configureView() {
         self.headlineLabel.sizeToFit()
         self.writerNameLabel.sizeToFit()
-        //self.writerNameLabel.needsUpdateConstraints()
-        //self.headlineLabel.needsUpdateConstraints()
     }
         
    

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmokeSignalMobileApp/Article.swift"
-            timestampString = "455670378.670694"
+            timestampString = "455737761.559274"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "setUpdatedDateString()"
             landmarkType = "5">
          </BreakpointContent>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/parsing.swift"
-            timestampString = "455668544.839777"
+            filePath = "SmokeSignalMobileApp/DetailViewController.swift"
+            timestampString = "455746186.797427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "388"
-            endingLineNumber = "388"
-            landmarkName = "extractJuiceboxLink(_:)"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/parsing.swift"
-            timestampString = "455669842.150682"
+            filePath = "SmokeSignalMobileApp/DetailViewController.swift"
+            timestampString = "455746186.797427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
-            landmarkName = "extractJuiceboxLink(_:)"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "numberOfSectionsInCollectionView(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/parsing.swift"
-            timestampString = "455669842.150682"
+            filePath = "SmokeSignalMobileApp/DetailViewController.swift"
+            timestampString = "455746186.797427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
-            landmarkName = "extractJuiceboxLink(_:)"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,29 +73,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/parsing.swift"
-            timestampString = "455669842.150682"
+            filePath = "SmokeSignalMobileApp/DetailViewController.swift"
+            timestampString = "455746186.797427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
-            landmarkName = "extractJuiceboxLink(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmokeSignalMobileApp/parsing.swift"
-            timestampString = "455669842.150682"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "404"
-            endingLineNumber = "404"
-            landmarkName = "extractJuiceboxLink(_:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "configureGalleryView()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

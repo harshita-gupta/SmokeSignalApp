@@ -36,6 +36,7 @@ final class Article : NSObject {
     
     var imageExists : Bool?
     
+    var juiceboxGalleryLink : NSURL?
     var juiceBoxExists : Bool?
     var juiceBoxImageLinks : [NSURL]?
     
@@ -60,13 +61,7 @@ final class Article : NSObject {
         setImageURLs()
         setContent()
         setURL()
-        
-        
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.handleJuicebox()
-        }
-
+        handleJuicebox()
         
     }
     
@@ -185,14 +180,73 @@ final class Article : NSObject {
             return
         }
         
-        else {
-            self.juiceBoxExists = true
+        self.juiceBoxExists = true
+        self.juiceBoxImageLinks = [NSURL]()
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.extractJuiceboxGalleryURL()
+            self.extractJuiceboxGalleryImageURLs()
+            //            let jbURL = parsing.extractJuiceboxLink(self.content!)
+//            self.juiceBoxImageLinks = parsing.extractJuiceboxGalleryImageURLs(jbURL)
+
         }
         
-        //TODO ACTUALLY USE METHOD
-        let jbURL = parsing.extractJuiceboxLink(self.content!)
-        
-        self.juiceBoxImageLinks = parsing.extractJuiceboxGalleryImageURLs(jbURL)
     }
+    
+    private func extractJuiceboxGalleryURL() {
+    
+        var text = self.content! as NSString
+        
+        let startConfigRange = text.rangeOfString("configUrl")
+        
+        let beforeStartOfURL = (text.rangeOfString("\"", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(startConfigRange.location, 20))).location
+        
+        
+        text = text.substringFromIndex(beforeStartOfURL + 1)
+        
+        let afterEndOfURL = (text.rangeOfString("\"")).location
+        
+        let stringToClear = text.substringFromIndex(afterEndOfURL)
+        
+        text = text.stringByReplacingOccurrencesOfString(stringToClear, withString: "")
+        
+        let jbLink = (NSURL(string: text as String)) as NSURL!!
+        
+        print("juicebox link: ")
+        print(jbLink)
+        
+        self.juiceboxGalleryLink = jbLink
+        
+    }
+    
+    private func extractJuiceboxGalleryImageURLs () {
+        print("started extracting juicebox gallery links")
+        
+        let url = self.juiceboxGalleryLink
+        var error : NSError?
+        
+        let urlData = NSData(contentsOfURL: url!)
+        
+        if let xmlDoc = AEXMLDocument(xmlData: urlData!, error: &error) {
+            
+            if let allImages = xmlDoc.root["image"].all {
+                for image in allImages {
+                    
+                    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                    dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                        
+                        if let imageLink = image.attributes["imageURL"] {
+                            print("image link: ", appendNewline: false)
+                            print (imageLink)
+                            self.juiceBoxImageLinks!.append(NSURL(string: imageLink as! String)!)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
     
 }

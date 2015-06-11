@@ -69,7 +69,6 @@ class Singleton {
     var currColor : UIColor = UIColor(rgba: Singleton.catColorHexes.regular)
     
     var posts : [NSMutableDictionary] = [NSMutableDictionary]()
-    var currIndex = Int()
     var mainViewControllerReference = MainViewController()
     var masterViewControllerReference = MasterViewController()
     var headlineView = UIView()
