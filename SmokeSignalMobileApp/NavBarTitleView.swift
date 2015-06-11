@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class NavBarTitleView : UIView {
+final class NavBarTitleView : UIView {
     
     @IBOutlet var label: UILabel!
     @IBOutlet var image: UIImageView!

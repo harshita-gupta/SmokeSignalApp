@@ -13,15 +13,15 @@ class ArticleTableViewCell : UITableViewCell {
     
     var currentArticle : Article?
     
-    @IBOutlet var categoryLabel: UILabel!
-    @IBOutlet var textPreview: UILabel!
-    @IBOutlet var writerLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var imView: UIImageView!
-    @IBOutlet var headline: UILabel!
+    @IBOutlet final var categoryLabel: UILabel!
+    @IBOutlet final var textPreview: UILabel!
+    @IBOutlet final var writerLabel: UILabel!
+    @IBOutlet final var dateLabel: UILabel!
+    @IBOutlet final var imView: UIImageView!
+    @IBOutlet final var headline: UILabel!
 
     
-    func setArticle(currArticle: Article) {
+    final func setArticle(currArticle: Article) {
         
         self.currentArticle = currArticle
         

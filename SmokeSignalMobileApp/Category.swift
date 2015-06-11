@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Category : NSObject {
+final class Category : NSObject {
     
     var slug: String?
     var catName : String?

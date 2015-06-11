@@ -11,7 +11,7 @@ import UIKit
 //import Fabric
 //import Crashlytics
 
-class MainViewController: SWRevealViewController {
+final class MainViewController: SWRevealViewController {
     
     override func viewDidLoad() {
         print("MainView loaded", appendNewline: true)

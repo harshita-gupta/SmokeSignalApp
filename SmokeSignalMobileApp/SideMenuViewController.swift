@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-class SideMenuViewController: UITableViewController {
+
+final class SideMenuViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 //import Crashlytics
 
-class MasterViewController: UITableViewController{
+final class MasterViewController: UITableViewController{
     
     @IBOutlet var activityBar: UIProgressView!
     

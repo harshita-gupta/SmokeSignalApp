@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AboutUsViewController: UIViewController {
+final class AboutUsViewController: UIViewController {
     
     @IBOutlet var mainTextView: UITextView!
     var currentCategory = Category(slug_name: "about-us")

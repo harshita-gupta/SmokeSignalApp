@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LeadArticleTableViewCell : ArticleTableViewCell {
+final class LeadArticleTableViewCell : ArticleTableViewCell {
     
     override func checksLayout() {
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Article : NSObject {
+final class Article : NSObject {
     
     var articleJSONDictionary : NSDictionary?
     

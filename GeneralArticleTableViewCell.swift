@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GeneralArticleTableViewCell : ArticleTableViewCell {
+final class GeneralArticleTableViewCell : ArticleTableViewCell {
     
     @IBOutlet var categoriesConstraintExtra: NSLayoutConstraint!
     @IBOutlet var headlineConstraintExtra: NSLayoutConstraint!

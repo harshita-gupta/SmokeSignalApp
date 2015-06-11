@@ -228,7 +228,7 @@ public class AEXMLElement: Equatable {
 
 // MARK: -
 
-public class AEXMLDocument: AEXMLElement {
+final public class AEXMLDocument: AEXMLElement {
     
     // MARK: Properties
     
