@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -996,95 +995,79 @@ The </string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goi-1o-xpl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <webView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
-                                        <rect key="frame" x="8" y="86" width="90" height="0.0"/>
+                                    <webView userInteractionEnabled="NO" contentMode="scaleToFill" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
+                                        <rect key="frame" x="16" y="95" width="97" height="30"/>
                                         <color key="backgroundColor" red="0.81553819444444442" green="0.81553819444444442" blue="0.81553819444444442" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" id="crc-iZ-HJX"/>
+                                            <constraint firstAttribute="height" constant="30" id="crc-iZ-HJX"/>
                                         </constraints>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="Ah7-4n-0Wa" id="Yme-G0-8pI"/>
                                         </connections>
                                     </webView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-fx-kPu">
-                                        <rect key="frame" x="16" y="11" width="58" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-fx-kPu">
+                                        <rect key="frame" x="16" y="10" width="97" height="15"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="11"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="headline" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-nB-cCw">
-                                        <rect key="frame" x="16" y="23" width="74" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="headline" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-nB-cCw">
+                                        <rect key="frame" x="16" y="28" width="97" height="26"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WriterName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
-                                        <rect key="frame" x="16" y="46" width="74" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WriterName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
+                                        <rect key="frame" x="16" y="57" width="97" height="16"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-IJ-3cK">
-                                        <rect key="frame" x="69" y="67" width="45" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMo-kP-fTL">
+                                        <rect key="frame" x="16" y="76" width="37" height="16"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMo-kP-fTL">
-                                        <rect key="frame" x="16" y="67" width="37" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-IJ-3cK">
+                                        <rect key="frame" x="68" y="76" width="45" height="16"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="leading" secondItem="AMo-kP-fTL" secondAttribute="trailing" constant="16" id="16t-6I-pZl"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="8" id="59q-mA-bMv"/>
-                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="topMargin" constant="3" id="8Oo-1G-w4W"/>
-                                    <constraint firstAttribute="trailing" secondItem="mQ7-nB-cCw" secondAttribute="trailingMargin" constant="8" id="8SH-fG-nbQ"/>
-                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottomMargin" constant="5" id="CjM-16-DFs"/>
-                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailingMargin" id="Qd6-eC-2fD"/>
-                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="Rfh-0S-IeU"/>
-                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottom" constant="5" id="VtX-Wj-N9l"/>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" constant="3" id="XPs-Dy-6hk"/>
-                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="ZXe-OT-8iQ"/>
-                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" constant="5" id="bPN-9P-N5C"/>
-                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="c2Q-nD-C7N"/>
-                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="cGf-j9-t4y"/>
-                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="cU6-HA-Q4l"/>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" id="dlE-Rn-ZOV"/>
-                                    <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottomMargin" id="eMI-e8-55W"/>
-                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="baseline" secondItem="AMo-kP-fTL" secondAttribute="baseline" id="fBk-HN-71c"/>
-                                    <constraint firstAttribute="trailing" secondItem="UqJ-R0-r3M" secondAttribute="trailingMargin" constant="8" id="hfM-Yg-ofi"/>
-                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="tCZ-S4-MOe"/>
-                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottomMargin" constant="5" id="xx2-rI-jr6"/>
+                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" constant="3" id="6Ps-UM-CxG"/>
+                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" constant="3" id="6t1-Mr-zHJ"/>
+                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="leading" secondItem="AMo-kP-fTL" secondAttribute="trailing" constant="15" id="M7K-Ws-Mxl"/>
+                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="OFt-iM-854"/>
+                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="QP6-Ic-wrP"/>
+                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="UG5-XV-vly"/>
+                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="baseline" secondItem="AMo-kP-fTL" secondAttribute="baseline" id="YeU-7Y-Yn7"/>
+                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottom" constant="3" id="Ze9-k0-PyY"/>
+                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="topMargin" constant="2" id="aWt-6l-SaY"/>
+                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" id="b3c-Vx-u38"/>
+                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="bt2-Kj-7vp"/>
+                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottom" constant="3" id="cW4-OT-i2a"/>
+                                    <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" id="eLl-nW-WPx"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="8" id="eXR-Dy-qCH"/>
+                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="nEf-i7-vhz"/>
+                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" id="oB9-19-aF1"/>
+                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" id="v8S-jN-mBL"/>
+                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="wUI-Zz-cF9"/>
+                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" id="wze-nZ-zdV"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="mQ7-nB-cCw" secondAttribute="trailing" constant="8" id="yZR-FG-mBh"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="VtX-Wj-N9l"/>
-                                    </mask>
-                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="bottom" secondItem="MMQ-IT-qOo" secondAttribute="bottomMargin" id="7jL-Rw-btR"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="width" secondItem="MMQ-IT-qOo" secondAttribute="width" id="IwX-kt-wUq"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="Kqm-Hy-oQT"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="height" secondItem="MMQ-IT-qOo" secondAttribute="height" id="Kw9-xc-zSG"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="bottom" secondItem="MMQ-IT-qOo" secondAttribute="bottom" id="7jL-Rw-btR"/>
                             <constraint firstItem="goi-1o-xpl" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" id="XaZ-1C-YEC"/>
                             <constraint firstItem="goi-1o-xpl" firstAttribute="trailing" secondItem="MMQ-IT-qOo" secondAttribute="trailing" id="dV4-0C-dDw"/>
                             <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="MMQ-IT-qOo" secondAttribute="topMargin" id="nEj-C2-Xig"/>
-                            <constraint firstItem="F8Z-ft-DJu" firstAttribute="width" secondItem="MMQ-IT-qOo" secondAttribute="width" id="viM-Um-AKi"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="IwX-kt-wUq"/>
-                                <exclude reference="Kqm-Hy-oQT"/>
-                                <exclude reference="Kw9-xc-zSG"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="cra-N8-TIN"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
