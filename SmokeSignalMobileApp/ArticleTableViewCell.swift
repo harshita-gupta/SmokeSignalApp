@@ -48,7 +48,7 @@ class ArticleTableViewCell : UITableViewCell {
         if (self.currentArticle!.imageExists!) {
             
             imView.hidden = false
-            imView.sd_setImageWithURL(self.currentArticle!.fullImageURL!)
+            imView.sd_setImageWithURL(self.currentArticle!.mediumImageURL!)
         }
         else {
             imView.hidden = true

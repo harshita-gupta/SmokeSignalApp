@@ -45,6 +45,7 @@ class MasterViewController: UITableViewController{
         activityBar.progressTintColor = currentCategory.highlightColor
         refresher.backgroundColor = currentCategory.highlightColor
         currentPage = 1;
+        
     
         //getting the json data from thesmokesignal.org
         parsing.getWebDataFromCategory("", page_number: currentPage)
@@ -152,14 +153,13 @@ class MasterViewController: UITableViewController{
         else {
             cell = tableView.dequeueReusableCellWithIdentifier("article", forIndexPath: indexPath) as! GeneralArticleTableViewCell
         }
-        
-        let currentPostDictionary : NSDictionary = Singleton.sharedInstance.posts[indexPath.row] as NSDictionary
-        
-        let currentArticle : Article = Article(article: currentPostDictionary)
+
+        let currentArticle = parsing.articleForPostAtIndex(indexPath.row)
         
         cell.setArticle(currentArticle)
         
-        cell.setNeedsDisplay()
+//        cell.setNeedsDisplay()
+        
         return cell
     }
  

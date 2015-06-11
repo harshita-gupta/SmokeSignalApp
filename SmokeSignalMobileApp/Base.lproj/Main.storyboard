@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -993,155 +994,101 @@ The </string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goi-1o-xpl">
-                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-fx-kPu">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="17" id="yGf-KB-nEA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="11"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="headline" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-nB-cCw">
-                                        <rect key="frame" x="0.0" y="17" width="265" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="1t5-HS-heH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="1t5-HS-heH"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WriterName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
-                                        <rect key="frame" x="0.0" y="43" width="560" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="kca-Gg-8kF"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMo-kP-fTL">
-                                        <rect key="frame" x="0.0" y="59" width="110" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="AeN-pX-QDN"/>
-                                            <constraint firstAttribute="height" constant="16" id="P62-k4-UJY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
-                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-IJ-3cK">
-                                        <rect key="frame" x="115" y="59" width="150" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="Jqx-nb-vCL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
-                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <webView userInteractionEnabled="NO" contentMode="scaleToFill" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
-                                        <rect key="frame" x="5" y="78" width="555" height="500"/>
+                                    <webView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
+                                        <rect key="frame" x="8" y="86" width="90" height="0.0"/>
                                         <color key="backgroundColor" red="0.81553819444444442" green="0.81553819444444442" blue="0.81553819444444442" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="500" id="ny6-Ld-Azb"/>
+                                            <constraint firstAttribute="height" id="crc-iZ-HJX"/>
                                         </constraints>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="Ah7-4n-0Wa" id="Yme-G0-8pI"/>
                                         </connections>
                                     </webView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-fx-kPu">
+                                        <rect key="frame" x="16" y="11" width="58" height="15"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Light" family="Segoe UI" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="headline" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-nB-cCw">
+                                        <rect key="frame" x="16" y="23" width="74" height="26"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WriterName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
+                                        <rect key="frame" x="16" y="46" width="74" height="16"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-IJ-3cK">
+                                        <rect key="frame" x="69" y="67" width="45" height="16"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMo-kP-fTL">
+                                        <rect key="frame" x="16" y="67" width="37" height="16"/>
+                                        <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="yEe-IJ-3cK" secondAttribute="bottom" constant="3" id="1gH-Nq-ZIe"/>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="1oq-gT-PyP"/>
-                                    <constraint firstAttribute="height" constant="536" id="31h-55-8V5"/>
-                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="leading" secondItem="AMo-kP-fTL" secondAttribute="trailing" constant="5" id="37Y-aV-JWn"/>
-                                    <constraint firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="303" id="59q-mA-bMv"/>
-                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" id="7mL-9K-76z"/>
-                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="8Oo-1G-w4W"/>
-                                    <constraint firstAttribute="trailing" secondItem="mQ7-nB-cCw" secondAttribute="trailing" constant="303" id="8SH-fG-nbQ"/>
-                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="-32" id="8zM-XH-itK"/>
-                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" id="Apr-gg-gxB"/>
-                                    <constraint firstAttribute="trailing" secondItem="yEe-IJ-3cK" secondAttribute="trailing" constant="303" id="Biu-U8-1Kh"/>
-                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottom" id="CjM-16-DFs"/>
-                                    <constraint firstAttribute="width" constant="568" id="Dzz-C0-fKS"/>
-                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" constant="8" id="Qd6-eC-2fD"/>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="RrS-4P-5nt"/>
-                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" id="UJk-SF-bOb"/>
-                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="ZXe-OT-8iQ"/>
-                                    <constraint firstAttribute="width" secondItem="F8Z-ft-DJu" secondAttribute="width" id="Zlx-yJ-HBo"/>
-                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="cU6-HA-Q4l"/>
-                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="width" secondItem="yEe-IJ-3cK" secondAttribute="width" constant="-40" id="dbs-l2-u9p"/>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="5" id="dlE-Rn-ZOV"/>
-                                    <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" constant="2" id="eMI-e8-55W"/>
-                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" id="g9W-5S-wXU"/>
-                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="gyi-lf-omX"/>
-                                    <constraint firstAttribute="trailing" secondItem="UqJ-R0-r3M" secondAttribute="trailing" constant="8" id="hfM-Yg-ofi"/>
-                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottom" id="jeZ-52-co7"/>
-                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" constant="8" id="lCu-Ue-kbS"/>
-                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="lwz-gT-fec"/>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" constant="3" id="sAl-8J-5Vf"/>
-                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="tCZ-S4-MOe"/>
-                                    <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" id="tLo-3T-fqB"/>
-                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottom" id="xx2-rI-jr6"/>
+                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="leading" secondItem="AMo-kP-fTL" secondAttribute="trailing" constant="16" id="16t-6I-pZl"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="8" id="59q-mA-bMv"/>
+                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="topMargin" constant="3" id="8Oo-1G-w4W"/>
+                                    <constraint firstAttribute="trailing" secondItem="mQ7-nB-cCw" secondAttribute="trailingMargin" constant="8" id="8SH-fG-nbQ"/>
+                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottomMargin" constant="5" id="CjM-16-DFs"/>
+                                    <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailingMargin" id="Qd6-eC-2fD"/>
+                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="Rfh-0S-IeU"/>
+                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottom" constant="5" id="VtX-Wj-N9l"/>
+                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" constant="3" id="XPs-Dy-6hk"/>
+                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="ZXe-OT-8iQ"/>
+                                    <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" constant="5" id="bPN-9P-N5C"/>
+                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="c2Q-nD-C7N"/>
+                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="cGf-j9-t4y"/>
+                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="cU6-HA-Q4l"/>
+                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" id="dlE-Rn-ZOV"/>
+                                    <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottomMargin" id="eMI-e8-55W"/>
+                                    <constraint firstItem="yEe-IJ-3cK" firstAttribute="baseline" secondItem="AMo-kP-fTL" secondAttribute="baseline" id="fBk-HN-71c"/>
+                                    <constraint firstAttribute="trailing" secondItem="UqJ-R0-r3M" secondAttribute="trailingMargin" constant="8" id="hfM-Yg-ofi"/>
+                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leadingMargin" constant="8" id="tCZ-S4-MOe"/>
+                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottomMargin" constant="5" id="xx2-rI-jr6"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="31h-55-8V5"/>
-                                        <exclude reference="Dzz-C0-fKS"/>
-                                        <exclude reference="gyi-lf-omX"/>
-                                        <exclude reference="8zM-XH-itK"/>
-                                        <exclude reference="jeZ-52-co7"/>
-                                        <exclude reference="1oq-gT-PyP"/>
-                                        <exclude reference="RrS-4P-5nt"/>
-                                        <exclude reference="UJk-SF-bOb"/>
-                                        <exclude reference="Zlx-yJ-HBo"/>
-                                        <exclude reference="g9W-5S-wXU"/>
-                                        <exclude reference="lCu-Ue-kbS"/>
-                                        <exclude reference="tLo-3T-fqB"/>
+                                        <exclude reference="VtX-Wj-N9l"/>
                                     </mask>
                                 </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="6pn-7s-w8x"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="goi-1o-xpl" secondAttribute="trailing" id="GxX-MQ-gZU"/>
-                            <constraint firstAttribute="width" secondItem="goi-1o-xpl" secondAttribute="width" constant="-5" id="KJm-aP-K53"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="-44" id="Kqm-Hy-oQT"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="LN2-dw-3oc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="goi-1o-xpl" secondAttribute="trailing" id="VtO-79-xSK"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="-4" id="XaZ-1C-YEC"/>
-                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="bottom" id="amk-Bh-7x3"/>
-                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="bottom" constant="-44" id="dM4-J7-zBl"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="trailing" secondItem="MMQ-IT-qOo" secondAttribute="trailingMargin" constant="4" id="dV4-0C-dDw"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="goi-1o-xpl" secondAttribute="bottom" id="fID-xc-1uA"/>
-                            <constraint firstItem="goi-1o-xpl" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="ft9-2M-np3"/>
-                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="bottom" id="ihc-mp-flb"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="bottom" secondItem="MMQ-IT-qOo" secondAttribute="bottomMargin" id="7jL-Rw-btR"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="width" secondItem="MMQ-IT-qOo" secondAttribute="width" id="IwX-kt-wUq"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" id="Kqm-Hy-oQT"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="height" secondItem="MMQ-IT-qOo" secondAttribute="height" id="Kw9-xc-zSG"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" id="XaZ-1C-YEC"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="trailing" secondItem="MMQ-IT-qOo" secondAttribute="trailing" id="dV4-0C-dDw"/>
+                            <constraint firstItem="goi-1o-xpl" firstAttribute="top" secondItem="MMQ-IT-qOo" secondAttribute="topMargin" id="nEj-C2-Xig"/>
+                            <constraint firstItem="F8Z-ft-DJu" firstAttribute="width" secondItem="MMQ-IT-qOo" secondAttribute="width" id="viM-Um-AKi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6pn-7s-w8x"/>
-                                <exclude reference="GxX-MQ-gZU"/>
-                                <exclude reference="KJm-aP-K53"/>
-                                <exclude reference="LN2-dw-3oc"/>
-                                <exclude reference="VtO-79-xSK"/>
-                                <exclude reference="fID-xc-1uA"/>
-                                <exclude reference="ft9-2M-np3"/>
-                                <exclude reference="amk-Bh-7x3"/>
-                                <exclude reference="ihc-mp-flb"/>
+                                <exclude reference="IwX-kt-wUq"/>
+                                <exclude reference="Kqm-Hy-oQT"/>
+                                <exclude reference="Kw9-xc-zSG"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="&quot;Article Name&quot;" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" id="cra-N8-TIN"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoryLabel" destination="8IV-fx-kPu" id="G3z-ce-pr1"/>
                         <outlet property="centerBar" destination="cra-N8-TIN" id="S5b-Yw-5hR"/>
@@ -1150,6 +1097,7 @@ The </string>
                         <outlet property="scrollView" destination="goi-1o-xpl" id="QOF-Lm-Uvo"/>
                         <outlet property="updatedDateLabel" destination="yEe-IJ-3cK" id="KVf-z7-TOe"/>
                         <outlet property="webView" destination="F8Z-ft-DJu" id="o1E-Dh-u4f"/>
+                        <outlet property="webViewHeightConstraint" destination="crc-iZ-HJX" id="K3U-JS-tTX"/>
                         <outlet property="writerNameLabel" destination="UqJ-R0-r3M" id="TcH-k0-vey"/>
                     </connections>
                 </viewController>

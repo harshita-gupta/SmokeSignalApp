@@ -72,6 +72,7 @@ struct parsing {
                     
                 if (page_number == 1) {
                     Singleton.sharedInstance.posts = updatedPostsArray as [NSMutableDictionary]
+                    Singleton.sharedInstance.articleCache = [NSInteger: Article]()
                 }
                 else {
                     Singleton.sharedInstance.posts = Singleton.sharedInstance.posts + (updatedPostsArray)
@@ -93,6 +94,22 @@ struct parsing {
             
         })
     }
+    
+    static func articleForPostAtIndex(row: NSInteger) -> Article {
+        // Return article if already computed
+        if let article = Singleton.sharedInstance.articleCache[row] {
+            return article
+        }
+        // Otherwise, create a new article and cache it.
+        let currentPostDictionary : NSDictionary = Singleton.sharedInstance.posts[row] as NSDictionary
+        let currentArticle : Article = Article(article: currentPostDictionary)
+        
+        Singleton.sharedInstance.articleCache[row] = currentArticle
+        
+        return currentArticle
+    }
+
+    
     
     //resizing image function
      static func RBResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
@@ -364,22 +381,55 @@ struct parsing {
     
     
     // this will extract the juicebox embed XML Link
-     static func extractJuiceboxLink (text: String) -> NSURL {
-    
-        //TODO
+     static func extractJuiceboxLink (var text: NSString) -> NSURL {
         
-        let jbLink = (NSURL(string: text)) as NSURL!!
+        let startConfigRange = text.rangeOfString("configUrl")
+        
+        let beforeStartOfURL = (text.rangeOfString("\"", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(startConfigRange.location, 20))).location
+        
+        text = text.substringFromIndex(beforeStartOfURL + 1)
+        
+        
+        let afterEndOfURL = (text.rangeOfString("\"")).location
+
+        let stringToClear = text.substringFromIndex(afterEndOfURL)
+        
+        text = text.stringByReplacingOccurrencesOfString(stringToClear, withString: "")
+        
+        let jbLink = (NSURL(string: text as String)) as NSURL!!
+        
+        print("juicebox link: ")
+        print(jbLink)
         
         return (jbLink)
     }
     
     
     // this will go through the XML link and return an array with all the images in it
-     static func extractJuiceboxGallery (url: NSURL) -> NSMutableArray {
+     static func extractJuiceboxGalleryImageURLs (url: NSURL) -> [NSURL] {
+
+        print("started extracting juicebox gallery links")
         
-        let imageGallery = NSMutableArray()
-        //TODO
-        return imageGallery
+        var imageURLGallery = [NSURL]()
+        
+        var error : NSError?
+        
+        let urlData = NSData(contentsOfURL: url)
+        
+        if let xmlDoc = AEXMLDocument(xmlData: urlData!, error: &error) {
+            
+            if let allImages = xmlDoc.root["image"].all {
+                for image in allImages {
+                    if let imageLink = image.attributes["imageURL"] {
+                        print("image link: ", appendNewline: false)
+                        print (imageLink)
+                        imageURLGallery.append(NSURL(string: imageLink as! String)!)
+                    }
+                }
+            }
+        }
+        
+        return imageURLGallery
     }
     
     //replace HTML tags with text

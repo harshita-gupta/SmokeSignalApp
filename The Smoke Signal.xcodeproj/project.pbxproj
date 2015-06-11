@@ -58,6 +58,7 @@
 		EE21C42E1A882E08003EF515 /* 152 x 152 App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE21C4241A882E08003EF515 /* 152 x 152 App Icon.png */; };
 		EE21C42F1A882E08003EF515 /* 180 x 180 App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE21C4251A882E08003EF515 /* 180 x 180 App Icon.png */; };
 		EE21C4301A882E08003EF515 /* 1024 x 1024 App Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE21C4261A882E08003EF515 /* 1024 x 1024 App Icon.png */; };
+		EE384B451B28E1150017B1BF /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE384B441B28E1150017B1BF /* AEXML.swift */; };
 		EE4CB3381A7566B600013975 /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB3371A7566B600013975 /* parsing.swift */; };
 		EE4CB33A1A7572CB00013975 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB3391A7572CB00013975 /* Singleton.swift */; };
 		EE62D1DC1A883C3800221D65 /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EE21C3E01A86D4C3003EF515 /* SEGOEUI.TTF */; };
@@ -189,6 +190,7 @@
 		EE21C4241A882E08003EF515 /* 152 x 152 App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "152 x 152 App Icon.png"; sourceTree = "<group>"; };
 		EE21C4251A882E08003EF515 /* 180 x 180 App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "180 x 180 App Icon.png"; sourceTree = "<group>"; };
 		EE21C4261A882E08003EF515 /* 1024 x 1024 App Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1024 x 1024 App Icon.png"; sourceTree = "<group>"; };
+		EE384B441B28E1150017B1BF /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
 		EE4CB3371A7566B600013975 /* parsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
 		EE4CB3391A7572CB00013975 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		EE99AAA51A0F5432001B9AEF /* The Smoke Signal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Smoke Signal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -328,6 +330,7 @@
 				EEFC5C2F1AF5D98700614494 /* DrawerController */,
 				EE0FB01D1AF5CCF000E9D430 /* SWRevealViewController */,
 				EE13F67C1AEE0C5700FE93FE /* SDWebImage */,
+				EE384B441B28E1150017B1BF /* AEXML.swift */,
 				EE206BD71A90B319007A3103 /* UIColorExtension.swift */,
 				EE21C3F21A86E54B003EF515 /* NSString+HTML.h */,
 				EE21C3F31A86E54B003EF515 /* NSString+HTML.m */,
@@ -672,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE384B451B28E1150017B1BF /* AEXML.swift in Sources */,
 				EE13F6AD1AEE0C6600FE93FE /* UIView+WebCacheOperation.m in Sources */,
 				EE21C3F71A86FA21003EF515 /* MyFooter.swift in Sources */,
 				EE4CB3381A7566B600013975 /* parsing.swift in Sources */,
@@ -850,6 +854,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = SmokeSignalMobileApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";

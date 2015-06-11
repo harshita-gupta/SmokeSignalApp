@@ -27,6 +27,8 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet var updatedDateLabel: UILabel!
     
+    @IBOutlet var webViewHeightConstraint: NSLayoutConstraint!
+    
     var currentArticle : Article = Article()
 
     var detailItem: Article? {
@@ -39,49 +41,54 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
 
     func webViewDidFinishLoad(webView: UIWebView) {
         
-        
-        categoryLabel.translatesAutoresizingMaskIntoConstraints = true
-        headlineLabel.translatesAutoresizingMaskIntoConstraints = true
-        writerNameLabel.translatesAutoresizingMaskIntoConstraints = true
-        postedDateLabel.translatesAutoresizingMaskIntoConstraints = true
-        updatedDateLabel.translatesAutoresizingMaskIntoConstraints = true
+//        
+//        categoryLabel.translatesAutoresizingMaskIntoConstraints = true
+//        headlineLabel.translatesAutoresizingMaskIntoConstraints = true
+//        writerNameLabel.translatesAutoresizingMaskIntoConstraints = true
+//        postedDateLabel.translatesAutoresizingMaskIntoConstraints = true
+//        updatedDateLabel.translatesAutoresizingMaskIntoConstraints = true
 
         
         //////creates frame for webview and sets the webview to that frame//////////////
-        var webFrame = webView.frame
-        webFrame.size.width = scrollView.frame.width - 8
-        webFrame.origin = CGPointMake(0, postedDateLabel.frame.origin.y + postedDateLabel.frame.height + 3)
-        webView.frame = webFrame
-        ////////////////////////////////////////////////////////////
-
-        
-        ////handles checking required height of webview//////
+//        var webFrame = webView.frame
+//        webFrame.size.width = scrollView.frame.width - 8
+//        webFrame.origin = CGPointMake(0, postedDateLabel.frame.origin.y + postedDateLabel.frame.height + 3)
+//        webView.frame = webFrame
+//        ////////////////////////////////////////////////////////////
+//
+//        
+//        ////handles checking required height of webview//////
         let webViewHeightString : String = webView.stringByEvaluatingJavaScriptFromString("document.body.scrollHeight")!
         let webViewHeight = (webViewHeightString as NSString).floatValue
-        let cgWebViewHeight : CGFloat = CGFloat(webViewHeight)
-        ////////////////////////////////////////////////////////////
         
-        print(cgWebViewHeight, appendNewline: true)
-        print("", appendNewline: true)
+        webViewHeightConstraint.constant = CGFloat(webViewHeight)
         
-        ////creates frame for scrollview and sets the scrollview to that frame////////
-        var scrollFrame = scrollView.frame
-        scrollFrame.size.height = cgWebViewHeight + 102
-        scrollView.contentSize = scrollFrame.size
+        webView.setNeedsUpdateConstraints()
+
+//        let cgWebViewHeight : CGFloat = CGFloat(webViewHeight)
+//        ////////////////////////////////////////////////////////////
+//        
+//        print(cgWebViewHeight, appendNewline: true)
+//        print("", appendNewline: true)
+//        
+//        ////creates frame for scrollview and sets the scrollview to that frame////////
+//        var scrollFrame = scrollView.frame
+//        scrollFrame.size.height = cgWebViewHeight + 102
+//        scrollView.contentSize = scrollFrame.size
         ////////////////////////////////////////////////////////////
 
         
         //////creates frame for webview and sets the webview to that frame//////////////
-        webFrame = webView.frame
-        webFrame.size.height = cgWebViewHeight
-        webFrame.origin = CGPointMake(0, postedDateLabel.frame.origin.y + postedDateLabel.frame.height + 3)
-        webView.frame = webFrame
+//        webFrame = webView.frame
+//        webFrame.size.height = cgWebViewHeight
+//        webFrame.origin = CGPointMake(0, postedDateLabel.frame.origin.y + postedDateLabel.frame.height + 3)
+//        webView.frame = webFrame
         ////////////////////////////////////////////////////////////
         
         
-        webView.translatesAutoresizingMaskIntoConstraints = true
-        scrollView.addSubview(webView)
-        webView.frame = webFrame
+//        webView.translatesAutoresizingMaskIntoConstraints = true
+//        scrollView.addSubview(webView)
+//        webView.frame = webFrame
         
         
     
@@ -109,40 +116,42 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
 
         //self.centerBar.leftBarButtonItem = nil
         print("view being configured", appendNewline: true)
-        print(self.navigationItem.leftBarButtonItem, appendNewline: true)//leftBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Done, target: self, action: "moveBack")
+        print(self.navigationItem.leftBarButtonItem, appendNewline: true)
         
         self.categoryLabel.text = currentArticle!.categoriesString!
         self.headlineLabel.text = currentArticle!.headline!
 
-        categoryLabel.translatesAutoresizingMaskIntoConstraints = true
-        headlineLabel.translatesAutoresizingMaskIntoConstraints = true
-        writerNameLabel.translatesAutoresizingMaskIntoConstraints = true
-        postedDateLabel.translatesAutoresizingMaskIntoConstraints = true
-        updatedDateLabel.translatesAutoresizingMaskIntoConstraints = true
-        
-        
-        var categoryFrame = categoryLabel.frame
-//        categoryFrame.size.height = 17
-        categoryFrame.size.width = self.view.frame.size.width - 16
-//        categoryFrame.origin.x = scrollView.frame.origin.x
-//        categoryFrame.origin.y = scrollView.frame.origin.y
-        categoryLabel.frame = categoryFrame
-        
-        var headlineFrame = self.headlineLabel.frame
-        headlineFrame.size.width = self.view.frame.size.width - 16
-        print("headline frame size : ", appendNewline: false)
-        print(headlineFrame.size.width, appendNewline: true)
-        self.headlineLabel.frame = headlineFrame
-        
-        let heightBefore = self.headlineLabel.frame.height
-
+//        categoryLabel.translatesAutoresizingMaskIntoConstraints = true
+//        headlineLabel.translatesAutoresizingMaskIntoConstraints = true
+//        writerNameLabel.translatesAutoresizingMaskIntoConstraints = true
+//        postedDateLabel.translatesAutoresizingMaskIntoConstraints = true
+//        updatedDateLabel.translatesAutoresizingMaskIntoConstraints = true
+//        
+//        
+//        var categoryFrame = categoryLabel.frame
+////        categoryFrame.size.height = 17
+//        categoryFrame.size.width = self.view.frame.size.width - 16
+////        categoryFrame.origin.x = scrollView.frame.origin.x
+////        categoryFrame.origin.y = scrollView.frame.origin.y
+//        categoryLabel.frame = categoryFrame
+//        
+//        var headlineFrame = self.headlineLabel.frame
+//        headlineFrame.size.width = self.view.frame.size.width - 16
+//        print("headline frame size : ", appendNewline: false)
+//        print(headlineFrame.size.width, appendNewline: true)
+//        self.headlineLabel.frame = headlineFrame
+//        
+//        let heightBefore = self.headlineLabel.frame.height
+//
         self.headlineLabel.sizeToFit()
         
-        let heightAfter = self.headlineLabel.frame.height
+//        let heightAfter = self.headlineLabel.frame.height
+//
+//        let changeInHeight = heightAfter - heightBefore
+//        
+//        self.headlineLabel.frame.height
 
-        let changeInHeight = heightAfter - heightBefore
         
-        self.headlineLabel.frame.height
         self.writerNameLabel.text = (currentArticle!.writerString!).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         self.postedDateLabel.text = currentArticle!.postedDateText!
         
@@ -153,26 +162,30 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
             self.updatedDateLabel.text = "Updated: " + currentArticle!.updatedDateText!
         }
         
-        
-        //Moving writerlabel and postdate and updatedatelabel
-        var writerLabelFrame = writerNameLabel.frame
-        writerLabelFrame.origin.y = writerLabelFrame.origin.y + changeInHeight
-        writerLabelFrame.size.width = self.view.frame.size.width - 16
-        writerNameLabel.frame = writerLabelFrame
-        
-        var postedLabelFrame = postedDateLabel.frame
-        postedLabelFrame.origin.y = postedLabelFrame.origin.y + changeInHeight
-        postedDateLabel.frame = postedLabelFrame
-        
-        var updateFrame = updatedDateLabel.frame
-        updateFrame.origin.y = updateFrame.origin.y + changeInHeight
-        updatedDateLabel.frame = updateFrame
-        
-        
+//        
+//        //Moving writerlabel and postdate and updatedatelabel
+//        var writerLabelFrame = writerNameLabel.frame
+//        writerLabelFrame.origin.y = writerLabelFrame.origin.y + changeInHeight
+//        writerLabelFrame.size.width = self.view.frame.size.width - 16
+//        writerNameLabel.frame = writerLabelFrame
+//        
+//        var postedLabelFrame = postedDateLabel.frame
+//        postedLabelFrame.origin.y = postedLabelFrame.origin.y + changeInHeight
+//        postedDateLabel.frame = postedLabelFrame
+//        
+//        var updateFrame = updatedDateLabel.frame
+//        updateFrame.origin.y = updateFrame.origin.y + changeInHeight
+//        updatedDateLabel.frame = updateFrame
+//        
+//        
         
         // loads webview with content
         let loadContent = self.currentArticle.content!
+
+        
         // if debugging, add "body {background: green}" to CSS
+        
+        
         let stringToBeLoadedPt1 = "<html><head><style>" + "p { font-size: 13px;}" + (Singleton.sharedInstance.universalCSS as String)
         let stringToBeLoadedPt2 = "</head></style><body>" + (loadContent) + "</body></html>"
 
@@ -186,7 +199,7 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         webView.delegate = self
-        self.navigationController?.navigationBar.translucent = true
+        //self.navigationController?.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {

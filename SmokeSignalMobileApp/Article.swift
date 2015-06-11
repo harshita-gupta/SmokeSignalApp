@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 class Article : NSObject {
     
@@ -30,14 +29,15 @@ class Article : NSObject {
     var content : String?
     
     var thumbnailURL : NSURL?
-  //  var thumbnailImage : UIImage?
-    
-    //var fullImage : UIImage?
-    var fullImageURL : NSURL?
+
+    var mediumImageURL : NSURL?
     
     var articleURL : NSURL?
     
     var imageExists : Bool?
+    
+    var juiceBoxExists : Bool?
+    var juiceBoxImageLinks : [NSURL]?
     
     override init () {
     }
@@ -61,33 +61,31 @@ class Article : NSObject {
         setContent()
         setURL()
         
+        
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            self.handleJuicebox()
+        }
 
+        
     }
     
     func setImageURLs() {
-//        self.thumbnailImage = (self.articleJSONDictionary!["savedThumbImage"] as? UIImage)
-//        self.fullImage = self.articleJSONDictionary!["savedFullImage"] as? UIImage
         
         if (imageExists == true) {
 
             let thumbnailsLib = articleJSONDictionary!["thumbnail_images"] as! NSDictionary!
 
-            let fullsizeImageDic = thumbnailsLib["full"] as! NSDictionary!
+            let mediumSizeImageDict = thumbnailsLib["medium"] as! NSDictionary!
 
-            self.fullImageURL = NSURL(string: (fullsizeImageDic["url"] as! NSString) as String ) as NSURL!
+            self.mediumImageURL = NSURL(string: (mediumSizeImageDict["url"] as! NSString) as String ) as NSURL!
 
             self.thumbnailURL = NSURL(string: (articleJSONDictionary!)["thumbnail"] as! String) as NSURL!
 
-//            var imageDataThumbnail = NSData(contentsOfURL: thumbnailURL)
-//            var imageDataFull = NSData(contentsOfURL: fullImageURL)
-//
-//            self.thumbnailImage = UIImage(data: imageDataThumbnail!)
-//            self.fullImage = UIImage(data: imageDataFull!)
-
         }
-        else {//if there isnt an image, it hides the imageview
+        else {
             self.thumbnailURL = nil
-            self.fullImageURL = nil
+            self.mediumImageURL = nil
         }
         
     }
@@ -133,9 +131,6 @@ class Article : NSObject {
     
     func setPreviewText() {
         self.previewText = (articleJSONDictionary!["previewContents"] as! String)
-//        var previewContents = parsing.createPreview(unclearedPreviewContents) as NSMutableString //created to store the string that will contain the preview text
-//        previewContents = ((previewContents as String).kv_decodeHTMLCharacterEntities()).mutableCopy() as! NSMutableString
-     //   self.previewText = previewContents.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
     }
     
     func setCategoriesString() {
@@ -180,6 +175,24 @@ class Article : NSObject {
         else {
             self.articleURL = nil
         }
+    }
+    
+    func handleJuicebox() {
+        let rangeOfJB = NSString(string: self.content!).rangeOfString("<!--START JUICEBOX EMBED-->")
+        
+        if (rangeOfJB.location) == NSNotFound {
+            self.juiceBoxExists = false
+            return
+        }
+        
+        else {
+            self.juiceBoxExists = true
+        }
+        
+        //TODO ACTUALLY USE METHOD
+        let jbURL = parsing.extractJuiceboxLink(self.content!)
+        
+        self.juiceBoxImageLinks = parsing.extractJuiceboxGalleryImageURLs(jbURL)
     }
     
 }

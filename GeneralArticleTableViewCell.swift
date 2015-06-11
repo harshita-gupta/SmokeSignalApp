@@ -61,8 +61,6 @@ class GeneralArticleTableViewCell : ArticleTableViewCell {
             }
             
             //////////////////////////////////////////////////////////////////////////////
-            
-            super.imView.sd_setImageWithURL(currentArticle!.fullImageURL!)
         }
         else {
             super.imView.hidden = true
