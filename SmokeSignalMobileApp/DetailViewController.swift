@@ -22,7 +22,25 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     @IBOutlet var webViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var imageGalleryCollView: UICollectionView!
     @IBOutlet var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var shareBarButtonItem: UIBarButtonItem!
     
+    @IBAction func shareButtonPressed(sender: AnyObject) {
+        let textToShare = currentArticle.headline!
+        if let myWebsite = currentArticle.articleURL
+        {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            if #available(iOS 9.0, *) {
+                activityVC.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeAssignToContact,UIActivityTypeOpenInIBooks, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll]
+            } else {
+                activityVC.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll]
+            }
+            
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+
+        
+    }
     var currentArticle : Article = Article()
 
     var detailItem: Article? {
@@ -119,7 +137,7 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
         
         let imageView: UIImageView = cell.viewWithTag(100) as! UIImageView
-        imageView.sd_setImageWithURL(currentArticle.juiceBoxImageLinks![indexPath.item])
+        imageView.sd_setImageWithURL(currentArticle.juiceBoxImageLinks![indexPath.item], placeholderImage: UIImage(named: "placeholderMoutains"))
         
         return cell
     }
@@ -131,10 +149,10 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     
     
     func configureView() {
-        self.headlineLabel.sizeToFit()
-        self.writerNameLabel.sizeToFit()
+//        self.headlineLabel.sizeToFit()
+//        self.writerNameLabel.sizeToFit()
     }
-        
-   
+    
+    
 }
 
