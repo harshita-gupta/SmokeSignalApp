@@ -40,6 +40,9 @@ class ArticleTableViewCell : UITableViewCell {
         if (self.currentArticle!.writerString != nil) {
             writerLabel.text = self.currentArticle!.writerString!
         }
+        else {
+            writerLabel.text = ""
+        }
         
         if (self.currentArticle!.previewText != nil) {
             textPreview.text = self.currentArticle!.previewText!

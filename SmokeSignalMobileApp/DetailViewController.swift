@@ -43,6 +43,13 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
 
         
     }
+    
+    
+    @IBAction func favorited(sender: AnyObject) {
+        
+        
+    }
+    
     var currentArticle : Article = Article()
 
     var detailItem: Article? {

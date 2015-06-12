@@ -61,6 +61,7 @@
 		EE384B451B28E1150017B1BF /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE384B441B28E1150017B1BF /* AEXML.swift */; };
 		EE4CB3381A7566B600013975 /* parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB3371A7566B600013975 /* parsing.swift */; };
 		EE4CB33A1A7572CB00013975 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB3391A7572CB00013975 /* Singleton.swift */; };
+		EE526A2F1B2B9D8A00A0EB6C /* favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE526A2D1B2B9D8A00A0EB6C /* favorites.xcdatamodeld */; };
 		EE62D1DC1A883C3800221D65 /* SEGOEUI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EE21C3E01A86D4C3003EF515 /* SEGOEUI.TTF */; };
 		EE62D1DD1A883C3800221D65 /* SEGOEUIB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EE21C3DF1A86D4BC003EF515 /* SEGOEUIB.TTF */; };
 		EE62D1DE1A883C3800221D65 /* SEGOEUII.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EE21C3E61A86D650003EF515 /* SEGOEUII.TTF */; };
@@ -193,6 +194,7 @@
 		EE384B441B28E1150017B1BF /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
 		EE4CB3371A7566B600013975 /* parsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parsing.swift; sourceTree = "<group>"; };
 		EE4CB3391A7572CB00013975 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		EE526A2E1B2B9D8A00A0EB6C /* favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = favorites.xcdatamodel; sourceTree = "<group>"; };
 		EE99AAA51A0F5432001B9AEF /* The Smoke Signal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Smoke Signal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE99AAA91A0F5432001B9AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE99AAAA1A0F5432001B9AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 		EE21C3E21A86D4DC003EF515 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EE526A2C1B2B9D6C00A0EB6C /* Core Data */,
 				EE4CB3371A7566B600013975 /* parsing.swift */,
 				EE4CB3391A7572CB00013975 /* Singleton.swift */,
 				EE21C3F01A86E549003EF515 /* SmokeSignalMobileApp-Bridging-Header.h */,
@@ -457,6 +460,14 @@
 				EE21C4261A882E08003EF515 /* 1024 x 1024 App Icon.png */,
 			);
 			name = "App Icon";
+			sourceTree = "<group>";
+		};
+		EE526A2C1B2B9D6C00A0EB6C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE526A2D1B2B9D8A00A0EB6C /* favorites.xcdatamodeld */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		EE99AA9C1A0F5432001B9AEF = {
@@ -679,6 +690,7 @@
 				EE13F6AD1AEE0C6600FE93FE /* UIView+WebCacheOperation.m in Sources */,
 				EE21C3F71A86FA21003EF515 /* MyFooter.swift in Sources */,
 				EE4CB3381A7566B600013975 /* parsing.swift in Sources */,
+				EE526A2F1B2B9D8A00A0EB6C /* favorites.xcdatamodeld in Sources */,
 				EE13F6AB1AEE0C6600FE93FE /* UIImageView+HighlightedWebCache.m in Sources */,
 				EE99AAAF1A0F5432001B9AEF /* DetailViewController.swift in Sources */,
 				EEB87EAE1B27736100752884 /* NavBarTitleView.swift in Sources */,
@@ -889,6 +901,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE526A2D1B2B9D8A00A0EB6C /* favorites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE526A2E1B2B9D8A00A0EB6C /* favorites.xcdatamodel */,
+			);
+			currentVersion = EE526A2E1B2B9D8A00A0EB6C /* favorites.xcdatamodel */;
+			path = favorites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EE99AA9D1A0F5432001B9AEF /* Project object */;
 }

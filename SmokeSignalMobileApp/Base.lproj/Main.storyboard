@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SEGOEUI.TTF">
@@ -825,7 +826,7 @@ The </string>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="749" text="Writer Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-vf-30M">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="749" text="Writer Name" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-vf-30M">
                                             <rect key="frame" x="13" y="38" width="68" height="16"/>
                                             <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
@@ -836,11 +837,14 @@ The </string>
                                     <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="0dJ-sB-hP6" secondAttribute="trailing" priority="900" constant="5" id="0zs-oc-J35"/>
+                                        <constraint firstItem="V0C-vf-30M" firstAttribute="width" relation="lessThanOrEqual" secondItem="jkQ-TF-56D" secondAttribute="width" constant="100" id="5AW-er-GZa"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="bottom" secondItem="d3P-M7-ByW" secondAttribute="bottomMargin" id="7ak-a8-eNt"/>
                                         <constraint firstItem="V0C-vf-30M" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="8TI-Pl-Paf"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="vtm-gn-y2e" secondAttribute="trailing" priority="900" constant="5" id="Em0-Pq-HbK"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="trailing" secondItem="d3P-M7-ByW" secondAttribute="trailingMargin" constant="5" id="IWj-vn-FEy"/>
+                                        <constraint firstItem="R30-7T-C8D" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" priority="900" constant="5" id="LHL-3a-FjY"/>
                                         <constraint firstItem="V0C-vf-30M" firstAttribute="top" secondItem="vtm-gn-y2e" secondAttribute="bottom" constant="2" id="NPf-Vi-TND"/>
+                                        <constraint firstItem="R30-7T-C8D" firstAttribute="top" secondItem="vtm-gn-y2e" secondAttribute="bottom" constant="2" id="RhC-Wn-H1L"/>
                                         <constraint firstItem="0dJ-sB-hP6" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="top" id="SLa-Iu-3SN"/>
                                         <constraint firstItem="R30-7T-C8D" firstAttribute="baseline" secondItem="V0C-vf-30M" secondAttribute="baseline" id="SmW-wJ-Lqc"/>
                                         <constraint firstItem="vtm-gn-y2e" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="TG2-Mr-B2Q"/>
@@ -848,12 +852,13 @@ The </string>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="5" id="Wz3-g4-JFx"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="jkQ-TF-56D" secondAttribute="trailing" priority="999" constant="3" id="bny-mh-ePf"/>
                                         <constraint firstItem="0dJ-sB-hP6" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="5" id="cWj-bg-3U4"/>
-                                        <constraint firstItem="R30-7T-C8D" firstAttribute="leading" secondItem="V0C-vf-30M" secondAttribute="trailing" constant="7" id="eT0-Sb-vUg"/>
+                                        <constraint firstItem="R30-7T-C8D" firstAttribute="leading" secondItem="V0C-vf-30M" secondAttribute="trailing" priority="999" constant="7" id="eT0-Sb-vUg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="jkQ-TF-56D" secondAttribute="trailing" priority="900" constant="5" id="go9-yK-NQc"/>
                                         <constraint firstAttribute="bottom" secondItem="jkQ-TF-56D" secondAttribute="bottom" id="iYp-cP-8RO"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="vtm-gn-y2e" secondAttribute="trailing" priority="999" constant="3" id="jUh-Z4-xRt"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="0dJ-sB-hP6" secondAttribute="trailing" priority="999" constant="3" id="lcA-25-tdA"/>
                                         <constraint firstItem="jkQ-TF-56D" firstAttribute="top" secondItem="V0C-vf-30M" secondAttribute="bottom" constant="2" id="pc9-0F-uH4"/>
+                                        <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="V0C-vf-30M" secondAttribute="trailing" id="pdh-C9-1uD"/>
                                         <constraint firstItem="vtm-gn-y2e" firstAttribute="top" secondItem="0dJ-sB-hP6" secondAttribute="bottom" constant="2" id="tWo-0t-wGW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="R30-7T-C8D" secondAttribute="trailing" priority="900" constant="5" id="tYT-WM-fSE"/>
                                         <constraint firstItem="ULv-Zu-pQu" firstAttribute="leading" secondItem="R30-7T-C8D" secondAttribute="trailing" priority="999" constant="3" id="tkg-0p-CKh"/>
@@ -1216,12 +1221,19 @@ The </string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cra-N8-TIN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="BI0-5d-re8">
-                            <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="shareButtonPressed:" destination="Ah7-4n-0Wa" id="Dhh-bu-Xe9"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="BI0-5d-re8">
+                                <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="Ah7-4n-0Wa" id="Dhh-bu-Xe9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Favorite" id="d7d-VV-nB7">
+                                <connections>
+                                    <action selector="favorited:" destination="Ah7-4n-0Wa" id="jAk-Tx-5yN"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
