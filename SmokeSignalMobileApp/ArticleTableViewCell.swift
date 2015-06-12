@@ -15,8 +15,8 @@ class ArticleTableViewCell : UITableViewCell {
     
     @IBOutlet final var categoryLabel: UILabel!
     @IBOutlet final var textPreview: UILabel!
+    @IBOutlet final var datePostedLabel: UILabel!
     @IBOutlet final var writerLabel: UILabel!
-    @IBOutlet final var dateLabel: UILabel!
     @IBOutlet final var imView: UIImageView!
     @IBOutlet final var headline: UILabel!
 
@@ -34,7 +34,7 @@ class ArticleTableViewCell : UITableViewCell {
         }
         
         if (self.currentArticle!.postedDateText != nil) {
-            dateLabel.text = self.currentArticle!.postedDateText!
+            datePostedLabel.text = self.currentArticle!.postedDateText!
         }
         
         if (self.currentArticle!.writerString != nil) {

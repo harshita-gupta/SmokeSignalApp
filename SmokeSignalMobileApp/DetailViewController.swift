@@ -23,6 +23,8 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     @IBOutlet var imageGalleryCollView: UICollectionView!
     @IBOutlet var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var shareBarButtonItem: UIBarButtonItem!
+    @IBOutlet var galleryTopBorder: UIView!
+    @IBOutlet var galleryBottomBorder: UIView!
     
     @IBAction func shareButtonPressed(sender: AnyObject) {
         let textToShare = currentArticle.headline!
@@ -121,6 +123,8 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         }
         else {
             self.imageGalleryCollView.removeFromSuperview()
+            self.galleryBottomBorder.removeFromSuperview()
+            self.galleryTopBorder.removeFromSuperview()
         }
     }
     
@@ -149,8 +153,13 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     
     
     func configureView() {
-//        self.headlineLabel.sizeToFit()
-//        self.writerNameLabel.sizeToFit()
+        self.scrollView.flashScrollIndicators()
+        self.imageGalleryCollView.flashScrollIndicators()
+        self.scrollView.indicatorStyle = UIScrollViewIndicatorStyle.Black
+        self.imageGalleryCollView.indicatorStyle = UIScrollViewIndicatorStyle.Black
+        self.scrollView.scrollsToTop = true
+        self.scrollView.bounces = true
+        self.scrollView.alwaysBounceVertical = true
     }
     
     

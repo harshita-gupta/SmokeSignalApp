@@ -156,7 +156,9 @@ final class Article : NSObject {
     
     func setContent() {
         if ((articleJSONDictionary!["content"] as! String!) != nil) {
-            self.content = (articleJSONDictionary!["content"] as! String)
+            var cont1 = (articleJSONDictionary!["content"]) as! NSMutableString
+            cont1 = parsing.clearTillEndWriterName(NSMutableString(string: cont1))
+            self.content = parsing.clearTillNextTag(cont1, tagToClear: "<p>") as String
         }
         else {
             self.content = ""

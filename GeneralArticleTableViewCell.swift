@@ -14,12 +14,12 @@ final class GeneralArticleTableViewCell : ArticleTableViewCell {
     @IBOutlet var categoriesConstraintExtra: NSLayoutConstraint!
     @IBOutlet var headlineConstraintExtra: NSLayoutConstraint!
     @IBOutlet var previewConstraintExtra: NSLayoutConstraint!
-    @IBOutlet var writerNameConstraintExtra: NSLayoutConstraint!
+    @IBOutlet var dateConstraintExtra: NSLayoutConstraint!
     
     @IBOutlet var categoriesConstraintImage: NSLayoutConstraint!
     @IBOutlet var headlineConstraintImage: NSLayoutConstraint!
     @IBOutlet var previewContraintImage: NSLayoutConstraint!
-    @IBOutlet var writerNameConstraintImage: NSLayoutConstraint!
+    @IBOutlet var dateConstraintImage: NSLayoutConstraint!
     
     
     override func checksLayout() {
@@ -53,11 +53,11 @@ final class GeneralArticleTableViewCell : ArticleTableViewCell {
             }
 
             
-            if (writerNameConstraintExtra.priority != 900) {
-                writerNameConstraintExtra.priority = 900
+            if (dateConstraintExtra.priority != 900) {
+                dateConstraintExtra.priority = 900
             }
-            if (writerNameConstraintImage.priority != 999) {
-                writerNameConstraintImage.priority = 999
+            if (dateConstraintImage.priority != 999) {
+                dateConstraintImage.priority = 999
             }
             
             //////////////////////////////////////////////////////////////////////////////
@@ -90,11 +90,11 @@ final class GeneralArticleTableViewCell : ArticleTableViewCell {
             }
             
             
-            if (writerNameConstraintExtra.priority != 999) {
-                writerNameConstraintExtra.priority = 999
+            if (dateConstraintExtra.priority != 999) {
+                dateConstraintExtra.priority = 999
             }
-            if (writerNameConstraintImage.priority != 900) {
-                writerNameConstraintImage.priority = 900
+            if (dateConstraintImage.priority != 900) {
+                dateConstraintImage.priority = 900
             }
             //////////////////////////////////////////////////////////////////////////////
             
