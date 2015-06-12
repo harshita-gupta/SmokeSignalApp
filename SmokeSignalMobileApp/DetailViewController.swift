@@ -28,7 +28,7 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         let textToShare = currentArticle.headline!
         if let myWebsite = currentArticle.articleURL
         {
-            let objectsToShare = [textToShare, myWebsite]
+            let objectsToShare = [textToShare + "- Read it on the Smoke Signal Website! " + String(myWebsite)]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             if #available(iOS 9.0, *) {
                 activityVC.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeAssignToContact,UIActivityTypeOpenInIBooks, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll]
