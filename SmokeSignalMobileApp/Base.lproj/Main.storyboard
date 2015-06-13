@@ -1026,7 +1026,15 @@ The </string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="goi-1o-xpl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOm-Yf-p6I">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQd-et-Ird" userLabel="Category background">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
+                                        <color key="backgroundColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qR-CU-wKP" userLabel="Headline background">
+                                        <rect key="frame" x="0.0" y="35" width="600" height="32"/>
+                                        <color key="backgroundColor" red="0.97254901960784312" green="0.91764705882352937" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOm-Yf-p6I" userLabel="ScrollView Binder">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -1035,7 +1043,7 @@ The </string>
                                         </constraints>
                                     </view>
                                     <webView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
-                                        <rect key="frame" x="8" y="95" width="584" height="30"/>
+                                        <rect key="frame" x="8" y="105" width="584" height="30"/>
                                         <color key="backgroundColor" red="0.81553819444444442" green="0.81553819444444442" blue="0.81553819444444442" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1050,39 +1058,39 @@ The </string>
                                         <rect key="frame" x="8" y="10" width="584" height="15"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="11"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="255" verticalCompressionResistancePriority="255" text="headline" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQ7-nB-cCw">
-                                        <rect key="frame" x="8" y="28" width="576" height="26"/>
+                                        <rect key="frame" x="8" y="38" width="576" height="26"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="19"/>
                                         <color key="textColor" red="0.16470588235294117" green="0.42352941176470588" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" text="WriterName" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqJ-R0-r3M">
-                                        <rect key="frame" x="8" y="57" width="584" height="16"/>
+                                        <rect key="frame" x="8" y="67" width="584" height="16"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" red="0.40784313725490196" green="0.68627450980392157" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="posted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMo-kP-fTL">
-                                        <rect key="frame" x="8" y="76" width="285" height="16"/>
+                                        <rect key="frame" x="8" y="86" width="285" height="16"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-IJ-3cK">
-                                        <rect key="frame" x="308" y="76" width="284" height="16"/>
+                                        <rect key="frame" x="308" y="86" width="284" height="16"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                         <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RXO-Ze-ajB">
-                                        <rect key="frame" x="8" y="160" width="584" height="20"/>
+                                        <rect key="frame" x="8" y="170" width="584" height="20"/>
                                         <color key="backgroundColor" red="0.40784313725490196" green="0.68627450980392157" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1126,7 +1134,7 @@ The </string>
                                         </cells>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buk-a5-OUG">
-                                        <rect key="frame" x="8" y="180" width="584" height="10"/>
+                                        <rect key="frame" x="8" y="190" width="584" height="10"/>
                                         <color key="backgroundColor" red="0.47450980392156861" green="0.72941176470588232" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1134,7 +1142,7 @@ The </string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYC-7A-3oE">
-                                        <rect key="frame" x="8" y="130" width="584" height="30"/>
+                                        <rect key="frame" x="8" y="140" width="584" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-C8-11F">
                                                 <rect key="frame" x="3" y="3" width="39" height="24"/>
@@ -1143,8 +1151,8 @@ The </string>
                                                     <constraint firstAttribute="width" secondItem="Rbn-C8-11F" secondAttribute="height" multiplier="129:80" id="pcw-nZ-v3g"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Image Gallery" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-Sn-u6O">
-                                                <rect key="frame" x="50" y="3" width="108" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Gallery" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-Sn-u6O">
+                                                <rect key="frame" x="50" y="3" width="89" height="28"/>
                                                 <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="SegoeUI-Semibold" family="Segoe UI" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1181,13 +1189,16 @@ The </string>
                                     <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" constant="3" id="6Ps-UM-CxG"/>
                                     <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" constant="3" id="6t1-Mr-zHJ"/>
                                     <constraint firstAttribute="trailing" secondItem="uOm-Yf-p6I" secondAttribute="trailing" id="6tI-gS-7EJ"/>
+                                    <constraint firstItem="iQd-et-Ird" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="7Kr-XW-HH7"/>
+                                    <constraint firstAttribute="trailing" secondItem="iQd-et-Ird" secondAttribute="trailing" id="JZF-Po-8Dx"/>
                                     <constraint firstItem="RXO-Ze-ajB" firstAttribute="width" secondItem="bYC-7A-3oE" secondAttribute="width" id="JqJ-jI-1rB"/>
                                     <constraint firstItem="yEe-IJ-3cK" firstAttribute="leading" secondItem="AMo-kP-fTL" secondAttribute="trailing" constant="15" id="M7K-Ws-Mxl"/>
                                     <constraint firstItem="RXO-Ze-ajB" firstAttribute="top" secondItem="bYC-7A-3oE" secondAttribute="bottom" id="OTv-RN-tY7"/>
                                     <constraint firstItem="AMo-kP-fTL" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="QP6-Ic-wrP"/>
                                     <constraint firstItem="bYC-7A-3oE" firstAttribute="top" secondItem="F8Z-ft-DJu" secondAttribute="bottom" constant="5" id="WAX-NV-N2I"/>
                                     <constraint firstItem="yEe-IJ-3cK" firstAttribute="baseline" secondItem="AMo-kP-fTL" secondAttribute="baseline" id="YeU-7Y-Yn7"/>
-                                    <constraint firstItem="mQ7-nB-cCw" firstAttribute="top" secondItem="8IV-fx-kPu" secondAttribute="bottom" constant="3" id="Ze9-k0-PyY"/>
+                                    <constraint firstItem="iQd-et-Ird" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="ZO5-FK-mh5"/>
+                                    <constraint firstItem="3qR-CU-wKP" firstAttribute="top" secondItem="iQd-et-Ird" secondAttribute="bottom" id="Zhj-gL-UcD"/>
                                     <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="topMargin" constant="2" id="aWt-6l-SaY"/>
                                     <constraint firstItem="uOm-Yf-p6I" firstAttribute="width" secondItem="goi-1o-xpl" secondAttribute="width" id="c3G-B4-iyq"/>
                                     <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottom" constant="3" id="cW4-OT-i2a"/>
@@ -1195,6 +1206,8 @@ The </string>
                                     <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" priority="900" id="eLl-nW-WPx"/>
                                     <constraint firstItem="uOm-Yf-p6I" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="eVF-we-uWg"/>
                                     <constraint firstAttribute="trailing" secondItem="8IV-fx-kPu" secondAttribute="trailing" constant="8" id="eXR-Dy-qCH"/>
+                                    <constraint firstItem="3qR-CU-wKP" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="ebA-Pn-3eQ"/>
+                                    <constraint firstItem="8IV-fx-kPu" firstAttribute="centerY" secondItem="iQd-et-Ird" secondAttribute="centerY" id="fY7-Rd-dmD"/>
                                     <constraint firstAttribute="trailing" secondItem="F8Z-ft-DJu" secondAttribute="trailing" constant="8" id="gjS-eE-CNS"/>
                                     <constraint firstAttribute="bottom" secondItem="RXO-Ze-ajB" secondAttribute="bottom" id="hfj-T7-a4W"/>
                                     <constraint firstItem="RXO-Ze-ajB" firstAttribute="centerX" secondItem="bYC-7A-3oE" secondAttribute="centerX" id="ihr-TE-yHC"/>
@@ -1202,11 +1215,14 @@ The </string>
                                     <constraint firstItem="F8Z-ft-DJu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="n7g-kV-i6B"/>
                                     <constraint firstItem="mQ7-nB-cCw" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="nEf-i7-vhz"/>
                                     <constraint firstAttribute="trailing" secondItem="RXO-Ze-ajB" secondAttribute="trailing" constant="8" id="ocm-XD-tTZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3qR-CU-wKP" secondAttribute="trailing" id="qmC-X3-xFK"/>
                                     <constraint firstItem="yEe-IJ-3cK" firstAttribute="width" secondItem="AMo-kP-fTL" secondAttribute="width" id="rCr-hT-oFb"/>
+                                    <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="3qR-CU-wKP" secondAttribute="bottom" id="stL-9g-SA2"/>
                                     <constraint firstItem="UqJ-R0-r3M" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="tRW-eO-Dro"/>
                                     <constraint firstItem="8IV-fx-kPu" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="wUI-Zz-cF9"/>
                                     <constraint firstItem="RXO-Ze-ajB" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="wp7-U1-m8F"/>
                                     <constraint firstItem="buk-a5-OUG" firstAttribute="centerX" secondItem="RXO-Ze-ajB" secondAttribute="centerX" id="x78-V9-6AP"/>
+                                    <constraint firstItem="3qR-CU-wKP" firstAttribute="centerY" secondItem="mQ7-nB-cCw" secondAttribute="centerY" id="xoa-wH-rvv"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="mQ7-nB-cCw" secondAttribute="trailing" constant="8" id="yZR-FG-mBh"/>
                                 </constraints>
                             </scrollView>
