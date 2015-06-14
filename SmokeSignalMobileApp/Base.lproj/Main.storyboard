@@ -906,14 +906,14 @@ The </string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Posted Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkv-uk-nNM">
-                                            <rect key="frame" x="84" y="239" width="508" height="16"/>
+                                            <rect key="frame" x="76" y="239" width="516" height="16"/>
                                             <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="500" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="749" text="Writer Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5n-70-zeb">
-                                            <rect key="frame" x="13" y="239" width="68" height="16"/>
+                                            <rect key="frame" x="13" y="239" width="60" height="16"/>
                                             <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
                                             <color key="textColor" red="0.47450980390000003" green="0.72941176470000002" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -939,9 +939,11 @@ The </string>
                                         <constraint firstAttribute="trailingMargin" secondItem="ldV-ly-tbU" secondAttribute="trailing" constant="5" id="2IG-oR-952"/>
                                         <constraint firstItem="Jhm-Qo-IeF" firstAttribute="top" secondItem="V7Y-Yv-TEv" secondAttribute="top" id="9AY-Bv-YRJ"/>
                                         <constraint firstItem="USQ-V5-fJB" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="5" id="9vX-qW-1Lg"/>
+                                        <constraint firstItem="Gkv-uk-nNM" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="68" id="EZf-RW-wSn"/>
                                         <constraint firstItem="Gkv-uk-nNM" firstAttribute="baseline" secondItem="P5n-70-zeb" secondAttribute="baseline" id="EtO-wD-vkI"/>
                                         <constraint firstItem="Mvh-GU-iKY" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leadingMargin" constant="5" id="Fyt-TO-x48"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Gkv-uk-nNM" secondAttribute="trailing" id="GT7-1s-EiR"/>
+                                        <constraint firstItem="Gkv-uk-nNM" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leading" priority="900" constant="5" id="KBt-rG-cuj"/>
                                         <constraint firstItem="Mvh-GU-iKY" firstAttribute="top" secondItem="Jhm-Qo-IeF" secondAttribute="bottom" constant="4" id="NQs-qj-D6l"/>
                                         <constraint firstItem="Jhm-Qo-IeF" firstAttribute="leading" secondItem="V7Y-Yv-TEv" secondAttribute="leading" id="TQX-lA-1vE"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="USQ-V5-fJB" secondAttribute="bottom" id="Vme-5Q-yf9"/>
