@@ -14,24 +14,24 @@ import UIKit
 final class MainViewController: SWRevealViewController {
     
     override func viewDidLoad() {
-        print("MainView loaded", appendNewline: true)
+        print("MainView loaded", terminator: "\n")
         self.frontViewController = self.storyboard!.instantiateViewControllerWithIdentifier("centerNavController") as UIViewController?
         
         self.rearViewController = self.storyboard!.instantiateViewControllerWithIdentifier("sideMenuView") as UIViewController?
         
         Singleton.sharedInstance.mainViewControllerReference = self
         
-        print("frontViewController set to:", appendNewline: false)
-        print(self.frontViewController, appendNewline: true)
+        print("frontViewController set to:", terminator: "")
+        print(self.frontViewController, terminator: "\n")
 
-        print("", appendNewline: true)
-        print("rearViewController set to:", appendNewline: false)
-        print(self.rearViewController, appendNewline: true)
+        print("", terminator: "\n")
+        print("rearViewController set to:", terminator: "")
+        print(self.rearViewController, terminator: "\n")
 
         
-        print("", appendNewline: true)
-        print("first member of NavigationController", appendNewline: false)
-        print((self.frontViewController as! UINavigationController).viewControllers[0], appendNewline: true)
+        print("", terminator: "\n")
+        print("first member of NavigationController", terminator: "")
+        print((self.frontViewController as! UINavigationController).viewControllers[0], terminator: "\n")
 
         setCenterControllerAndBarButton("centerViewList")
 

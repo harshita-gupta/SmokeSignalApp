@@ -19,9 +19,9 @@ import UIKit
     //page number must always be specified
     static func getWebDataFromCategory (category_slug: String, page_number: Int, completion: (()->())? = nil) ->Void{
         
-        print("webdatarequested", appendNewline: true)
-        print(category_slug, appendNewline: true)
-        print(page_number, appendNewline: true)
+        print("webdatarequested", terminator: "\n")
+        print(category_slug, terminator: "\n")
+        print(page_number, terminator: "\n")
         
         var baseURLString : String = ("http://thesmokesignal.org/json_api/")
        
@@ -51,13 +51,13 @@ import UIKit
                 
             }
             
-            print("sent request for json", appendNewline: true)
+            print("sent request for json", terminator: "\n")
             var updatedPostsArray = [NSMutableDictionary]()
             
             if (jsonResult != nil) {
-                print("found a json result", appendNewline: true)
+                print("found a json result", terminator: "\n")
                 let postsArray = (jsonResult!["posts"] as! NSArray).mutableCopy() as! [NSMutableDictionary]
-                print("stored JSON in array", appendNewline: true)
+                print("stored JSON in array", terminator: "\n")
                 
                 
                 
@@ -309,8 +309,8 @@ import UIKit
     
      static func clearAllTriangeTags (incoming: NSMutableString) -> NSMutableString {
         
-        print("value before clearing all triangle tags: ", appendNewline: false)
-        print(incoming, appendNewline: true)
+        print("value before clearing all triangle tags: ", terminator: "")
+        print(incoming, terminator: "\n")
         let freshText = incoming.mutableCopy() as! NSMutableString
         var triangeTagsLeft : NSRange? = findRangeOfFirstTriangleTag(freshText)
         while (triangeTagsLeft != nil)  {
@@ -321,8 +321,8 @@ import UIKit
             triangeTagsLeft = findRangeOfFirstTriangleTag(freshText)
         }
         
-        print("value after clearing all triangle tags: ", appendNewline: false)
-        print(freshText, appendNewline: true)
+        print("value after clearing all triangle tags: ", terminator: "")
+        print(freshText, terminator: "\n")
 
         return freshText
         
@@ -341,21 +341,21 @@ import UIKit
     static func deleteAllScripts(incoming: NSMutableString) -> NSMutableString {
         
         
-        print("value before deleting all scripts tags: ", appendNewline: false)
-        print(incoming, appendNewline: true)
+        print("value before deleting all scripts tags: ", terminator: "")
+        print(incoming, terminator: "\n")
 
         
         let text = incoming as NSString
         let rangeOfTag : NSRange? = (text.rangeOfString("<script"))
         
         
-        print("range of <script tag :", appendNewline: false)
-        print(rangeOfTag, appendNewline: true)
+        print("range of <script tag :", terminator: "")
+        print(rangeOfTag, terminator: "\n")
 
         
         if (rangeOfTag?.location == NSNotFound) {
             
-            print("no <script tags found, method exited ", appendNewline: true)
+            print("no <script tags found, method exited ", terminator: "\n")
 
             return incoming
         }
@@ -363,21 +363,21 @@ import UIKit
         let rangeOfCloseTag = text.rangeOfString("</script>") as NSRange
         
         
-        print("range of closing </script> tag :", appendNewline: false)
-        print(rangeOfCloseTag, appendNewline: true)
+        print("range of closing </script> tag :", terminator: "")
+        print(rangeOfCloseTag, terminator: "\n")
 
         
         let locOfCloseTag = rangeOfCloseTag.location
         
         let rangeOfScriptContent = NSMakeRange(locOfStartTag, (locOfCloseTag + rangeOfCloseTag.length - 1 ) - locOfStartTag + 1)
 
-        print("range of  script content to be cleared :", appendNewline: false)
-        print(rangeOfScriptContent, appendNewline: true)
+        print("range of  script content to be cleared :", terminator: "")
+        print(rangeOfScriptContent, terminator: "\n")
         
         let finalText = clearCharactersFromString(text.mutableCopy() as! NSMutableString, rangeToBeCleared: rangeOfScriptContent)
         
-        print("value before deleting all scripts tags: ", appendNewline: false)
-        print(finalText, appendNewline: true)
+        print("value before deleting all scripts tags: ", terminator: "")
+        print(finalText, terminator: "\n")
         
         return finalText
     }

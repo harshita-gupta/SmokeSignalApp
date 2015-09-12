@@ -239,7 +239,7 @@ final class Article : NSObject {
                     dispatch_async(dispatch_get_global_queue(priority, 0)) {
                         
                         if let imageLink = image.attributes["imageURL"] {
-                            print("image link: ", appendNewline: false)
+                            print("image link: ", terminator: "")
                             print (imageLink)
                             self.juiceBoxImageLinks!.append(NSURL(string: imageLink as! String)!)
                         }

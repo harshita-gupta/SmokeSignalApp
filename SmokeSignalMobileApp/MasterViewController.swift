@@ -26,7 +26,7 @@ final class MasterViewController: UITableViewController{
     var currentlyLoading = false
     
     override func viewDidLoad() {
-        print("master view loaded", appendNewline: true)
+        print("master view loaded", terminator: "\n")
 
         ((self.parentViewController)?.parentViewController as! MainViewController).panGestureRecognizer()
 
@@ -59,17 +59,17 @@ final class MasterViewController: UITableViewController{
     }
     
     func setBarButton() {
-        print("starts setting leftBarButtonItem", appendNewline: true)
+        print("starts setting leftBarButtonItem", terminator: "\n")
         self.mainNavBar!.leftBarButtonItem = DrawerBarButtonItem(target: self, action: "toggleLeft")
-        print("leftBarButtonItem set to: ", appendNewline: false)
-        print(self.mainNavBar!.leftBarButtonItem, appendNewline: true)
-        print("finished setting leftBarButtonItem", appendNewline: true)
-        print("", appendNewline: true)
+        print("leftBarButtonItem set to: ", terminator: "")
+        print(self.mainNavBar!.leftBarButtonItem, terminator: "\n")
+        print("finished setting leftBarButtonItem", terminator: "\n")
+        print("", terminator: "\n")
 
     }
     
     func toggleLeft() {
-        print("DrawerBarButtonItem tapped.", appendNewline: true)
+        print("DrawerBarButtonItem tapped.", terminator: "\n")
         ((Singleton.sharedInstance.mainViewControllerReference) as SWRevealViewController).revealToggleAnimated(true)
     }
     
@@ -83,7 +83,7 @@ final class MasterViewController: UITableViewController{
     }
  
     func addNavBarBanner() {
-        print("started adding top Navigation Bar", appendNewline: true)
+        print("started adding top Navigation Bar", terminator: "\n")
         var imPresent : Bool
         if self.currentCategory.slug! == "" {
             imPresent = true
@@ -96,8 +96,8 @@ final class MasterViewController: UITableViewController{
         let titleSize = titleView.systemLayoutSizeFittingSize(CGSizeZero)
         titleView.frame = CGRectMake(0, 0, titleSize.width, titleSize.height)
         mainNavBar.titleView = titleView
-        print("finished adding top Navigation Bar, view set to : ", appendNewline: false)
-        print(mainNavBar.titleView, appendNewline: true)
+        print("finished adding top Navigation Bar, view set to : ", terminator: "")
+        print(mainNavBar.titleView, terminator: "\n")
 
 
         

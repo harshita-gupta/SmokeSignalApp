@@ -222,7 +222,12 @@ public class AEXMLElement: Equatable {
     
     public var xmlStringCompact: String {
         let chars = NSCharacterSet(charactersInString: "\n\t")
-        return "".join(xmlString.componentsSeparatedByCharactersInSet(chars))
+        var st = ""
+        let arr = xmlString.componentsSeparatedByCharactersInSet(chars)
+        for elem in arr {
+            st = st + elem
+        }
+        return st
     }
 }
 
