@@ -11,6 +11,8 @@ import UIKit
 final class DetailViewController: UIViewController, UIWebViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
 
 
+    @IBOutlet var featuredImageAspectRatioConstraint: NSLayoutConstraint!
+    @IBOutlet var featuredImageView: UIImageView!
     @IBOutlet var centerBar: UINavigationItem!
     @IBOutlet var webView: UIWebView!
     @IBOutlet var scrollView: UIScrollView!
@@ -102,6 +104,12 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         }
         else {
             self.updatedDateLabel.text = "Updated: " + currentArticle!.updatedDateText!
+        }
+        if (self.currentArticle.imageExists!) {
+            featuredImageView.sd_setImageWithURL(self.currentArticle.fullImageURL!)
+        }
+        else {
+            featuredImageView.hidden = true
         }
     }
     

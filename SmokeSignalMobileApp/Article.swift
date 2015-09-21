@@ -32,6 +32,8 @@ final class Article : NSObject {
 
     var mediumImageURL : NSURL?
     
+    var fullImageURL : NSURL?
+    
     var articleURL : NSURL?
     
     var imageExists : Bool?
@@ -72,9 +74,13 @@ final class Article : NSObject {
             let thumbnailsLib = articleJSONDictionary!["thumbnail_images"] as! NSDictionary!
 
             let mediumSizeImageDict = thumbnailsLib["medium"] as! NSDictionary!
+            let fullSizeImageDict = thumbnailsLib["full"] as! NSDictionary!
+
+            self.fullImageURL = NSURL(string: (fullSizeImageDict["url"] as! NSString) as String ) as NSURL!
 
             self.mediumImageURL = NSURL(string: (mediumSizeImageDict["url"] as! NSString) as String ) as NSURL!
 
+            
             self.thumbnailURL = NSURL(string: (articleJSONDictionary!)["thumbnail"] as! String) as NSURL!
 
         }

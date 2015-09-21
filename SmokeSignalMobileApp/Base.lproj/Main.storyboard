@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NTu-pb-qfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NTu-pb-qfh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -1043,7 +1043,7 @@ The </string>
                                         </constraints>
                                     </view>
                                     <webView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-ft-DJu">
-                                        <rect key="frame" x="8" y="105" width="584" height="30"/>
+                                        <rect key="frame" x="8" y="430" width="584" height="30"/>
                                         <color key="backgroundColor" red="0.81553819444444442" green="0.81553819444444442" blue="0.81553819444444442" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1090,7 +1090,7 @@ The </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RXO-Ze-ajB">
-                                        <rect key="frame" x="8" y="170" width="584" height="20"/>
+                                        <rect key="frame" x="8" y="495" width="584" height="20"/>
                                         <color key="backgroundColor" red="0.40784313725490196" green="0.68627450980392157" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1134,7 +1134,7 @@ The </string>
                                         </cells>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buk-a5-OUG">
-                                        <rect key="frame" x="8" y="190" width="584" height="10"/>
+                                        <rect key="frame" x="8" y="515" width="584" height="10"/>
                                         <color key="backgroundColor" red="0.47450980392156861" green="0.72941176470588232" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1142,7 +1142,7 @@ The </string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYC-7A-3oE">
-                                        <rect key="frame" x="8" y="140" width="584" height="30"/>
+                                        <rect key="frame" x="8" y="465" width="584" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-C8-11F">
                                                 <rect key="frame" x="3" y="3" width="39" height="24"/>
@@ -1180,6 +1180,12 @@ The </string>
                                             </mask>
                                         </variation>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-Na-qng">
+                                        <rect key="frame" x="8" y="105" width="584" height="328"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aRe-Na-qng" secondAttribute="height" multiplier="777:437" id="BEn-hv-03s"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="tintColor" red="0.1647058824" green="0.42352941179999998" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1187,21 +1193,25 @@ The </string>
                                     <constraint firstItem="buk-a5-OUG" firstAttribute="top" secondItem="RXO-Ze-ajB" secondAttribute="bottom" id="3Zg-H0-1no"/>
                                     <constraint firstItem="buk-a5-OUG" firstAttribute="width" secondItem="RXO-Ze-ajB" secondAttribute="width" id="6Kp-rc-4ue"/>
                                     <constraint firstItem="AMo-kP-fTL" firstAttribute="top" secondItem="UqJ-R0-r3M" secondAttribute="bottom" constant="3" id="6Ps-UM-CxG"/>
-                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" constant="3" id="6t1-Mr-zHJ"/>
                                     <constraint firstAttribute="trailing" secondItem="uOm-Yf-p6I" secondAttribute="trailing" id="6tI-gS-7EJ"/>
                                     <constraint firstItem="iQd-et-Ird" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="7Kr-XW-HH7"/>
+                                    <constraint firstItem="F8Z-ft-DJu" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" priority="900" constant="3" id="94k-ci-Rr8"/>
+                                    <constraint firstItem="aRe-Na-qng" firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="top" constant="3" id="AMt-M7-ccm"/>
+                                    <constraint firstAttribute="trailing" secondItem="aRe-Na-qng" secondAttribute="trailing" constant="8" id="Eug-XK-uH5"/>
                                     <constraint firstAttribute="trailing" secondItem="iQd-et-Ird" secondAttribute="trailing" id="JZF-Po-8Dx"/>
                                     <constraint firstItem="RXO-Ze-ajB" firstAttribute="width" secondItem="bYC-7A-3oE" secondAttribute="width" id="JqJ-jI-1rB"/>
                                     <constraint firstItem="yEe-IJ-3cK" firstAttribute="leading" secondItem="AMo-kP-fTL" secondAttribute="trailing" constant="15" id="M7K-Ws-Mxl"/>
                                     <constraint firstItem="RXO-Ze-ajB" firstAttribute="top" secondItem="bYC-7A-3oE" secondAttribute="bottom" id="OTv-RN-tY7"/>
                                     <constraint firstItem="AMo-kP-fTL" firstAttribute="leading" secondItem="8IV-fx-kPu" secondAttribute="leading" id="QP6-Ic-wrP"/>
                                     <constraint firstItem="bYC-7A-3oE" firstAttribute="top" secondItem="F8Z-ft-DJu" secondAttribute="bottom" constant="5" id="WAX-NV-N2I"/>
+                                    <constraint firstItem="aRe-Na-qng" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" constant="8" id="X9L-fx-62E"/>
                                     <constraint firstItem="yEe-IJ-3cK" firstAttribute="baseline" secondItem="AMo-kP-fTL" secondAttribute="baseline" id="YeU-7Y-Yn7"/>
                                     <constraint firstItem="iQd-et-Ird" firstAttribute="leading" secondItem="goi-1o-xpl" secondAttribute="leading" id="ZO5-FK-mh5"/>
                                     <constraint firstItem="3qR-CU-wKP" firstAttribute="top" secondItem="iQd-et-Ird" secondAttribute="bottom" id="Zhj-gL-UcD"/>
                                     <constraint firstItem="8IV-fx-kPu" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="topMargin" constant="2" id="aWt-6l-SaY"/>
                                     <constraint firstItem="uOm-Yf-p6I" firstAttribute="width" secondItem="goi-1o-xpl" secondAttribute="width" id="c3G-B4-iyq"/>
                                     <constraint firstItem="UqJ-R0-r3M" firstAttribute="top" secondItem="mQ7-nB-cCw" secondAttribute="bottom" constant="3" id="cW4-OT-i2a"/>
+                                    <constraint firstItem="aRe-Na-qng" firstAttribute="top" secondItem="AMo-kP-fTL" secondAttribute="bottom" constant="3" id="cmR-Kb-1uy"/>
                                     <constraint firstAttribute="trailing" secondItem="UqJ-R0-r3M" secondAttribute="trailing" constant="8" id="dpe-9Z-WWl"/>
                                     <constraint firstAttribute="bottom" secondItem="F8Z-ft-DJu" secondAttribute="bottom" priority="900" id="eLl-nW-WPx"/>
                                     <constraint firstItem="uOm-Yf-p6I" firstAttribute="top" secondItem="goi-1o-xpl" secondAttribute="top" id="eVF-we-uWg"/>
@@ -1256,6 +1266,8 @@ The </string>
                         <outlet property="categoryLabel" destination="8IV-fx-kPu" id="G3z-ce-pr1"/>
                         <outlet property="centerBar" destination="cra-N8-TIN" id="S5b-Yw-5hR"/>
                         <outlet property="collectionViewHeightConstraint" destination="bW7-bu-L1Y" id="z9s-Uy-Act"/>
+                        <outlet property="featuredImageAspectRatioConstraint" destination="BEn-hv-03s" id="nFK-Yt-Acq"/>
+                        <outlet property="featuredImageView" destination="aRe-Na-qng" id="DA0-KG-zTt"/>
                         <outlet property="galleryBottomBorder" destination="buk-a5-OUG" id="bFf-WY-Swu"/>
                         <outlet property="galleryTopBorder" destination="bYC-7A-3oE" id="RbT-aI-Jcj"/>
                         <outlet property="headlineLabel" destination="mQ7-nB-cCw" id="okk-r8-MbM"/>
