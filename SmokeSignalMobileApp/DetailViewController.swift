@@ -28,7 +28,7 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     @IBOutlet var galleryTopBorder: UIView!
     @IBOutlet var galleryBottomBorder: UIView!
     
-    @IBAction func shareButtonPressed(sender: AnyObject) {
+    @IBAction func shareButtonPressed(_ sender: AnyObject) {
         let textToShare = currentArticle.headline!
         if let myWebsite = currentArticle.articleURL
         {
@@ -40,14 +40,14 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
                 activityVC.excludedActivityTypes = [UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypeSaveToCameraRoll]
             }
             
-            self.presentViewController(activityVC, animated: true, completion: nil)
+            self.present(activityVC, animated: true, completion: nil)
         }
 
         
     }
     
     
-    @IBAction func favorited(sender: AnyObject) {
+    @IBAction func favorited(_ sender: AnyObject) {
         
         
     }
@@ -81,9 +81,9 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         // Dispose of any resources that can be recreated.
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         
-        let webViewHeightString : String = webView.stringByEvaluatingJavaScriptFromString("document.body.scrollHeight")!
+        let webViewHeightString : String = webView.stringByEvaluatingJavaScript(from: "document.body.scrollHeight")!
         let webViewHeight = (webViewHeightString as NSString).floatValue
         webViewHeightConstraint.constant = CGFloat(webViewHeight)
         webView.setNeedsUpdateConstraints()
@@ -96,7 +96,7 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         
         self.categoryLabel.text = currentArticle!.categoriesString!
         self.headlineLabel.text = currentArticle!.headline!
-        self.writerNameLabel.text = (currentArticle!.writerString!).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        self.writerNameLabel.text = (currentArticle!.writerString!).trimmingCharacters(in: CharacterSet.whitespaces)
         self.postedDateLabel.text = currentArticle!.postedDateText!
         
         if (currentArticle!.postedDateText == currentArticle!.updatedDateText) {
@@ -106,10 +106,10 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
             self.updatedDateLabel.text = "Updated: " + currentArticle!.updatedDateText!
         }
         if (self.currentArticle.imageExists!) {
-            featuredImageView.sd_setImageWithURL(self.currentArticle.fullImageURL!)
+            featuredImageView.sd_setImage(with: self.currentArticle.fullImageURL! as URL!)
         }
         else {
-            featuredImageView.hidden = true
+            featuredImageView.isHidden = true
         }
     }
     
@@ -129,10 +129,10 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
             self.collectionViewHeightConstraint.constant = scrollView.frame.size.width / 1.5
             
             let flowLayout = UICollectionViewFlowLayout()
-            flowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+            flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
             flowLayout.minimumInteritemSpacing = 0.0
             flowLayout.minimumLineSpacing = 0.0
-            self.imageGalleryCollView.pagingEnabled = true
+            self.imageGalleryCollView.isPagingEnabled = true
             self.imageGalleryCollView.collectionViewLayout = flowLayout
             print(imageGalleryCollView)
         }
@@ -143,25 +143,25 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
         }
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (currentArticle.juiceBoxImageLinks?.count)!
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as UICollectionViewCell
         
         let imageView: UIImageView = cell.viewWithTag(100) as! UIImageView
-        imageView.sd_setImageWithURL(currentArticle.juiceBoxImageLinks![indexPath.item], placeholderImage: UIImage(named: "placeholderMoutains"))
+        imageView.sd_setImage(with: currentArticle.juiceBoxImageLinks![(indexPath as NSIndexPath).item] as URL, placeholderImage: UIImage(named: "placeholderMoutains"))
         
         return cell
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.imageGalleryCollView.frame.size
     }
     
@@ -170,8 +170,8 @@ final class DetailViewController: UIViewController, UIWebViewDelegate, UICollect
     func configureView() {
         self.scrollView.flashScrollIndicators()
         self.imageGalleryCollView.flashScrollIndicators()
-        self.scrollView.indicatorStyle = UIScrollViewIndicatorStyle.Black
-        self.imageGalleryCollView.indicatorStyle = UIScrollViewIndicatorStyle.Black
+        self.scrollView.indicatorStyle = UIScrollViewIndicatorStyle.black
+        self.imageGalleryCollView.indicatorStyle = UIScrollViewIndicatorStyle.black
         self.scrollView.scrollsToTop = true
         self.scrollView.bounces = true
         self.scrollView.alwaysBounceVertical = true

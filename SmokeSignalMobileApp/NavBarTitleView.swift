@@ -19,7 +19,7 @@ final class NavBarTitleView : UIView {
     init(frame: CGRect, title: String, imagePresent: Bool) {
         super.init(frame: frame)
         
-        NSBundle.mainBundle().loadNibNamed("NavBars", owner: self, options: nil)
+        Bundle.main.loadNibNamed("NavBars", owner: self, options: nil)
         
         self.addSubview(label)
         
@@ -27,15 +27,15 @@ final class NavBarTitleView : UIView {
         
         if (imagePresent) {
             self.addSubview(image)
-            self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-0-[label]-0-[image]-0-|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: bindings))
-            self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[image]-0-|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: bindings))
+            self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-0-[label]-0-[image]-0-|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: bindings))
+            self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[image]-0-|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: bindings))
         }
         
         
         else {
             
-            self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-0-[label]-0-|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: bindings))
-            self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[label]-0-|", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: bindings))
+            self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-0-[label]-0-|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: bindings))
+            self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[label]-0-|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: bindings))
             
         }
         

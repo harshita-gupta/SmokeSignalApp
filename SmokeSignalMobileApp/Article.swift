@@ -18,29 +18,29 @@ final class Article : NSObject {
     
     var categoriesString : String?
     
-    var postedDate : NSDate?
+    var postedDate : Date?
     var postedDateText : String?
     
-    var updatedDate: NSDate?
+    var updatedDate: Date?
     var updatedDateText : String?
     
     var writerString : String?
     
     var content : String?
     
-    var thumbnailURL : NSURL?
+    var thumbnailURL : URL?
 
-    var mediumImageURL : NSURL?
+    var mediumImageURL : URL?
     
-    var fullImageURL : NSURL?
+    var fullImageURL : URL?
     
-    var articleURL : NSURL?
+    var articleURL : URL?
     
     var imageExists : Bool?
     
-    var juiceboxGalleryLink : NSURL?
+    var juiceboxGalleryLink : URL?
     var juiceBoxExists : Bool?
-    var juiceBoxImageLinks : [NSURL]?
+    var juiceBoxImageLinks : [URL]?
     
     override init () {
     }
@@ -73,15 +73,15 @@ final class Article : NSObject {
 
             let thumbnailsLib = articleJSONDictionary!["thumbnail_images"] as! NSDictionary!
 
-            let mediumSizeImageDict = thumbnailsLib["medium"] as! NSDictionary!
-            let fullSizeImageDict = thumbnailsLib["full"] as! NSDictionary!
+            let mediumSizeImageDict = thumbnailsLib?["medium"] as! NSDictionary!
+            let fullSizeImageDict = thumbnailsLib?["full"] as! NSDictionary!
 
-            self.fullImageURL = NSURL(string: (fullSizeImageDict["url"] as! NSString) as String ) as NSURL!
+            self.fullImageURL = URL(string: (fullSizeImageDict?["url"] as! NSString) as String ) as URL!
 
-            self.mediumImageURL = NSURL(string: (mediumSizeImageDict["url"] as! NSString) as String ) as NSURL!
+            self.mediumImageURL = URL(string: (mediumSizeImageDict?["url"] as! NSString) as String ) as URL!
 
             
-            self.thumbnailURL = NSURL(string: (articleJSONDictionary!)["thumbnail"] as! String) as NSURL!
+            self.thumbnailURL = URL(string: (articleJSONDictionary!)["thumbnail"] as! String) as URL!
 
         }
         else {
@@ -98,26 +98,26 @@ final class Article : NSObject {
     
     func setPostedDateString() {
         let dateStringFromJSON : String = articleJSONDictionary!["date"] as! String
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-M-d H:m:s"
-        self.postedDate = ((dateFormatter.dateFromString(dateStringFromJSON))) as NSDate!
+        self.postedDate = ((dateFormatter.date(from: dateStringFromJSON))) as Date!
         
-        let dateFormatter2 = NSDateFormatter()
+        let dateFormatter2 = DateFormatter()
         dateFormatter2.dateFormat = "MMMM d, yyyy"
         
-        self.postedDateText = dateFormatter2.stringFromDate(self.postedDate!)
+        self.postedDateText = dateFormatter2.string(from: self.postedDate!)
     }
     
     func setUpdatedDateString() {
         let dateStringFromJSON : String = articleJSONDictionary!["modified"] as! String
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-M-d H:m:s"
-        self.updatedDate = ((dateFormatter.dateFromString(dateStringFromJSON))) as NSDate!
+        self.updatedDate = ((dateFormatter.date(from: dateStringFromJSON))) as Date!
         
-        let dateFormatter2 = NSDateFormatter()
+        let dateFormatter2 = DateFormatter()
         dateFormatter2.dateFormat = "MMMM d, yyyy"
         
-        self.updatedDateText = dateFormatter2.stringFromDate(self.updatedDate!)
+        self.updatedDateText = dateFormatter2.string(from: self.updatedDate!)
     }
     
     func setWriter() {
@@ -139,7 +139,7 @@ final class Article : NSObject {
         if articleJSONDictionary!["categories"] != nil {
             let categoriesArray : NSArray = articleJSONDictionary!["categories"] as! NSArray
             if (categoriesArray.count != 0) {
-                for var index = 0; index < categoriesArray.count; ++index {
+                for index in (0 ..< categoriesArray.count) {
                     let currTitle : String = (categoriesArray[index] as! NSDictionary)["title"] as! String
                     if index == 0 {
                         categoryLabelString += currTitle
@@ -173,7 +173,7 @@ final class Article : NSObject {
     
     func setURL() {
         if ((articleJSONDictionary!["url"] as! String!) != nil){
-            self.articleURL = NSURL(fileURLWithPath: articleJSONDictionary!["url"] as! String!)
+            self.articleURL = URL(fileURLWithPath: articleJSONDictionary!["url"] as! String!)
         }
         else {
             self.articleURL = nil
@@ -181,7 +181,7 @@ final class Article : NSObject {
     }
     
     func handleJuicebox() {
-        let rangeOfJB = NSString(string: self.content!).rangeOfString("<!--START JUICEBOX EMBED-->")
+        let rangeOfJB = NSString(string: self.content!).range(of: "<!--START JUICEBOX EMBED-->")
         
         if (rangeOfJB.location) == NSNotFound {
             self.juiceBoxExists = false
@@ -189,10 +189,10 @@ final class Article : NSObject {
         }
         
         self.juiceBoxExists = true
-        self.juiceBoxImageLinks = [NSURL]()
+        self.juiceBoxImageLinks = [URL]()
         
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+        let priority = DispatchQueue.GlobalAttributes.qosDefault
+        DispatchQueue.global(attributes: priority).async {
             self.extractJuiceboxGalleryURL()
             self.extractJuiceboxGalleryImageURLs()
             //            let jbURL = parsing.extractJuiceboxLink(self.content!)
@@ -206,25 +206,25 @@ final class Article : NSObject {
     
         var text = self.content! as NSString
         
-        let startConfigRange = text.rangeOfString("configUrl")
+        let startConfigRange = text.range(of: "configUrl")
         
-        let beforeStartOfURL = (text.rangeOfString("\"", options: NSStringCompareOptions.CaseInsensitiveSearch, range: NSMakeRange(startConfigRange.location, 20))).location
+        let beforeStartOfURL = (text.range(of: "\"", options: NSString.CompareOptions.caseInsensitive, range: NSMakeRange(startConfigRange.location, 20))).location
         
         
-        text = text.substringFromIndex(beforeStartOfURL + 1)
+        text = text.substring(from: beforeStartOfURL + 1)
         
-        let afterEndOfURL = (text.rangeOfString("\"")).location
+        let afterEndOfURL = (text.range(of: "\"")).location
         
-        let stringToClear = text.substringFromIndex(afterEndOfURL)
+        let stringToClear = text.substring(from: afterEndOfURL)
         
-        text = text.stringByReplacingOccurrencesOfString(stringToClear, withString: "")
+        text = text.replacingOccurrences(of: stringToClear, with: "")
         
-        let jbLink = (NSURL(string: text as String)) as NSURL!!
+        let jbLink = (URL(string: text as String)) as URL?!
         
         print("juicebox link: ")
         print(jbLink)
         
-        self.juiceboxGalleryLink = jbLink
+        self.juiceboxGalleryLink = jbLink!
         
     }
     
@@ -234,20 +234,20 @@ final class Article : NSObject {
         let url = self.juiceboxGalleryLink
         var error : NSError?
         
-        let urlData = NSData(contentsOfURL: url!)
+        let urlData = try? Data(contentsOf: url!)
         
         if let xmlDoc = AEXMLDocument(xmlData: urlData!, error: &error) {
             
             if let allImages = xmlDoc.root["image"].all {
                 for image in allImages {
                     
-                    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-                    dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                    let priority = DispatchQueue.GlobalAttributes.qosDefault
+                    DispatchQueue.global(attributes: priority).async {
                         
                         if let imageLink = image.attributes["imageURL"] {
                             print("image link: ", terminator: "")
                             print (imageLink)
-                            self.juiceBoxImageLinks!.append(NSURL(string: imageLink as! String)!)
+                            self.juiceBoxImageLinks!.append(URL(string: imageLink as! String)!)
                         }
                     }
                 }

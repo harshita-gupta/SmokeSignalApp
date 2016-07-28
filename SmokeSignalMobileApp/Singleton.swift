@@ -10,18 +10,10 @@ import Foundation
 import UIKit
 
 class Singleton {
-  class var sharedInstance: Singleton {
-    struct Static {
-      static var instance: Singleton?
-      static var token: dispatch_once_t = 0
-    }
-
-    dispatch_once(&Static.token) {
-      Static.instance = Singleton()
-    }
-
-    return Static.instance!
-  }
+  static let sharedInstance: Singleton = {
+    let instance = Singleton()
+    return instance
+  }()
     
     struct catColorHexes {
         static var regular = "729977"

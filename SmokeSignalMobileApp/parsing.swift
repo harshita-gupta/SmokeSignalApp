@@ -17,7 +17,7 @@ import UIKit
     // doesnt return any value
     // category_slug is if it is a category-specific load, left as "" if it is not
     //page number must always be specified
-    static func getWebDataFromCategory (category_slug: String, page_number: Int, completion: (()->())? = nil) ->Void{
+    static func getWebDataFromCategory (_ category_slug: String, page_number: Int, completion: (()->())? = nil) ->Void{
         
         print("webdatarequested", terminator: "\n")
         print(category_slug, terminator: "\n")
@@ -33,19 +33,19 @@ import UIKit
             baseURLString = baseURLString + "?slug=" + category_slug + "&page=" + (String(page_number))
         }
         
-        baseURLString = baseURLString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet());
+        baseURLString = baseURLString.trimmingCharacters(in: CharacterSet.whitespaces);
         
-        let url : NSURL = (NSURL(string:baseURLString)) as NSURL!
+        let url : URL = (URL(string:baseURLString)) as URL!
         
-        let request = NSURLRequest(URL: url)
+        let request = URLRequest(url: url)
         
 
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue(), completionHandler:{ (response:URLResponse?, data: Data?, error: NSError?) -> Void in
             
             var jsonResult : NSMutableDictionary?
             
             do {
-                try jsonResult = NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.AllowFragments) as? NSMutableDictionary
+                try jsonResult = JSONSerialization.jsonObject(with: data!, options:JSONSerialization.ReadingOptions.allowFragments) as? NSMutableDictionary
             }
             catch {
                 
@@ -67,7 +67,7 @@ import UIKit
                     
                     var previewContents  = parsing.createPreview(post["content"] as! NSMutableString)  //created to store the string that will contain the preview text
                     previewContents = ((previewContents as String).kv_decodeHTMLCharacterEntities()).mutableCopy() as! NSMutableString
-                    previewContents = NSMutableString(string: previewContents.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()))
+                    previewContents = NSMutableString(string: previewContents.trimmingCharacters(in: CharacterSet.whitespaces))
                     updatedPost["previewContents"] = NSMutableString(string: previewContents)
                     updatedPostsArray.append(updatedPost)//append(updatedPost as NSMutableDictionary)
                 }
@@ -80,7 +80,7 @@ import UIKit
                 else {
                     Singleton.sharedInstance.posts = Singleton.sharedInstance.posts + (updatedPostsArray)
                 }
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     if let completion = completion {
                         completion()
                     }
@@ -98,7 +98,7 @@ import UIKit
         })
     }
     
-    static func articleForPostAtIndex(row: NSInteger) -> Article {
+    static func articleForPostAtIndex(_ row: NSInteger) -> Article {
         // Return article if already computed
         if let article = Singleton.sharedInstance.articleCache[row] {
             return article
@@ -115,7 +115,7 @@ import UIKit
     
     
     //resizing image function
-     static func RBResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+     static func RBResizeImage(_ image: UIImage, targetSize: CGSize) -> UIImage {
         let size = image.size
         
         let widthRatio  = targetSize.width  / image.size.width
@@ -124,28 +124,28 @@ import UIKit
         // Figure out what our orientation is, and use that to form the rectangle
         var newSize: CGSize
         if(widthRatio > heightRatio) {
-            newSize = CGSizeMake(size.width * heightRatio, size.height * heightRatio)
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
         } else {
-            newSize = CGSizeMake(size.width * widthRatio,  size.height * widthRatio)
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
         }
         
         // This is the rect that we've calculated out and this is what is actually used below
-        let rect = CGRectMake(0, 0, newSize.width, newSize.height)
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
         
         // Actually do the resizing to the rect using the ImageContext stuff
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.drawInRect(rect)
+        image.draw(in: rect)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
     
     //returns a string of the writer name    
-     static func extractWriter (text: NSMutableString) -> NSMutableString? {
+     static func extractWriter (_ text: NSMutableString) -> NSMutableString? {
         var writer : NSMutableString = text.mutableCopy() as! NSMutableString
         
-        let loc : NSRange? = text.rangeOfString("By:")
+        let loc : NSRange? = text.range(of: "By:")
         
         // if the writer name isn't present, returns nil
         if loc!.location == NSNotFound || loc!.location == NSNotFound{
@@ -187,7 +187,7 @@ import UIKit
             //we proceed to remove everything after the name.
             //after name, there is always a <
             //we create an optional just in case, but highly unlikely that article will only be writer name LOL. unless it's an image. so good robustness gj harshita
-            let firstCharAfterName: NSRange? = writer.rangeOfString("<")
+            let firstCharAfterName: NSRange? = writer.range(of: "<")
             
             if firstCharAfterName!.location == NSNotFound {
                 // we do nothing, bc there's nothing after the name so like LOL
@@ -202,15 +202,15 @@ import UIKit
     }
 
     // this will clear the links and stuff at the start of the article, and any stuff at the end of it. will also remove writer name.
-     static func createPreview (text: NSMutableString) -> NSMutableString {
+     static func createPreview (_ text: NSMutableString) -> NSMutableString {
         
         var clearedText : NSMutableString = text.mutableCopy() as! NSMutableString
         
         // removes all \ slashes from the string
-        clearedText.replaceOccurrencesOfString("\\", withString: "", options: NSStringCompareOptions.CaseInsensitiveSearch, range: (NSMakeRange(0, clearedText.length)))
+        clearedText.replaceOccurrences(of: "\\", with: "", options: NSString.CompareOptions.caseInsensitive, range: (NSMakeRange(0, clearedText.length)))
 
         //removes all newlines from string bc preview
-        clearedText.replaceOccurrencesOfString("\n", withString: " ", options: NSStringCompareOptions.CaseInsensitiveSearch, range: (NSMakeRange(0, clearedText.length)))
+        clearedText.replaceOccurrences(of: "\n", with: " ", options: NSString.CompareOptions.caseInsensitive, range: (NSMakeRange(0, clearedText.length)))
         
         //removes all header images and stuff before the writer name
         clearedText = clearTillNextTag( clearedText , tagToClear: "<p>")
@@ -228,26 +228,26 @@ import UIKit
         clearedText = clearAllTriangeTags(clearedText)
         
         if (clearedText.hasPrefix("Local")) {
-            clearedText.replaceCharactersInRange(NSMakeRange(0, 5), withString: "")
+            clearedText.replaceCharacters(in: NSMakeRange(0, 5), with: "")
             
         }
 
         if (clearedText.hasPrefix(": ")) {
-            clearedText.replaceCharactersInRange(NSMakeRange(0, 2), withString: "")
+            clearedText.replaceCharacters(in: NSMakeRange(0, 2), with: "")
             
         }
 
-        let finalString: NSMutableString = (clearedText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())).mutableCopy() as! NSMutableString
+        let finalString: NSMutableString = (clearedText.trimmingCharacters(in: CharacterSet.whitespaces)).mutableCopy() as! NSMutableString
          
         return finalString
     
     }
 
-     static func clearTillEndWriterName (textToBeCleared : NSMutableString) -> NSMutableString {
+     static func clearTillEndWriterName (_ textToBeCleared : NSMutableString) -> NSMutableString {
         
         if extractWriter(NSMutableString(string: textToBeCleared)) != nil { //there is a writer name
             let writerName = extractWriter(NSMutableString(string: textToBeCleared))!
-            let locWriterName : NSRange? = textToBeCleared.rangeOfString( (writerName as String).stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) ) as NSRange
+            let locWriterName : NSRange? = textToBeCleared.range( of: (writerName as String).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) ) as NSRange
             let endWriterNamePos = locWriterName!.location + locWriterName!.length - 1//this is the variable we want to clear till
             let clearTill_Range : NSRange = NSMakeRange(0, endWriterNamePos + 1 )
             let finalString = clearCharactersFromString(textToBeCleared, rangeToBeCleared: clearTill_Range)
@@ -261,8 +261,8 @@ import UIKit
 
     }
     
-     static func clearTillNextTag (textToBeCleared : NSMutableString, tagToClear : NSString) -> NSMutableString {
-        let locTagRange : NSRange? = textToBeCleared.rangeOfString(tagToClear as String)
+     static func clearTillNextTag (_ textToBeCleared : NSMutableString, tagToClear : NSString) -> NSMutableString {
+        let locTagRange : NSRange? = textToBeCleared.range(of: tagToClear as String)
         if locTagRange != nil {
             let posTag = locTagRange!.location
             
@@ -279,7 +279,7 @@ import UIKit
 
                 }
                 let clearedString: NSMutableString = textToBeCleared.mutableCopy() as! NSMutableString
-                clearedString.replaceCharactersInRange(unneededRange, withString: "")
+                clearedString.replaceCharacters(in: unneededRange, with: "")
                 return clearedString
             }
         }
@@ -290,24 +290,24 @@ import UIKit
 
     }
     
-     static func findRangeOfFirstTriangleTag (incoming: NSMutableString) -> NSRange? {
+     static func findRangeOfFirstTriangleTag (_ incoming: NSMutableString) -> NSRange? {
         var text = incoming as NSString
-        let rangeOfTag : NSRange? = (text.rangeOfString("<"))
+        let rangeOfTag : NSRange? = (text.range(of: "<"))
         if (rangeOfTag?.location == NSNotFound) {
             return nil
         }
         var locOfStartTag = rangeOfTag!.location
-        var locOfCloseTag = (text.rangeOfString(">") as NSRange).location
+        var locOfCloseTag = (text.range(of: ">") as NSRange).location
         while (locOfCloseTag < locOfStartTag) {
             text = clearCharactersFromString(text.mutableCopy() as! NSMutableString, rangeToBeCleared: NSMakeRange(locOfCloseTag, 1))
-            locOfStartTag = (text.rangeOfString("<") as NSRange).location
-            locOfCloseTag = (text.rangeOfString(">") as NSRange).location
+            locOfStartTag = (text.range(of: "<") as NSRange).location
+            locOfCloseTag = (text.range(of: ">") as NSRange).location
         }
         let rangeToReturn = NSMakeRange(locOfStartTag, ((locOfCloseTag - locOfStartTag) + 1))
         return rangeToReturn
     }
     
-     static func clearAllTriangeTags (incoming: NSMutableString) -> NSMutableString {
+     static func clearAllTriangeTags (_ incoming: NSMutableString) -> NSMutableString {
         
         print("value before clearing all triangle tags: ", terminator: "")
         print(incoming, terminator: "\n")
@@ -317,7 +317,7 @@ import UIKit
             if ((triangeTagsLeft?.location) > 700) {
              break;
             }
-            freshText.replaceCharactersInRange(triangeTagsLeft!, withString: "")
+            freshText.replaceCharacters(in: triangeTagsLeft!, with: "")
             triangeTagsLeft = findRangeOfFirstTriangleTag(freshText)
         }
         
@@ -329,16 +329,16 @@ import UIKit
         
     }
     
-     static func clearCharactersFromString(text: NSMutableString, rangeToBeCleared: NSRange) -> NSMutableString {
+     static func clearCharactersFromString(_ text: NSMutableString, rangeToBeCleared: NSRange) -> NSMutableString {
         
         let finalString: NSMutableString = text.mutableCopy() as! NSMutableString
-        finalString.replaceCharactersInRange(rangeToBeCleared , withString: "")
+        finalString.replaceCharacters(in: rangeToBeCleared , with: "")
 
         return finalString
     }
    
     
-    static func deleteAllScripts(incoming: NSMutableString) -> NSMutableString {
+    static func deleteAllScripts(_ incoming: NSMutableString) -> NSMutableString {
         
         
         print("value before deleting all scripts tags: ", terminator: "")
@@ -346,7 +346,7 @@ import UIKit
 
         
         let text = incoming as NSString
-        let rangeOfTag : NSRange? = (text.rangeOfString("<script"))
+        let rangeOfTag : NSRange? = (text.range(of: "<script"))
         
         
         print("range of <script tag :", terminator: "")
@@ -360,7 +360,7 @@ import UIKit
             return incoming
         }
         let locOfStartTag = rangeOfTag!.location
-        let rangeOfCloseTag = text.rangeOfString("</script>") as NSRange
+        let rangeOfCloseTag = text.range(of: "</script>") as NSRange
         
         
         print("range of closing </script> tag :", terminator: "")

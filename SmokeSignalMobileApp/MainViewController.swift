@@ -15,9 +15,9 @@ final class MainViewController: SWRevealViewController {
     
     override func viewDidLoad() {
         print("MainView loaded", terminator: "\n")
-        self.frontViewController = self.storyboard!.instantiateViewControllerWithIdentifier("centerNavController") as UIViewController?
+        self.frontViewController = self.storyboard!.instantiateViewController(withIdentifier: "centerNavController") as UIViewController?
         
-        self.rearViewController = self.storyboard!.instantiateViewControllerWithIdentifier("sideMenuView") as UIViewController?
+        self.rearViewController = self.storyboard!.instantiateViewController(withIdentifier: "sideMenuView") as UIViewController?
         
         Singleton.sharedInstance.mainViewControllerReference = self
         
@@ -37,8 +37,8 @@ final class MainViewController: SWRevealViewController {
 
     }
     
-    func setCenterControllerAndBarButton(storyboardTag : String) {
-        (self.frontViewController as! UINavigationController).viewControllers[0] = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardTag) as UIViewController!
+    func setCenterControllerAndBarButton(_ storyboardTag : String) {
+        (self.frontViewController as! UINavigationController).viewControllers[0] = self.storyboard?.instantiateViewController(withIdentifier: storyboardTag) as UIViewController!
 
     }
 }

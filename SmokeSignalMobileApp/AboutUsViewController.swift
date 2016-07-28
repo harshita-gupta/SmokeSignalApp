@@ -22,7 +22,7 @@ final class AboutUsViewController: UIViewController {
     
     func setBarButton() {
         print("starts setting leftBarButtonItem", terminator: "\n")
-        self.navigationController?.navigationItem.leftBarButtonItem = DrawerBarButtonItem(target: self, action: "toggleLeft")
+        self.navigationController?.navigationItem.leftBarButtonItem = DrawerBarButtonItem(target: self, action: #selector(AboutUsViewController.toggleLeft))
         print("leftBarButtonItem set to: ", terminator: "")
         print(self.navigationController?.navigationItem.leftBarButtonItem, terminator: "\n")
         print("finished setting leftBarButtonItem", terminator: "\n")
@@ -32,7 +32,7 @@ final class AboutUsViewController: UIViewController {
     
     func toggleLeft() {
         print("DrawerBarButtonItem tapped.", terminator: "\n")
-        ((Singleton.sharedInstance.mainViewControllerReference) as SWRevealViewController).revealToggleAnimated(true)
+        ((Singleton.sharedInstance.mainViewControllerReference) as SWRevealViewController).revealToggle(animated: true)
     }
 
     

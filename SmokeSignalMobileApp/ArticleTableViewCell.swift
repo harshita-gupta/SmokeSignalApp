@@ -21,7 +21,7 @@ class ArticleTableViewCell : UITableViewCell {
     @IBOutlet final var headline: UILabel!
 
     
-    final func setArticle(currArticle: Article) {
+    final func setArticle(_ currArticle: Article) {
         
         self.currentArticle = currArticle
         
@@ -50,11 +50,11 @@ class ArticleTableViewCell : UITableViewCell {
         
         if (self.currentArticle!.imageExists!) {
             
-            imView.hidden = false
-            imView.sd_setImageWithURL(self.currentArticle!.fullImageURL!)
+            imView.isHidden = false
+            imView.sd_setImage(with: self.currentArticle!.fullImageURL! as URL!)
         }
         else {
-            imView.hidden = true
+            imView.isHidden = true
         }
         
         imView.clipsToBounds = true

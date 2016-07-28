@@ -28,7 +28,7 @@ final class MasterViewController: UITableViewController{
     override func viewDidLoad() {
         print("master view loaded", terminator: "\n")
 
-        ((self.parentViewController)?.parentViewController as! MainViewController).panGestureRecognizer()
+        ((self.parent)?.parent as! MainViewController).panGestureRecognizer()
 
         super.viewDidLoad()
         Singleton.sharedInstance.masterViewControllerReference = self;
@@ -51,16 +51,16 @@ final class MasterViewController: UITableViewController{
         parsing.getWebDataFromCategory("", page_number: currentPage)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let gesture = ((self.parentViewController)?.parentViewController as! MainViewController).panGestureRecognizer()
-        gesture.enabled = true
+        let gesture = ((self.parent)?.parent as! MainViewController).panGestureRecognizer()
+        gesture?.isEnabled = true
     }
     
     func setBarButton() {
         print("starts setting leftBarButtonItem", terminator: "\n")
-        self.mainNavBar!.leftBarButtonItem = DrawerBarButtonItem(target: self, action: "toggleLeft")
+        self.mainNavBar!.leftBarButtonItem = DrawerBarButtonItem(target: self, action: #selector(MasterViewController.toggleLeft))
         print("leftBarButtonItem set to: ", terminator: "")
         print(self.mainNavBar!.leftBarButtonItem, terminator: "\n")
         print("finished setting leftBarButtonItem", terminator: "\n")
@@ -70,10 +70,10 @@ final class MasterViewController: UITableViewController{
     
     func toggleLeft() {
         print("DrawerBarButtonItem tapped.", terminator: "\n")
-        ((Singleton.sharedInstance.mainViewControllerReference) as SWRevealViewController).revealToggleAnimated(true)
+        ((Singleton.sharedInstance.mainViewControllerReference) as SWRevealViewController).revealToggle(animated: true)
     }
     
-    func refreshWithNewCatSort(slug_name: String) {
+    func refreshWithNewCatSort(_ slug_name: String) {
         currentCategory = Category(slug_name: slug_name)
         addNavBarBanner()
         activityBar.progressTintColor = currentCategory.highlightColor
@@ -91,10 +91,10 @@ final class MasterViewController: UITableViewController{
         else {
             imPresent = false
         }
-        let titleView = NavBarTitleView(frame: CGRectZero, title: currentCategory.catName!,imagePresent: imPresent)
+        let titleView = NavBarTitleView(frame: CGRect.zero, title: currentCategory.catName!,imagePresent: imPresent)
 
-        let titleSize = titleView.systemLayoutSizeFittingSize(CGSizeZero)
-        titleView.frame = CGRectMake(0, 0, titleSize.width, titleSize.height)
+        let titleSize = titleView.systemLayoutSizeFitting(CGSize.zero)
+        titleView.frame = CGRect(x: 0, y: 0, width: titleSize.width, height: titleSize.height)
         mainNavBar.titleView = titleView
         print("finished adding top Navigation Bar, view set to : ", terminator: "")
         print(mainNavBar.titleView, terminator: "\n")
@@ -106,7 +106,7 @@ final class MasterViewController: UITableViewController{
     
     
     //handles loading of extra table cells
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentOffset : CGFloat = scrollView.contentOffset.y
         let maximumOffset : CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
         
@@ -121,18 +121,18 @@ final class MasterViewController: UITableViewController{
     }
     
     //number of sections
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     //number of rows
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Singleton.sharedInstance.posts.count
     }
 
    // cell heights
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if (indexPath.row == 0) {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if ((indexPath as NSIndexPath).row == 0) {
             return UITableViewAutomaticDimension
         }
         
@@ -142,19 +142,19 @@ final class MasterViewController: UITableViewController{
     }
     
     //populates table with cells
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         var cell : ArticleTableViewCell
         
-        if (indexPath.row == 0) {
-            cell = tableView.dequeueReusableCellWithIdentifier("mostRecentPreview", forIndexPath: indexPath) as! LeadArticleTableViewCell
+        if ((indexPath as NSIndexPath).row == 0) {
+            cell = tableView.dequeueReusableCell(withIdentifier: "mostRecentPreview", for: indexPath) as! LeadArticleTableViewCell
         }
         
         else {
-            cell = tableView.dequeueReusableCellWithIdentifier("article", forIndexPath: indexPath) as! GeneralArticleTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "article", for: indexPath) as! GeneralArticleTableViewCell
         }
 
-        let currentArticle = parsing.articleForPostAtIndex(indexPath.row)
+        let currentArticle = parsing.articleForPostAtIndex((indexPath as NSIndexPath).row)
         
         cell.setArticle(currentArticle)
         
@@ -164,22 +164,22 @@ final class MasterViewController: UITableViewController{
     }
  
     
-    @IBAction func refreshPulled(sender: AnyObject) {
+    @IBAction func refreshPulled(_ sender: AnyObject) {
         currentPage = 1;
         parsing.getWebDataFromCategory(currentCategory.slug!, page_number: currentPage, completion: nil)
         refresher.endRefreshing()
     }
     
     //DONE
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if ((segue.identifier == "showDetail") || (segue.identifier == "showDetailFirst")) {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let selectedPost: Article = Singleton.sharedInstance.articleCache[indexPath.row]!
+                let selectedPost: Article = Singleton.sharedInstance.articleCache[(indexPath as NSIndexPath).row]!
                 (segue.destinationViewController as! DetailViewController).detailItem = selectedPost
             }
             
-            let gesture = ((self.parentViewController)?.parentViewController as! MainViewController).panGestureRecognizer()
-            gesture.enabled = false
+            let gesture = ((self.parent)?.parent as! MainViewController).panGestureRecognizer()
+            gesture?.isEnabled = false
         }
     }
 

@@ -25,7 +25,7 @@ final class GeneralArticleTableViewCell : ArticleTableViewCell {
     override func checksLayout() {
         if (super.currentArticle!.imageExists!) {
             
-            imView.hidden = false
+            imView.isHidden = false
             
             //////////////////////////increasing priority of image constraints and minimizing it for extra constraints
             
@@ -63,7 +63,7 @@ final class GeneralArticleTableViewCell : ArticleTableViewCell {
             //////////////////////////////////////////////////////////////////////////////
         }
         else {
-            super.imView.hidden = true
+            super.imView.isHidden = true
             
             //////////////////////////increasing priority of extra constraints and minimizing it for image constraints
             if (categoriesConstraintExtra.priority != 999) {

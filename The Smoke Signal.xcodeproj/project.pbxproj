@@ -84,10 +84,10 @@
 		EEB87EB01B27B73C00752884 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EAF1B27B73C00752884 /* ArticleTableViewCell.swift */; };
 		EEB87EB41B27C05600752884 /* LeadArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EB31B27C05600752884 /* LeadArticleTableViewCell.swift */; };
 		EEB87EB61B27C07200752884 /* GeneralArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB87EB51B27C07200752884 /* GeneralArticleTableViewCell.swift */; };
-		EED868621BA3FB0C002E3382 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8685E1BA3FB0C002E3382 /* AnimatedMenuButton.swift */; settings = {ASSET_TAGS = (); }; };
-		EED868631BA3FB0C002E3382 /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8685F1BA3FB0C002E3382 /* DrawerBarButtonItem.swift */; settings = {ASSET_TAGS = (); }; };
-		EED868641BA3FB0C002E3382 /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED868601BA3FB0C002E3382 /* DrawerController.swift */; settings = {ASSET_TAGS = (); }; };
-		EED868651BA3FB0C002E3382 /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED868611BA3FB0C002E3382 /* DrawerVisualState.swift */; settings = {ASSET_TAGS = (); }; };
+		EED868621BA3FB0C002E3382 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8685E1BA3FB0C002E3382 /* AnimatedMenuButton.swift */; };
+		EED868631BA3FB0C002E3382 /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8685F1BA3FB0C002E3382 /* DrawerBarButtonItem.swift */; };
+		EED868641BA3FB0C002E3382 /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED868601BA3FB0C002E3382 /* DrawerController.swift */; };
+		EED868651BA3FB0C002E3382 /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED868611BA3FB0C002E3382 /* DrawerVisualState.swift */; };
 		EEF50DF01A90F1D300E733BE /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DEF1A90F1D300E733BE /* AboutUsViewController.swift */; };
 		EEF50DF41A911F1E00E733BE /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF50DF31A911F1E00E733BE /* PhotosViewController.swift */; };
 		EEFC5C491AF5DD4700614494 /* 01 Recent Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFC5C3A1AF5DD4700614494 /* 01 Recent Bar.png */; };
@@ -578,6 +578,7 @@
 					EE99AAA41A0F5432001B9AEF = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = GJ983GN5BM;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -836,6 +837,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmokeSignalMobileApp/SmokeSignalMobileApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -861,6 +863,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmokeSignalMobileApp/SmokeSignalMobileApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -13,12 +13,12 @@ class MyFooter : UIView {
     
     @IBOutlet var activityIndicator:UIActivityIndicatorView!
     
-    override var hidden:Bool {
+    override var isHidden:Bool {
         get {
-            return super.hidden
+            return super.isHidden
         }
         set(hidden) {
-            super.hidden = hidden
+            super.isHidden = hidden
 
 //            if self.activityIndicator {
 //                if hidden {
